@@ -27,7 +27,6 @@ function initDynamic() {
         defaultValues.legal;
         defaultValues.legalButton;
         defaultValues.landingPage;
-    	
     } else {
     
         Enabler.setProfileId(10577988);
