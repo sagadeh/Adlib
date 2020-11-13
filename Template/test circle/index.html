@@ -18,19 +18,15 @@
         }
         #circle1-wrapper {
             right: 0px;
-            width: 150px;
         }
         #circle2-wrapper {
             bottom: 0px;
-            height: 125px;
         }
         #circle3-wrapper {
             left: 0px;
-            width: 150px;
         }
         #circle4-wrapper {
             top: 0px;
-            height: 125px;
         }
         #circle1, #circle2, #circle3, #circle4 {
             position: absolute;
@@ -38,11 +34,9 @@
             height: 250px;
         } 
         #circle1 {
-            left: -150px;
             background-image: url(circle1.png);
         }
         #circle2 {
-            top: -125px;
             background-image: url(circle2.png);
         }
         #circle3 {
@@ -72,15 +66,14 @@
 </div>
 <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.0.1_min.js"></script>
 <script>
-    //console.log("hello world");
     var tl = gsap.timeline();
     
-    tl.to("#circle1-wrapper", {duration: 0.5, width: "300px"})
-      .to("#circle1", {duartion: 0.5, left: "0px"},'-=0.5')
-      .to("#circle2-wrapper", {duration: 0.5, height: "250px"},'-=0.3')
-      .to("#circle2", {duartion: 0.5, top: "0px"},'-=0.5')
-      .to("#circle3-wrapper", {duration: 0.5, width: "300px"},'-=0.3')
-      .to("#circle4-wrapper", {duration: 0.5, height: "250px"},'-=0.3');
+    tl.from("#circle1-wrapper", {duration: 0.5, width: "150px"})
+      .from("#circle1", {duartion: 0.5, left: "-150px"},'-=0.5')
+      .from("#circle2-wrapper", {duration: 0.5, height: "125px"},'-=0.3')
+      .from("#circle2", {duartion: 0.5, top: "-125px"},'-=0.5')
+      .from("#circle3-wrapper", {duration: 0.5, width: "0px"},'-=0.4')
+      .from("#circle4-wrapper", {duration: 0.5, height: "0px"},'-=0.4');
 </script> 
 </body>
 </html>

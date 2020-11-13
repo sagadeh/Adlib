@@ -61,7 +61,7 @@ function initDynamic() {
         devDynamicContent.Black_Friday__Solus_at_24[0].endDate.UtcValue = 1604188800000;
         Enabler.setDevDynamicContent(devDynamicContent);
 
-
+        defaultValues.cssAttrib = dynamicContent.Black_Friday__Solus_at_24[0].cssAttrib;
         defaultValues.frame1Headline = dynamicContent.Black_Friday__Solus_at_24[0].frame1Headline;
         defaultValues.frame2Headline = dynamicContent.Black_Friday__Solus_at_24[0].frame2Headline;
         defaultValues.frame1Image = dynamicContent.Black_Friday__Solus_at_24[0].frame1Image.Url;
@@ -71,8 +71,6 @@ function initDynamic() {
         defaultValues.legal = dynamicContent.Black_Friday__Solus_at_24[0].legal;
         defaultValues.legalButton = dynamicContent.Black_Friday__Solus_at_24[0].legalButton;
         defaultValues.landingPage = dynamicContent.Black_Friday__Solus_at_24[0].landingPage.Url;
-        defaultValues.cssAttrib = dynamicContent.Black_Friday__Solus_at_24[0].cssAttrib;
-      
     }
 }
 

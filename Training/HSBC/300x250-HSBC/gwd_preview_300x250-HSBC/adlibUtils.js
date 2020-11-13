@@ -47,22 +47,18 @@ function takeScreenshot() {
 
 //first function call initializaation for screenshot
 function adlibStart() {
-    
     parent.postMessage({
         type: 'SCREENSHOT_START',
         id
     }, '*');
-    console.log("screenshot");
 }
 
 //last function call for screenhot 
 function adlibEnd() {
-    
     parent.postMessage({
         type: 'SCREENSHOT_STOP',
         id
     }, '*');
-    console.log("screenshot end");
 }
 
 //for play/pause functionality
@@ -120,35 +116,7 @@ function textResize(element) {
            copyParagraph.style.fontSize = (parseInt(window.getComputedStyle(copyParagraph).fontSize) - 1) + "px";
        }
    })
-}
-
-//--end
-
-
-//image preloader without appends
-var paths = [];
-
-function preloadImages(paths, callback) {
-    var images = [];
-    var loaded = 0;
-
-    paths.forEach(function (path) {
-        var img = new Image();
-        img.src = path;
-        img.onload = onImagePreloaded;
-        images.push(img);
-    });
-
-
-    function onImagePreloaded() {
-        loaded++;
-        if (loaded === paths.length && callback) {
-             callback(images);
-
-        }
-    }
-}
-
+}    
 
 //TEMPLATE CSS
 // Enhance the styling for dynamic element also allow you to target specific browser. It will also minimize the styling using only one dynamic element(defaultValues.cssAttrib or defaultValues.customVariable) instead of styling all the dynamic element. 
@@ -175,14 +143,17 @@ function templateCSS(content, param){
                 device = "macFirefox";
             }
         }
-        Array.prototype.slice.call(getElems).forEach(function(item, index, arr) {
-            item.classList.add(device);
-        }, this);
+        
+        if(device.length > 0){
+            Array.prototype.slice.call(getElems).forEach(function(item, index, arr) {
+                if(item.tagName !== "BR"){
+                    item.classList.add(device);
+                } 
+            }, this);
+        }
 
-        content.innerHTML += "<style>" + param + "</style>";
+        param = param.replace(/(<|&lt;)br\s*\/*(>|&gt;)/g,'');
+        content.innerHTML = "<style>" + param + "</style>";
     }
 }
-
-
-
-
+//--end
