@@ -4,9 +4,7 @@ gsap.set(["#main", "#replay-button"], {visibility: "hidden"});
 
 // gsap.set("#your-element", {width: 0}); <-- initial position/behavior of your element
 
-
 gsap.globalTimeline.pause(); //<-- dont delete, this is strictly implemented
-
 
 //<-- dont delete, this is strictly implemented
 function initAnim(){
