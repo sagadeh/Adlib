@@ -27,7 +27,7 @@ function initAnim(){
     .from("#frame2Headline", {duration: 0.5, y: "-25%", opacity: 0})
     .from("#frame2Image", {duration: 0.5, opacity: 0})
     .from("#frame2Subheadline", {duration: 0.5, x: "25%", opacity: 0},'-=0.5')
-    .from("#legal", {duration: 0.5, y: "50%", opacity: 0})
+    .from("#legal", {duration: 0.5, y: "50%", opacity: 0},'-=0.25')
     .from("#logo", {duration: 0.5, y: "25%", opacity: 0})
     .to("#frame2Headline-wrapper, #frame2Subheadline-wrapper, #frame2Image-wrapper", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'+=2')
     .from("#frame3Headline", {duration: 0.5, y: "-25%", opacity: 0})
