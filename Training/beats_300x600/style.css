@@ -1,0 +1,414 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);*/
+
+.centered {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#main {
+    position:absolute;
+    z-index:10;
+    display: none;
+    width:300px;
+    height:600px;
+    border:1px solid #585858;
+    box-sizing:border-box;
+    background-color: white;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    -webkit-transform:translateZ(0);
+    -ms-transform:translateZ(0);
+     transform:translateZ(0);
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;    
+}
+
+#text1, #text2, #text3, #text4 {    
+    position: absolute;
+    margin: auto;
+    top: 120px;
+    left: 0;
+    right: 0;   
+    text-align: center;
+    vertical-align: middle;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #e01e3c;
+}
+#text1 {
+    width: 270px;
+    height: 55px;   
+    line-height: 55px;
+}
+#text2 {
+    top: 175px;
+    font-size: 40px;
+    width: 270px;
+    height: 21px;  
+    line-height: 50px;
+}
+#text3 {
+    
+}
+#text4 {
+    top: 175px
+}
+#bgExit-frame1 {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+#bgExit {
+    position:absolute;
+    display:block;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    cursor:pointer;
+}
+#logoExit {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 160px;
+    height: 80px;
+    cursor:pointer;
+}
+#ctaExit {
+    position: absolute;
+    display: none;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 160px;
+    height: 80px;
+    cursor:pointer;
+}
+/*
+#bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url(img/bg1.png);
+}
+*/
+
+#frame1, #frame2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #f7f7f8;
+}
+#bgGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(transparent 5%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+#logo  {
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 43px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+    background-image:url(img/logo-red.png);
+}
+
+#headphone-intro {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    width: 200px;
+    height: 191px;
+    background-image:url(img/beats_red.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+}
+
+/* FRAME 2*/
+#headphone1, #headphone2, #headphone3, #headphone4, #headphone5, #headphone6, #headphone7, #headphone8, #headphone9 {
+    position: absolute;
+    display: none;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    width: 150px;
+    height: 203px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+}
+#headphone1 {
+    background-image:url(img/headphone1.png);
+}
+#headphone2 {
+    background-image:url(img/headphone2.png);
+}
+#headphone3 {
+    background-image:url(img/headphone3.png);
+}
+#headphone4 {
+    background-image:url(img/headphone4.png);
+}
+#headphone5 {
+    display: block;
+    background-image:url(img/headphone5.png);
+}
+#headphone6 {
+    background-image:url(img/headphone6.png);
+}
+#headphone7 {
+    background-image:url(img/headphone7.png);
+}
+#headphone8 {
+    background-image:url(img/headphone8.png);
+}
+#headphone9 {
+    background-image:url(img/headphone9.png);
+}
+
+#header-text {
+    position: absolute;
+    margin: auto;
+    top: 75px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+#circle-container1, #circle-container2 {
+    position: absolute;
+    margin: auto;
+    top: 200px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 30px;
+}
+#circle-container2 {
+    top: 240px;
+    width: 180px;
+}
+#circle1-holder, #circle2-holder, #circle3-holder, #circle4-holder, #circle4-holder, #circle5-holder, #circle6-holder, #circle7-holder, #circle8-holder, #circle9-holder {
+    position: relative;
+    display:inline-block;
+    width: 30px;
+    height: 100%;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.21);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+}
+#circle1-btn, #circle2-btn, #circle3-btn, #circle4-btn, #circle5-btn, #circle6-btn, #circle7-btn, #circle8-btn, #circle9-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#check1, #check2, #check3, #check4, #check5, #check6, #check7, #check8, #check9 {
+    display: none;
+    width: 16px;
+    height: 14px;
+    background-image:url(img/check.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#check5 {
+    display: block;
+}
+#circle1-holder {
+    background-image:url(img/circle1.png);
+}
+#circle2-holder {
+    background-image:url(img/circle2.png);
+}
+#circle3-holder {
+    background-color: #2b2d2f;
+}
+#circle4-holder {
+    background-image:url(img/circle4.png);
+}
+#circle5-holder {
+    background-color: #ffffff;
+}
+#circle6-holder {
+    background-color: #ff0000;
+}
+#circle7-holder {
+    background-color: #243652;
+}
+#circle8-holder {
+    background-image:url(img/circle8.png);
+}
+#circle9-holder {
+    background-color: #585a5b;
+}
+.subText {
+    font-weight: 100;
+}
+#details1, #details2, #details3, #details4,  #details5, #details6, #details7, #details8, #details9 {
+    position: absolute;
+    opacity: 0;
+    margin: auto;
+    top: 135px;
+    left: 0;
+    right: 0;
+    width: 190px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+#details5 {
+    text-shadow: 1px 2px #909090;
+}
+#details3, #details5, #details6, #details7 {
+    top: 140px;
+}
+#details5 {
+    opacity: 1;
+}
+
+#cta {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    width: 150px;
+    height: 40px;
+    background-color: #e01e3c;
+}
+/*#cta-border {
+    position: absolute;
+    width: 144px;
+    height: 34px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #e01e3c;
+    
+}*/
+#hover-anim {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+#cta-text {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 25px;    
+    text-align: center;
+    vertical-align: middle;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 400;
+    /*font-family: 'Roboto Mono', monospace;*/
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+#arrow-left-container, #arrow-right-container {
+    position: absolute;
+    cursor: pointer;
+    margin: auto;
+    top: 170px;
+    bottom: 0;
+    width: 50px;
+    height: 90px;
+    background-color: rgba(22, 22, 22, 0.2);
+}
+#arrow-left-container {
+    left: 0px;    
+}
+#arrow-right-container {
+    right: 0px;
+}
+#arrow-left-btn, #arrow-right-btn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 47px;
+    height: 88px;
+}
+#arrow-left, #arrow-right {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    height: 41px;
+    background-image:url(img/arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#arrow-left-btn:hover {
+    border:2px solid grey;
+}
+#arrow-right-btn:hover {
+    border:2px solid grey;
+}
+#arrow-left {
+    -webkittransform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
