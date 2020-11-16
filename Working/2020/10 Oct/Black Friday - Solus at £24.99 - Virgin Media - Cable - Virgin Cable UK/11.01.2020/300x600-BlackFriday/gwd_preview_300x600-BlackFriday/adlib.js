@@ -18,8 +18,6 @@ var defaultValues = {
 
 function initDynamic() {
     if (!Enabler.isServingInLiveEnvironment()) {
-    	// defaultValues.frame1Headline; <-- example dynamic naming convension
-    	// defaultValues.baseImage; <-- example dynamic naming convension
         defaultValues.frame1Headline;
         defaultValues.frame2Headline;
         defaultValues.frame1Image;
@@ -28,8 +26,7 @@ function initDynamic() {
         defaultValues.ctaText;
         defaultValues.legal;
         defaultValues.legalButton;
-        defaultValues.landingPage; //<-- make sure always have a landing page
-    	
+        defaultValues.landingPage;
     } else {
     
         Enabler.setProfileId(10577988);
@@ -64,7 +61,7 @@ function initDynamic() {
         devDynamicContent.Black_Friday__Solus_at_24[0].endDate.UtcValue = 1604188800000;
         Enabler.setDevDynamicContent(devDynamicContent);
 
-
+        defaultValues.cssAttrib = dynamicContent.Black_Friday__Solus_at_24[0].cssAttrib;
         defaultValues.frame1Headline = dynamicContent.Black_Friday__Solus_at_24[0].frame1Headline;
         defaultValues.frame2Headline = dynamicContent.Black_Friday__Solus_at_24[0].frame2Headline;
         defaultValues.frame1Image = dynamicContent.Black_Friday__Solus_at_24[0].frame1Image.Url;
