@@ -11,7 +11,7 @@ var defaultValues = {
   frame2Subheadline:"HSBC Advance<br>Credit Card",
   frame2Image:"frame2Image.png",
   
-  frame3Headline:"Sign up for HSBC Advance<br>Credit Card and receive",
+  frame3Headline:"Sign up for HSBC<br> Advance Credit Card<br> and receive",
   productImage1:"productImage1.png",
   price:"price.png",
   
