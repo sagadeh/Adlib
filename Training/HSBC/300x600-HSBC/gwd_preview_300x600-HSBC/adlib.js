@@ -4,10 +4,10 @@
 var defaultValues = {
   cssAttrib:"<! –– css styling if necessary ––>", 
   
-  frame1Headline:"Reward yourself... with<br>the Advance Card from HSBC",
+  frame1Headline:"Reward<br> yourself... <br>with<br> the Advance<br> Card from HSBC",
   frame1Image:"frame1Image.png",
   
-  frame2Headline:"Up to 3.5% cash back on<br> all purchases",
+  frame2Headline:"Up to 3.5% cash<br> back on all<br> purchases",
   frame2Subheadline:"HSBC Advance<br>Credit Card",
   frame2Image:"frame2Image.png",
   
