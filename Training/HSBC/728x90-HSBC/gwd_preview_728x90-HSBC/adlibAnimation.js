@@ -19,7 +19,7 @@ function initAnim(){
   }});
   
   tl.to("#main", {duration: 0.5, visibility: "visible"})
-    .from("#frame1Image", {duration: 0.5, opacity: 0})
+    .from("#frame1Image, #logo", {duration: 0.5, opacity: 0})
     .from("#frame1Headline", {duration: 0.5, opacity: 0})
     .to("#frame1Image-wrapper, #frame1Headline", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'+=2')
     .from("#frame2Headline, #frame2Image", {duration: 0.5, opacity: 0})
@@ -28,13 +28,13 @@ function initAnim(){
     .from("#legal", {duration: 0.5, y: "50%", opacity: 0},'-=0.25')
     /*.from("#logo", {duration: 0.5, y: "25%", opacity: 0})*/
     .to("#frame2Headline-wrapper, #frame2Subheadline-wrapper, #frame2Image-wrapper, #legal", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'+=2')
-    .from("#frame3Headline", {duration: 0.5, y: "-20%", opacity: 0})
+    .to("#legal", {duration: 0, x: "308px"})
+    .from("#frame3Headline", {duration: 0.5, opacity: 0})
     .from("#orText", {duration: 0.5, opacity: 0},'-=0.5')
     .from("#productImage1", {duration: 0.5, x: "-10%", opacity: 0},'-=0.5')
     .from("#price", {duration: 0.5, x: "10%", opacity: 0},'-=0.5')
     .from("#cta", {duration: 0.5, x: "5%", opacity: 0})
-    .to("#legal", {duration: 0, x: "308px"})
-    .to("#legal", {duration: 0.5, opacity: 1})
+    .to("#legal", {duration: 0.5, opacity: 1},'-=0.5')
     .from("#replay", {duration: 0.5, x: "2%", opacity: 0});
 }
 
