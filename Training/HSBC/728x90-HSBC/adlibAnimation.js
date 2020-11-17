@@ -33,7 +33,7 @@ function initAnim(){
     .from("#orText", {duration: 0.5, opacity: 0},'-=0.5')
     .from("#productImage1", {duration: 0.5, x: "-10%", opacity: 0},'-=0.5')
     .from("#price", {duration: 0.5, x: "10%", opacity: 0},'-=0.5')
-    .from("#cta", {duration: 0.5, x: "5%", opacity: 0})
+    .from("#cta", {duration: 0.5, x: "3%", opacity: 0})
     .to("#legal", {duration: 0.5, opacity: 1},'-=0.5')
     .from("#replay", {duration: 0.5, x: "2%", opacity: 0});
 }

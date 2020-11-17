@@ -27,7 +27,7 @@ function initAnim(){
     .from("#legal", {duration: 0.5, y: "50%", opacity: 0},'-=0.25')
     /*.from("#logo", {duration: 0.5, y: "25%", opacity: 0})*/
     .to("#frame2Headline-wrapper, #frame2Subheadline-wrapper, #frame2Image-wrapper", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'+=2')
-    .from("#frame3Headline", {duration: 0.5, y: "-25%", opacity: 0})
+    .from("#frame3Headline", {duration: 0.5, opacity: 0})
     .from("#orText", {duration: 0.5, opacity: 0},'-=0.5')
     .from("#productImage1", {duration: 0.5, x: "-25%", opacity: 0},'-=0.5')
     .from("#price", {duration: 0.5, x: "25%", opacity: 0},'-=0.5')

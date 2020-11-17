@@ -13,9 +13,9 @@ var defaultValues = {
   
   frame3Headline:"Sign up for HSBC Advance Credit Card and receive",
   productImage1:"productImage1.png",
-  price:"price.png",
+  productImage2:"price.png",
   
-  cta:"cta.png",
+  ctaImage:"cta.png",
   legal:"*Terms and conditions apply",
   logo:"logo.png",
   landingPage:"https://www.hsbc.com"
@@ -32,9 +32,9 @@ function initDynamic() {
     
       defaultValues.frame3Headline;
       defaultValues.productImage1;
-      defaultValues.price;
+      defaultValues.productImage2;
     
-      defaultValues.cta;
+      defaultValues.ctaImage;
       defaultValues.legal;
       defaultValues.logo;
       defaultValues.landingPage;
@@ -54,9 +54,9 @@ function populate() {
   
   document.querySelector("#frame3Headline").innerHTML = defaultValues.frame3Headline;
   document.querySelector("#productImage1").setAttribute("source", defaultValues.productImage1);
-  document.querySelector("#price").setAttribute("source", defaultValues.price);
+  document.querySelector("#price").setAttribute("source", defaultValues.productImage2);
   
-  document.querySelector("#cta").setAttribute("source", defaultValues.cta);
+  document.querySelector("#cta").setAttribute("source", defaultValues.ctaImage);
   document.querySelector("#legal").innerHTML = defaultValues.legal;
   document.querySelector("#logo").setAttribute("source", defaultValues.logo);
 }
