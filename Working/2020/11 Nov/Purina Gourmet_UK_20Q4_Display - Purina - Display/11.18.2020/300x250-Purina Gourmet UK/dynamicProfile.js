@@ -15,7 +15,7 @@ var defaultValues = {
     ctaText: "BUY NOW",
     frame1Subheadline: "",
     frame2Subheadline: "",
-    frame3Subheadline: "",
+    frame3Subheadline: "Subject to availability, while stocks last",
     trigger: "ZOOPLUS",
     trigger2: "PERLE",
     startDate: "",
