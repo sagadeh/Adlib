@@ -3,27 +3,27 @@
 // VARIABLE DECLARATION
 var defaultValues = {
    // FRAME 1
-   frame1Headline: "\"PURINA ONE HAS DEFINITELY CONTRIBUTED TO MY BELLA'S WELLBEING\" - PAULA",
-   frame1Background: "image1.png",
+   frame1Headline:"\"PURINA ONE HAS DEFINITELY CONTRIBUTED TO MY BELLA'S WELLBEING\" - PAULA",
+   frame1Background:"image1.png",
    // FRAME 2
-   frame2Headline: "ONLY 1 WEEK TO NOTICE JASPAR'S HIGHER ENERGY LEVELS",
-   frame2Background: "image2.png",
+   frame2Headline:"ONLY 1 WEEK TO NOTICE JASPAR'S HIGHER ENERGY LEVELS",
+   frame2Background:"image2.png",
    // FRAME 3
-   frame3Headline: "START THE PURINA ONE 3 WEEK CHALLENGE",
-   ctaImage: "BUY_NOW.png",
-   //frame1Subheadline: "2 FOR €10",
-   //frame2Subheadline: "*Subject to availability, while stocks last",
-   // trigger: "ASDA",
-   frame1Subheadline: "",
-   frame2Subheadline: "",
-   trigger: "ZOOPLUS",
-   frame1Image: "product1.png",
-   frame2Image: "product2.png",
-   frame3Image: "product3.png",
+   frame3Headline:"START THE PURINA ONE 3 WEEK CHALLENGE",
+   ctaImage:"BUY_NOW.png",
+   frame1Subheadline:"2 FOR €10",
+   frame2Subheadline:"*Subject to availability, while stocks last",
+   // trigger:"ASDA",
+   //frame1Subheadline:"",
+   //frame2Subheadline:"",
+   trigger:"ZOOPLUS",
+   frame1Image:"product1.png",
+   frame2Image:"product2.png",
+   frame3Image:"product3.png",
    // OTHER
-   readableLabel: "",
-   customVariable: "",
-   landingPage: "https://google.com"
+   readableLabel:"",
+   customVariable:"",
+   landingPage:"https://google.com"
 };
 
 function initDynamic() {
