@@ -78,5 +78,15 @@ function initDynamic() {
 }
 
 function populate() {
-  
+  var triggerType = defaultValues.trigger.toUpperCase();
+  var triggerType2 = defaultValues.trigger2.toUpperCase();
+  headlineLabel.innerHTML = defaultValues.frame1Headline;
+  product.setAttribute("source", defaultValues.frame1Image);
+  background1.setAttribute("source", defaultValues.frame1Background);
+  background2.setAttribute("source", defaultValues.frame2Background);
+  background3.setAttribute("source", defaultValues.frame3Background);
+  ctaLabel.innerHTML = defaultValues.ctaText;
+  offerLabel.innerHTML = defaultValues.frame1Subheadline;
+  dateLabel.innerHTML = defaultValues.frame2Subheadline;
+  tcLabel.innerHTML = defaultValues.frame3Subheadline;
 }

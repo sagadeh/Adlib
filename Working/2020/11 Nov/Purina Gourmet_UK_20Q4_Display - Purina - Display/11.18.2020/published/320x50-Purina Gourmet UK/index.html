@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl5f63f68286ea8a764091e5f40e22dbc7"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl6cb7c3c7df2a3cbd3ff65690401f68af"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 9.0.2.0915">
   <meta name="template" content="Banner 3.0.0">
@@ -174,7 +174,7 @@ g.ka=function(a){this.v=this.A=!1;if(a.target==this.a){var b=a.detail;a=b.outgoi
 (b=studio.video&&studio.video.Reporter,c=this.qa.bind(this),this.P=Array.prototype.slice.call(a),b?c():Enabler.loadModule(studio.module.ModuleId.VIDEO,c))}};g.qa=function(){for(var a,b;this.P.length;)if(b=this.P.shift(),a=M(b))studio.video.Reporter.attach(a,"gwd-video"==b.tagName.toLowerCase()?b.nativeElement:b,b.autoplay),this.O.push(a)};
 var M=function(a){return"object"==typeof gwd&&"GwdId"in gwd?(new gwd.GwdId(a)).getString():"string"==typeof a?a:a.id},N=function(a){a=Array.prototype.slice.call(a.a.querySelectorAll("audio, video, gwd-video, gwd-youtube, gwd-youtube-livestream, gwd-audio"));for(var b=0;b<a.length;b++)a[b].pause()};customElements.define("gwd-google-ad",I);}).call(this);
 </script>
-  <script type="text/javascript" gwd-events="handlers">window.gwd=window.gwd||{};gwd.exitAd=function(event){Enabler.exitOverride("Purina Gourment UK",defaultValues.landingPage)};gwd.loadData=function(event){populate();templateCSS(stylingCSS,defaultValues.customVariable);var triggerType=defaultValues.trigger.toUpperCase();var triggerType2=defaultValues.trigger2.toUpperCase();headlineLabel.innerHTML=defaultValues.frame1Headline;product.setAttribute("source",defaultValues.frame1Image);background1.setAttribute("source",defaultValues.frame1Background);background2.setAttribute("source",defaultValues.frame2Background);background3.setAttribute("source",defaultValues.frame3Background);ctaLabel.innerHTML=defaultValues.ctaText;offerLabel.innerHTML=defaultValues.frame1Subheadline;tcLabel.innerHTML=defaultValues.frame3Subheadline;if(defaultValues.frame1Subheadline=="&nbsp;"||defaultValues.frame1Subheadline==""){gradient.style.display="none";background3_2.style.display="none"}switch(triggerType){case"ASDA":logoASDA.style.opacity=1;break;case"TESCO":logoTESCO.style.opacity=1;break;case"ZOOPLUS":logoZOOPLUS.style.opacity=1;break}switch(triggerType2){case"GOLD":Gold.style.opacity=1;break;case"PERLE":Perle.style.opacity=1;break;case"MONPETIT":Monpetit.style.opacity=1;break}};gwd.initAd=function(event){initDynamic()};gwd.auto_PlayBtnClick=function(event){gwd.actions.timeline.play("page1");console.log("Play Timeline")};gwd.auto_PauseBtnClick=function(event){gwd.actions.timeline.pause("page1");console.log("Pause Timeline")};gwd.screenStart=function(event){adlibStart()};gwd.screenTake=function(event){takeScreenshot()};gwd.screenStop=function(event){adlibStop()}</script>
+  <script type="text/javascript" gwd-events="handlers">window.gwd=window.gwd||{};gwd.exitAd=function(event){Enabler.exitOverride("Purina Gourment UK",defaultValues.landingPage)};gwd.loadData=function(event){populate();templateCSS(stylingCSS,defaultValues.customVariable);var triggerType=defaultValues.trigger.toUpperCase();var triggerType2=defaultValues.trigger2.toUpperCase();if(defaultValues.frame1Subheadline=="&nbsp;"||defaultValues.frame1Subheadline==""){gradient.style.display="none";background3_2.style.display="none"}switch(triggerType){case"ASDA":logoASDA.style.opacity=1;break;case"TESCO":logoTESCO.style.opacity=1;break;case"ZOOPLUS":logoZOOPLUS.style.opacity=1;break}switch(triggerType2){case"GOLD":Gold.style.opacity=1;break;case"PERLE":Perle.style.opacity=1;break;case"MONPETIT":Monpetit.style.opacity=1;break}};gwd.initAd=function(event){initDynamic()};gwd.auto_PlayBtnClick=function(event){gwd.actions.timeline.play("page1");console.log("Play Timeline")};gwd.auto_PauseBtnClick=function(event){gwd.actions.timeline.pause("page1");console.log("Pause Timeline")};gwd.screenStart=function(event){adlibStart()};gwd.screenTake=function(event){takeScreenshot()};gwd.screenStop=function(event){adlibStop()}</script>
   <script data-source="gwdimage_min.js" data-version="15" data-exports-type="gwd-image">(function(){/*
 
  Copyright The Closure Library Authors.
@@ -277,7 +277,7 @@ R.prototype.refitAll=function(){E(this.b);this.fit()};q.Object.defineProperties(
             <gwd-image id="ctaBtn" source="ctaBtn.png" scaling="stretch" class="gwd-image-17wf"></gwd-image>
             <gwd-image id="ctaArrow" source="ctaArrow.png" scaling="stretch" class="gwd-image-vf9d" style="left: initial; right: 5%;"></gwd-image>
             <div class="gwd-div-1xvj" id="ctaContent">
-              <p class="gwd-div-1uvj" id="ctaLabel" gwd-min-font-size-px="6" data-gwd-fit-font-size="" style="transform: translateY(-50%); top: 50%; line-height: 90%; height: initial;">BUY GOURMET</p>
+              <p class="gwd-div-1uvj" id="ctaLabel" gwd-min-font-size-px="6" data-gwd-fit-font-size="" style="transform: translateY(-50%); line-height: 90%; height: initial; top: 6px;">BUY GOURMET</p>
             </div>
           </div>
           <gwd-taparea id="exitAd_hotspot" class="gwd-taparea-18l1"></gwd-taparea>
@@ -407,7 +407,14 @@ function initDynamic() {
 }
 
 function populate() {
-  
+  headlineLabel.innerHTML = defaultValues.frame1Headline;
+  product.setAttribute("source", defaultValues.frame1Image);
+  background1.setAttribute("source", defaultValues.frame1Background);
+  background2.setAttribute("source", defaultValues.frame2Background);
+  background3.setAttribute("source", defaultValues.frame3Background);
+  ctaLabel.innerHTML = defaultValues.ctaText;
+  offerLabel.innerHTML = defaultValues.frame1Subheadline;
+  tcLabel.innerHTML = defaultValues.frame3Subheadline;
 }</script>
   <script>function templateCSS(content, param){
     var getElems = document.getElementById("pagedeck").getElementsByTagName("*");

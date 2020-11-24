@@ -677,14 +677,14 @@
       templateCSS(stylingCSS, defaultValues.customVariable);
       var triggerType = defaultValues.trigger.toUpperCase();
       var triggerType2 = defaultValues.trigger2.toUpperCase();
-      headlineLabel.innerHTML = defaultValues.frame1Headline;
+      /*headlineLabel.innerHTML = defaultValues.frame1Headline;
       product.setAttribute("source", defaultValues.frame1Image);
       background1.setAttribute("source", defaultValues.frame1Background);
       background2.setAttribute("source", defaultValues.frame2Background);
       background3.setAttribute("source", defaultValues.frame3Background);
       ctaLabel.innerHTML = defaultValues.ctaText;
       offerLabel.innerHTML = defaultValues.frame1Subheadline;
-      tcLabel.innerHTML = defaultValues.frame3Subheadline;
+      tcLabel.innerHTML = defaultValues.frame3Subheadline;*/
       if (defaultValues.frame1Subheadline == "&nbsp;" || defaultValues.frame1Subheadline == "") {
         //offerContainer.style.display = "none";
         gradient.style.display = "none";
@@ -813,11 +813,11 @@
             <p class="gwd-span-1m93" id="offerLabel" style="line-height: 120%;">NOW £1.50</p>
             <p class="gwd-p-pxss" style="line-height: 120%;" id="tcLabel">*Subject to availability, while stocks last</p>
           </div>
-          <div class="gwd-div-1gwk gwd-gen-1r05gwdanimation" id="ctaContainer" data-gwd-tl-locked="">
+          <div class="gwd-div-1gwk gwd-gen-1r05gwdanimation" id="ctaContainer">
             <gwd-image id="ctaBtn" source="assets/ctaBtn.png" scaling="stretch" class="gwd-image-17wf"></gwd-image>
             <gwd-image id="ctaArrow" source="assets/ctaArrow.png" scaling="stretch" class="gwd-image-vf9d" style="left: initial; right: 5%;"></gwd-image>
             <div class="gwd-div-1xvj" id="ctaContent">
-              <p class="gwd-div-1uvj" id="ctaLabel" gwd-min-font-size-px="6" data-gwd-fit-font-size="" style="transform: translateY(-50%); top: 50%; line-height: 90%; height: initial;">BUY GOURMET</p>
+              <p class="gwd-div-1uvj" id="ctaLabel" gwd-min-font-size-px="6" data-gwd-fit-font-size="" style="transform: translateY(-50%); line-height: 90%; height: initial; top: 6px;">BUY GOURMET</p>
             </div>
           </div>
           <gwd-taparea id="exitAd_hotspot" class="gwd-taparea-18l1" data-gwd-tl-hidden="" data-gwd-tl-locked=""></gwd-taparea>

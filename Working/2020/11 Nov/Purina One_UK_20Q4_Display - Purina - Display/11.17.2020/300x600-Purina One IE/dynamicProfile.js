@@ -11,10 +11,10 @@ var defaultValues = {
    // FRAME 3
    frame3Headline:"START THE PURINA ONE 3 WEEK CHALLENGE",
    ctaImage:"BUY_NOW.png",
-   frame1Subheadline:"2 FOR €10",
+   //frame1Subheadline:"2 FOR €10",
    frame2Subheadline:"*Subject to availability, while stocks last",
    // trigger: "ASDA",
-   //frame1Subheadline: "",
+   frame1Subheadline: "",
    //frame2Subheadline: "",
    trigger:"ZOOPLUS",
    frame1Image:"product1.png",
@@ -75,5 +75,15 @@ function initDynamic() {
 }
 
 function populate() {
-  
+  headline1.innerHTML = defaultValues.frame1Headline;
+  headline2.innerHTML = defaultValues.frame2Headline;
+  headline3.innerHTML = defaultValues.frame3Headline;
+  pricetag.innerHTML = defaultValues.frame1Subheadline;
+  tcline.innerHTML = defaultValues.frame2Subheadline;
+  background1.setAttribute("source", defaultValues.frame1Background);
+  background2.setAttribute("source", defaultValues.frame2Background);
+  product1.setAttribute("source", defaultValues.frame1Image);
+  product2.setAttribute("source", defaultValues.frame2Image);
+  product3.setAttribute("source", defaultValues.frame3Image);
+  ctaBtn.setAttribute("source", defaultValues.ctaImage);
 }
