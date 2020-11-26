@@ -78,8 +78,6 @@ function initDynamic() {
 }
 
 function populate() {
-  var triggerType = defaultValues.trigger.toUpperCase();
-  var triggerType2 = defaultValues.trigger2.toUpperCase();
   headlineLabel.innerHTML = defaultValues.frame1Headline;
   product.setAttribute("source", defaultValues.frame1Image);
   background1.setAttribute("source", defaultValues.frame1Background);
