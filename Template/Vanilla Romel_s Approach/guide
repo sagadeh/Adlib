@@ -1,0 +1,18 @@
+How to use this template:
+
+1. add adlib-txt as a class to your dynamic text element.
+
+example
+<p id="frame1Headline_elem" class="adlib-txt"></p>
+
+
+2. add adlib-img as a class to your dynamic image element.
+
+example
+
+<img id="frame1Image_elem" class="adlib-img" src="retailer_adlib.png">
+
+3. add adSize as a class to images that are same with creative's size. 
+
+<img id="frame1Image_elem" class="adSize" src="your image.png">
+

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300, height=600">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://s0.2mdn.net/creatives/assets/3915781/adlib.css">
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+	<script src="https://s0.2mdn.net/creatives/assets/3915781/SplitText.min.js"></script>
+	<script src="https://s0.2mdn.net/creatives/assets/3915781/adlibUtils-v3.js"></script>
+	
+
+	<style type="text/css">
+
+		p{
+			margin: 0 auto;
+		}
+		
+		#main{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			border: 1px solid #000;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+
+		.adSize{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			object-fit: contain;
+		}
+
+		#bgColor_elem{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			background: #fff;
+		}
+
+		#frame1Headline_elem{
+			position: absolute;
+			font-family: 'Montserrat', sans-serif;
+			width: 270px;
+			height: 55px;
+			left: 15px;
+			top: 424px;
+			font-size: 24px;
+			line-height: 1em;
+			letter-spacing: -0.02em;
+			text-align: center;
+			color: #151026;
+			font-weight: 500;
+		}
+
+		#frame2Headline_elem{
+			position: absolute;
+			font-family: 'Montserrat', sans-serif;
+			width: 270px;
+			height: 55px;
+			left: 15px;
+			top: 399px;
+			font-size: 24px;
+			line-height: 1em;
+			letter-spacing: -0.02em;
+			text-align: center;
+			color: #151026;
+			font-weight: 500;
+		}
+
+		#frame2Subheadline_elem{
+			position: absolute;
+			font-family: 'Montserrat', sans-serif;
+			width: 247px;
+			height: 34px;
+			font-weight: 300;
+			font-size: 14px;
+			letter-spacing: -0.02em;
+			line-height: 1em;
+			text-align: center;
+			color: #151026;
+			left: 27px;
+			top: 454px;
+		}
+
+		#frame3Headline_elem{
+			position: absolute;
+			font-family: 'Montserrat', sans-serif;
+			width: 270px;
+			height: 55px;
+			left: 15px;
+			top: 399px;
+			font-size: 24px;
+			line-height: 1em;
+			letter-spacing: -0.02em;
+			text-align: center;
+			color: #151026;
+			font-weight: 500;
+		}
+
+		#frame3Subheadline_elem{
+			position: absolute;
+			font-family: 'Montserrat', sans-serif;
+			width: 247px;
+			height: 34px;
+			font-weight: 300;
+			font-size: 14px;
+			letter-spacing: -0.02em;
+			line-height: 1em;
+			text-align: center;
+			color: #151026;
+			left: 27px;
+			top: 454px;
+		}
+
+		#cta-wrapper{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#ctaText_elem{
+			position: absolute;
+			font-family: "Montserrat", sans-serif;
+			font-weight: bold;
+			color: #312C42;
+			min-width: 110px;
+			text-align: center;
+			background-color: #fff;
+			border: 3px solid #312C42;
+			border-radius: 18px;
+			top: 499px;
+			font-size: 12px;
+			/*left: 50%;
+			transform: translate3d(-50%, 0px, 0px);*/
+			padding: 8px 16px 9px;
+		}
+
+		#legal_elem{
+			position: absolute;
+			font-family: "Montserrat", sans-serif;
+			font-weight: bold;
+			font-size: 8px;
+			text-align: center;
+			color: #fff;
+			bottom: 7px;
+			margin-left: 15px;
+			width: auto;
+		}
+
+		#bgMask1_elem{
+			position: relative;
+			left: 168px;
+			top: 254px;
+			width: 132px;
+			height: 132px;
+			background: #FA4040;
+			border-radius: 50%;
+			color: #fff;
+		}
+
+
+
+		#frame3Headline2_elem{
+			font-family: "Montserrat", sans-serif;
+			font-size: 10px;
+			text-align: center;
+			font-weight: 600;
+			letter-spacing: -0.02em;
+			width: 98px;
+			height: auto;
+			bottom: 73px	;
+			position: absolute;
+			left: 50%;
+			transform: translate3d(-50%, 0px, 0px);
+			
+		}
+
+		#price_elem{
+			font-family: "Montserrat", sans-serif;
+			font-weight: 900;
+			font-size: 24px;
+			letter-spacing: -0.02em;
+			text-align: center;
+			color: #fff;
+			/* position: absolute; */
+			width: 100%;
+			padding-top: 60px;
+			height: auto;
+		}
+
+		#frame3Headline3_elem{
+			font-family: "Montserrat", sans-serif;
+			font-weight: normal;
+			font-size: 7px;
+			letter-spacing: -0.02em;
+			text-align: center;
+			color: #fff;
+			height: auto;
+			width: 100%;
+
+
+		}
+
+		#taparea{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			cursor: pointer;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<div id="main">
+		<img id="frame1Background_elem" class="adSize adlib-img" src="">
+		<img id="packshot1_elem" class="adSize adlib-img" src="">
+		<img id="logo_elem" class="adSize adlib-img" src="">
+		<img id="baseImage_elem" class="adSize adlib-img" src="">
+		<div id="bgColor_elem"></div>
+		<p id="frame1Headline_elem" class="adlib-txt"></p>
+		<p id="frame2Headline_elem" class="adlib-txt"></p>
+		<p id="frame2Subheadline_elem" class="adlib-txt"></p>
+		<p id="frame3Headline_elem" class="adlib-txt"></p>
+		<p id="frame3Subheadline_elem" class="adlib-txt"></p>
+		<img id="frame1Image_elem" class="adSize adlib-img" src="retailer_adlib.png">
+		<div id="bgMask1_elem">
+			<div id="frame3Headline2_elem" class="adlib-txt"></div>
+			<div id="price_elem" class="adlib-txt"></div>
+			<div id="frame3Headline3_elem" class="adlib-txt"></div>
+		</div>
+		<div id="cta-wrapper">
+			<p id="ctaText_elem" class="adlib-txt"></p>
+		</div>
+		<p id="legal_elem" class="adlib-txt"></p>
+		<div id="taparea"></div>
+	</div>
+
+
+
+	<script>
+		"use strict"
+
+
+		var defaultValues = {
+			logo:"curology_logo.png",
+			baseImage:"rating_5star.png",
+			frame1Background:"product-bg.png",
+			packshot1:"curology-3in1-set.png",
+			frame1Image:"retailer_adlib.png",
+			bgColor:"#ffffff",
+			frame1Headline:"LOREM IPSUM DOLOR SIT AMET AS",
+			legal:"Legal stuff applies",
+			frame2Headline:"LOREM IPSUM DOLOR SIT AMET AS",
+			frame2Subheadline:"Aenean imperdiet. Etiam ultricies nisi vel auguea elis pede.",
+			frame3Headline:"LOREM IPSUM DOLOR SIT AMET AS",
+			frame3Subheadline:"Aenean imperdiet. Etiam ultricies nisi vel auguea elis pede.",
+			ctaText:"Sed turpis nequ",
+			bgMask1:"#FA4040",
+			frame3Headline2:"AMET VEL AUGUEA",
+			price:"$XX.XX",
+			frame3Headline3:"IN ENIM JUSTO, RHONCU UT.",
+			landingPage:"https.yourUrl.com"
+		};
+
+		function invocationCode() {
+			// paste studio Invocation code from studio profile should be here
+			Enabler.setProfileId(10590215);
+		    var devDynamicContent = {};
+
+		    devDynamicContent.romeltest_feed_300x600 = [{}];
+		    devDynamicContent.romeltest_feed_300x600[0]._id = 0;
+		    devDynamicContent.romeltest_feed_300x600[0].Unique_ID = 1;
+		    devDynamicContent.romeltest_feed_300x600[0].Reporting_Label = "Turtle";
+		    devDynamicContent.romeltest_feed_300x600[0].logo = {};
+		    devDynamicContent.romeltest_feed_300x600[0].logo.Type = "file";
+		    devDynamicContent.romeltest_feed_300x600[0].logo.Url = "https://s0.2mdn.net/ads/richmedia/studio/pv2/82473114/dirty/curology_logo.png";
+		    devDynamicContent.romeltest_feed_300x600[0].baseImage = {};
+		    devDynamicContent.romeltest_feed_300x600[0].baseImage.Type = "file";
+		    devDynamicContent.romeltest_feed_300x600[0].baseImage.Url = "https://s0.2mdn.net/ads/richmedia/studio/60001657/60001657_20201202225530405_rating_4star.png";
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Background = {};
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Background.Type = "file";
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Background.Url = "https://s0.2mdn.net/ads/richmedia/studio/60001657/60001657_20201202225758730_product-bg2.png";
+		    devDynamicContent.romeltest_feed_300x600[0].packshot1 = {};
+		    devDynamicContent.romeltest_feed_300x600[0].packshot1.Type = "file";
+		    devDynamicContent.romeltest_feed_300x600[0].packshot1.Url = "https://s0.2mdn.net/ads/richmedia/studio/pv2/82473021/dirty/curology-3in1-set.png";
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Image = {};
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Image.Type = "file";
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/pv2/82473087/dirty/retailer_adlib.png";
+		    devDynamicContent.romeltest_feed_300x600[0].bgColor = "#C0C0C0";
+		    devDynamicContent.romeltest_feed_300x600[0].frame1Headline = "SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS";
+		    devDynamicContent.romeltest_feed_300x600[0].legal = "Legal stuff ";
+		    devDynamicContent.romeltest_feed_300x600[0].frame2Headline = "ACCUSANTIUM DOLOREMQUE LAUDANTIUM, TOT";
+		    devDynamicContent.romeltest_feed_300x600[0].frame2Subheadline = "rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi";
+		    devDynamicContent.romeltest_feed_300x600[0].frame3Headline = " VITAE DICTA SUNT EXPLICABO. NEMO";
+		    devDynamicContent.romeltest_feed_300x600[0].frame3Subheadline = "voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed";
+		    devDynamicContent.romeltest_feed_300x600[0].ctaText = "Learn more";
+		    devDynamicContent.romeltest_feed_300x600[0].bgMask1 = "#EE82EE";
+		    devDynamicContent.romeltest_feed_300x600[0].frame3Headline2 = "FLASH SALE";
+		    devDynamicContent.romeltest_feed_300x600[0].price = "$30.46";
+		    devDynamicContent.romeltest_feed_300x600[0].frame3Headline3 = "HURRY UP NOW!";
+		    devDynamicContent.romeltest_feed_300x600[0].landingPage = "https:\/\/www.google.com";
+		    devDynamicContent.romeltest_feed_300x600[0].Default = false;
+		    devDynamicContent.romeltest_feed_300x600[0].Active = true;
+		    Enabler.setDevDynamicContent(devDynamicContent);
+		}
+
+
+		function initDynamic() {
+
+			try{!Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {console.log(defaultValues[platform]),defaultValues[platform];})):(
+				invocationCode(),
+				Object.keys(defaultValues).forEach((studio) => {
+					if (imgKeywordArr.some(word => studio.indexOf(word) > -1) || vidKeywordArr.some(word => studio.indexOf(word) > -1) || audioKeywordArr.some(word => studio.indexOf(word) > -1) || landingPageArr.some(word => studio.indexOf(word) > -1)) {
+						try{
+		    				//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+		    				defaultValues[studio] = dynamicContent.romeltest_feed_300x600[0][studio].Url; 
+		    			}catch(Error){}	
+		    		}else{
+			    			//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+			    			defaultValues[studio] = dynamicContent.romeltest_feed_300x600[0][studio];
+			    		}
+			    	})
+				);}catch(Error){}	
+		}
+
+
+		function populate() {
+			console.log("populate")
+
+			//automated assignment of defaultvalues to img element
+			document.querySelectorAll(".adlib-img").forEach(img => {
+				var dvImgs = defaultValues[img.id.replace(/_elem/g, "")];
+				document.getElementById(img.id).src = dvImgs;
+			});
+
+		    //automated assignment of defaultvalues to text element
+		    document.querySelectorAll(".adlib-txt").forEach(txt => {
+		    	var dvTxts = defaultValues[txt.id.replace(/_elem/g, "")];
+		    	document.getElementById(txt.id).innerHTML = dvTxts;
+		    });
+
+		    //manual assignment of other default values susch as background color, etc.
+		    document.querySelector("#bgColor_elem").style.backgroundColor = defaultValues.bgColor; 
+		    document.querySelector("#bgMask1_elem").style.backgroundColor = defaultValues.bgMask1;  
+
+		}
+
+
+		window.gwd = window.gwd || {};
+
+        //Tool Play and Pause
+        gwd.auto_PauseBtnClick = function (event) {
+        	gsap.globalTimeline.pause(); 
+        	console.log("Pause Timeline");
+        };
+        gwd.auto_PlayBtnClick = function (event) {
+        	gsap.globalTimeline.resume(); 
+        	console.log("Play Timeline");
+        };
+
+
+        //* * * * * * * * ALL ANIMATION RELATED CODE SHOULD START HERE * * * * * * * 
+
+        // set initial position of your elements here
+        gsap.set("#main", {display: "none"});
+        gsap.set("#bgColor_elem", {y: -600}); 
+        gsap.set(["#logo_elem","#packshot1_elem", "#baseImage_elem", "#frame1Image_elem", "#ctaText_elem", "#legal_elem"], {opacity: 0}); 
+        gsap.set(["#frame1Headline_elem", "#frame2Headline_elem", "#frame2Subheadline_elem", "#frame3Headline_elem", "#frame3Subheadline_elem"], {y: 34, opacity: 0}); 
+        gsap.set("#bgMask1_elem", {scale: 0}); 
+
+
+        gsap.globalTimeline.pause();
+
+
+        function initAnim() {
+		    // templateCSS(defaultValues.cssAttrib); 
+		    adlibStart();
+		    populate();
+		    setTimeout(deployAnimation, 1000);
+		}
+
+		function deployAnimation() {
+			console.log("animation initialized")
+
+			document.querySelector("#taparea").addEventListener("click", function(){
+				Enabler.exitOverride("Your Exit Name here", defaultValues.landingPage);
+			});
+
+			gsap.globalTimeline.resume();
+
+            // animation start here after global resume.
+            gsap.set("#main", {display: "block"}); 
+
+            var tl = gsap.timeline();
+
+            //frame1 animation
+            tl.to("#bgColor_elem", {duration: 0.7, ease: "quad.inOut", y: -24})
+            .to(["#logo_elem","#packshot1_elem", "#baseImage_elem"], {duration: 0.5, ease: "quad.inOut", opacity: 1})
+            .to("#bgColor_elem", {duration: 0.5, ease: "quad.inOut", height: 224}, "-=0.5")
+            .to("#frame1Headline_elem", {duration: 0.5, ease: "quad.inOut", y: 0, opacity: 1}, "-=0.3")
+            .to("#frame1Image_elem", {duration: 0.5, ease: "quad.inOut", opacity: 1}, "-=0.3")
+            .to("#legal_elem", {duration: 0.5, ease: "quad.inOut", opacity: 1, onComplete: takeScreenshot}, "-=0.5")
+
+            //frame2 animation
+            .to("#frame1Headline_elem", {duration: 0.5, ease: "quad.inOut", opacity: 0}, "+=2")
+            .to("#frame2Headline_elem", {duration: 0.5, ease: "quad.inOut", y: 0, opacity: 1})
+            .to("#frame2Subheadline_elem", {duration: 0.5, ease: "quad.inOut", y: 0, opacity: 1, onComplete: takeScreenshot}, "-=0.4")
+
+            //frame3 animation
+            .to(["#frame2Headline_elem", "#frame2Subheadline_elem"], {duration: 0.5, ease: "quad.inOut", opacity: 0}, "+=2")
+            .to("#frame3Headline_elem", {duration: 0.5, ease: "quad.inOut", y: 0, opacity: 1})
+            .to("#frame3Subheadline_elem", {duration: 0.5, ease: "quad.inOut", y: 0, opacity: 1}, "-=0.4")
+            .to("#ctaText_elem", {duration: 0.5, ease: "quad.inOut", opacity: 1})
+            .to("#bgMask1_elem", {duration: 0.7, ease: "elastic.out(1, 0.75)", scale: 1, onComplete: adlibEnd});
+            
+
+        }
+
+
+        gsap.ticker.fps(30);
+
+
+        window.onload = function () {
+        	if (Enabler.isInitialized()) {
+        		enablerInitHandler();
+        	} else {
+        		Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        	}
+        }
+
+        function enablerInitHandler() {
+        	initDynamic();
+        	initAnim();
+
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+
+        }
+
+
+    </script>
+
+</body>
+</html>
+
