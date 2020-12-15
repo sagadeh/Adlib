@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300, height=600">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://s0.2mdn.net/creatives/assets/3915781/adlib.css">
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+	<script src="https://s0.2mdn.net/creatives/assets/3915781/SplitText.min.js"></script>
+	<script src="https://s0.2mdn.net/creatives/assets/3915781/adlibUtils-v3.js"></script>
+	
+
+	<style type="text/css">
+
+		p{
+			margin: 0 auto;
+		}
+
+		@font-face{
+			font-family: HelveticaNeue-Bold;
+			src: url("HelveticaNeue-Bold.woff");
+		}
+		@font-face{
+			font-family: HelveticaNeue-Light;
+			src: url("HelveticaNeue-Light.woff");
+		}
+		@font-face{
+			font-family: HelveticaNeueLTStd-Cn;
+			src: url("HelveticaNeueLTStd-Cn.woff");
+		}
+
+		#container{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			border: 1px solid #000;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		
+		#layout1{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.adSize{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
+
+		
+		#layout1_pattern{
+			position: absolute;
+			width: 1134px;
+			height: 1134px;
+			left: -67px;
+			top: -574px;
+
+		}
+
+		#layout1_logo{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		#layout1_fr1Copy_wrapper , #layout1_fr2Copy_wrapper , #layout1_fr3Copy_wrapper , #layout1_legal_wrapper{
+			position: absolute;
+			width: 250px;
+			height: 221px;
+			top: 100px;
+			left: 25px;
+			
+		}
+
+		#layout1_fr1Copy , #layout1_fr2Copy , #layout1_fr3Copy , #layout1_legal{
+			position: absolute;
+			font-family: "HelveticaNeue-Light";
+			width: auto;
+			height: auto;
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 1.150em;
+			text-align: center;
+			color: #fff;
+		}
+
+		#layout1_packshot1 , #layout1_packshot2 , #layout1_packshot3, #layout1_packshot4{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		#layout1_cta_wrapper{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+		}
+
+		#layout1_cta{
+			position: absolute;
+			top: 544px;
+			color: #fff;
+			font-size: 14px;
+			font-family: HelveticaNeueLTStd-Cn;
+			border: 2px solid #fff;
+			border-radius: 7px;
+			padding: 6px 18px;
+			min-width: 100px;
+			text-align: center;
+			background: rgb(119,179,43);
+			background: linear-gradient(0deg, rgba(119,179,43,1) 0%, rgba(72,155,54,1) 100%);
+		}
+
+
+		#taparea{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<!-- layout #1 -->
+		<div id="layout1">
+			<img id="layout1_fr1Background" adlib-image="frame1Background" class="adSize" src="">
+			<img id="layout1_pattern" src="pattern.png">
+			<img id="layout1_logo" adlib-image="logo" class="adSize" src="">
+			<div id="layout1_fr1Copy_wrapper">
+				<p id="layout1_fr1Copy" adlib-text="frame1Headline"></p>
+			</div>
+			<img id="layout1_packshot1"  adlib-image="packshot1" class="adSize" src="">
+			<div id="layout1_cta_wrapper">
+				<p id="layout1_cta" adlib-text="ctaText"></p>
+			</div>
+			<div id="layout1_fr2Copy_wrapper">
+				<p id="layout1_fr2Copy" adlib-text="frame2Headline"></p>
+			</div>
+			<img id="layout1_packshot2" adlib-image="packshot2" class="adSize" src="">
+			<div id="layout1_fr3Copy_wrapper">
+				<p id="layout1_fr3Copy" adlib-text="frame3Headline"></p>
+			</div>
+			<img id="layout1_packshot3" adlib-image="packshot3" class="adSize" src="">
+			<div id="layout1_legal_wrapper">
+				<p id="layout1_legal" adlib-text="legal"></p>
+			</div>
+			<img id="layout1_packshot4" adlib-image="packshot4" class="adSize" src=""> 
+		</div>
+		<!-- end -->
+
+		<!-- layout #1 -->
+		<!-- layout #2 starts here -->
+		<!-- end -->
+
+
+
+		<div id="taparea"></div>
+		
+	</div>
+	
+
+
+	<script>
+		"use strict"
+
+		var defaultValues = {
+			cssAttrib:"<--custom css here->",
+			frame1Background:"bg_full_gradient.png",
+			logo:"logo_white.png",
+			frame1Headline:"Lorem ipsum dolor sit amet, consectetuer adipisc",
+			frame2Headline:"Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Sed fringi.",
+			frame3Headline:"Aenean imperdiet. Etiam ultricies nisi vel augue. Curabiturs",
+			packshot1:"packshot1.png",
+			packshot2:"packshot1.png",
+			packshot3:"packshot1.png",
+			packshot4:"tillverkning.png",
+			ctaText:"Täältä voi ostaa",
+			legal:"Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo.",
+			customVariable:"?utm_medium=display-banner&utm_source=dynamicSiteNameUTM&utm_term=dynamicPlacementIdUTM&utm_campaign=SE_Nicorette_2020_Display-H2",
+			landingPage:"https.yourUrl.com"
+		};
+
+		function invocationCode() {
+			// paste studio Invocation code from studio profile should be here
+		}
+
+
+		function initDynamic() {
+
+			try{!Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {defaultValues[platform];})):(
+				invocationCode(),
+				Object.keys(defaultValues).forEach((studio) => {
+					if (imgKeywordArr.some(word => studio.indexOf(word) > -1) || vidKeywordArr.some(word => studio.indexOf(word) > -1) || audioKeywordArr.some(word => studio.indexOf(word) > -1) || landingPageArr.some(word => studio.indexOf(word) > -1)) {
+						try{
+		    				//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+		    				defaultValues[studio]  = dynamicContent.romeltest_feed_300x600[0][studio].Url; 
+		    			}catch(Error){}	
+		    		}else{
+			    			//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+			    			defaultValues[studio] = dynamicContent.romeltest_feed_300x600[0][studio];
+			    		}
+			    	})
+				);}catch(Error){}	
+		}
+
+
+		function populate() {
+			
+			document.querySelectorAll('body *').forEach(val => {
+				if(val.getAttribute('adlib-text') != null) {
+					document.querySelector('#'+val.id).innerHTML = defaultValues[val.getAttribute('adlib-text')]
+				}
+				if(val.getAttribute('adlib-image') != null) {
+					document.querySelector('#'+val.id).src = defaultValues[val.getAttribute('adlib-image')]
+				}
+			})
+
+
+		}
+
+		window.gwd = window.gwd || {};
+        //Tool Play and Pause
+        gwd.auto_PauseBtnClick = function (event) {
+        	gsap.globalTimeline.pause(); 
+        	console.log("Pause Timeline");
+        };
+        gwd.auto_PlayBtnClick = function (event) {
+        	gsap.globalTimeline.resume(); 
+        	console.log("Play Timeline");
+        };
+
+        //* * * * * * * * ALL ANIMATION RELATED CODE SHOULD START HERE * * * * * * * 
+
+        // set initial position of your elements here
+        var tl;
+        gsap.set("#layout1", {display: "none"});
+        gsap.set(["#layout1_fr1Copy_wrapper", "#layout1_fr2Copy_wrapper", "#layout1_fr3Copy_wrapper"], {opacity:0, y:20});
+        gsap.set("#layout1_legal_wrapper", {opacity:0, y:10});
+        gsap.set(["#layout1_packshot1", "#layout1_packshot2", "#layout1_packshot3", "#layout1_packshot4", "#layout1_cta_wrapper", "#layout1_logo"], {opacity:0}); 
+        gsap.set("#layout1_pattern", {x: 370, y: 0});
+
+
+
+        gsap.globalTimeline.pause();
+
+
+        function initAnim() {
+        	templateCSS(defaultValues.cssAttrib); 
+        	adlibStart();
+        	populate();
+        	setTimeout(deployAnimation, 1000);
+        }
+
+        function deployAnimation() {
+        	document.querySelector("#taparea").addEventListener("click", function(){
+        		Enabler.exitOverride("background_exit", defaultValues.landingPage + utmParser(defaultValues.customVariable));
+        	});
+
+        	gsap.globalTimeline.resume();
+
+            // animation start here after global resume.
+            gsap.set("#layout1", {display: "block", onComplete:txtResizer});
+
+            function frame1Animation(){
+            	gsap.to("#layout1_logo",{duration:1.5, ease:"power2.out", opacity:1});
+            	gsap.to("#layout1_fr1Copy_wrapper",{duration:0.8, ease:"power2.out", opacity:1, y:0, delay: 0.3, onComplete:patternAnim});
+            	gsap.to("#layout1_packshot1",{duration: 2, ease:"power2.out", opacity:1, delay: 0.5});
+            	gsap.to("#layout1_cta_wrapper",{duration:1.5, ease:"power2.out", opacity:1,delay: 0.7, onComplete: function(){
+            		takeScreenshot();
+            		gsap.delayedCall(2, frame2Animation);  
+            	}})
+            }
+
+            function frame2Animation(){
+            	gsap.to("#layout1_fr1Copy_wrapper",{duration:0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_packshot1",{duration: 0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_fr2Copy_wrapper",{duration: 0.8, ease:"power2.out", opacity:1, y:0, delay: 0.3})
+            	gsap.to("#layout1_packshot2",{duration: 2, ease:"power2.out", opacity:1, delay: 0.5, onComplete: function(){
+            		takeScreenshot();
+            		gsap.delayedCall(2, frame3Animation);
+            	}})
+            }
+
+            function frame3Animation(){
+            	gsap.to("#layout1_fr2Copy_wrapper",{duration:0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_packshot2",{duration: 0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_fr3Copy_wrapper",{duration: 0.8, ease:"power2.out", opacity:1, y:0, delay: 0.3})
+            	gsap.to("#layout1_packshot3",{duration: 2, ease:"power2.out", opacity:1, delay: 0.5, onComplete: function(){
+            		takeScreenshot();
+            		gsap.delayedCall(2, frame4Animation);
+            	}})
+            }
+
+            function frame4Animation(){
+            	gsap.to("#layout1_fr3Copy_wrapper",{duration:0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_packshot3",{duration: 0.5, ease:"power2.out", opacity:0})
+            	gsap.to("#layout1_legal_wrapper",{duration: 0.8, ease:"power2.out", opacity:1, y:0, delay: 0.3})
+            	gsap.to("#layout1_packshot4",{duration: 2, ease:"power2.out", opacity:1, delay: 0.5, onComplete: function(){
+            		tl.pause();
+            		adlibEnd();
+            	}})
+            }
+
+            function patternAnim() {
+            	tl = gsap.timeline();
+
+            	tl.to("#layout1_pattern",{duration:3.5, ease:"none", x: 309, y: 30})
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: 248, y: -30}, "-=2")
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: 187, y: 30}, "-=2")
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: 126, y: -30}, "-=2")
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: 65, y: 30}, "-=2")
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: 4, y: -30}, "-=2")
+            	.to("#layout1_pattern",{duration:3.5, ease:"none", x: -57, y: 30}, "-=2");
+
+
+
+            }
+
+            frame1Animation();
+
+        }
+
+        function txtResizer() {
+        
+        	autoFontSize("layout1_fr1Copy_wrapper", "layout1_fr1Copy", 20, 8);
+        	autoFontSize("layout1_fr2Copy_wrapper", "layout1_fr2Copy", 20, 8);
+        	autoFontSize("layout1_fr3Copy_wrapper", "layout1_fr3Copy", 20, 8);
+        	autoFontSize("layout1_legal_wrapper", "layout1_legal", 20, 8);
+        }
+
+
+        gsap.ticker.fps(30);
+
+
+        window.onload = function () {
+        	if (Enabler.isInitialized()) {
+        		enablerInitHandler();
+        	} else {
+        		Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        	}
+        }
+
+        function enablerInitHandler() {
+        	initDynamic();
+        	initAnim();
+
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+
+        }
+
+
+    </script>
+
+</body>
+</html>
+
