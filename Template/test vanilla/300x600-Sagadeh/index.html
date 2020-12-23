@@ -273,7 +273,7 @@
             Enabler.setDevDynamicContent(devDynamicContent);
 		}
 
-		function initDynamic() {
+		function dynamic() {
 			try{!Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {console.log(defaultValues[platform]),defaultValues[platform];})):(
 				invocationCode(),
 				Object.keys(defaultValues).forEach((studio) => {
@@ -293,13 +293,13 @@
 		function populate() {
             document.querySelectorAll('body *').forEach(val => {
 				if(val.getAttribute('adlib-text') != null) {
-					document.querySelector('#'+val.id).innerHTML = defaultValues[val.getAttribute('adlib-text')]
+					document.querySelector('#'+val.id).innerHTML = defaultValues[val.getAttribute('adlib-text')];
 				}
 				if(val.getAttribute('adlib-image') != null) {
-					document.querySelector('#'+val.id).src = defaultValues[val.getAttribute('adlib-image')]
+					document.querySelector('#'+val.id).src = defaultValues[val.getAttribute('adlib-image')];
 				}
                 if(val.getAttribute('adlib-style') != null) {
-					document.querySelector('#'+val.id).style.backgroundColor = defaultValues[val.getAttribute('adlib-style')]
+					document.querySelector('#'+val.id).style.backgroundColor = defaultValues[val.getAttribute('adlib-style')];
 				}
             })
 		}
@@ -323,6 +323,7 @@
 
         function init() {
 		    // templateCSS(defaultValues.cssAttrib); 
+            dynamic();
 		    adlibStart();
 		    populate();
             startAnimation();
@@ -370,7 +371,6 @@
         }
 
         function enablerInitHandler() {
-        	initDynamic();
         	init();
             // this is from engineering team. this is strictly required
             var event = new CustomEvent("adinitialized");

@@ -1,0 +1,92 @@
+console.log("studio invocation script");
+function studioInvocation() {
+    Enabler.setProfileId(10584507);
+    var devDynamicContent = {};
+
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed = [{}];
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0]._id = 0;
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].id = 1;
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].Reporting_Label = "5fbe457164c783000646ac25-5fc1182f64c783000648dda5_39";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].Active = true;
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].Weights = 1;
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].Scoring_status = "Unscored";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].animationType = "frame1";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].logo = {};
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].logo.Url = "https://cdn.ad-lib.io/v2/partners/5c5578a2e50cb95de10c079e/assets/concepts/5f0d63cfef0c6b00062a5bfe/templates/5f71560c9b5b7200068850c1/content/specsavers_980x240.png";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].baseImage = {};
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].baseImage.Url = "https://cdn.ad-lib.io/v3/partners/5c5578a2e50cb95de10c079e/assets/singleFiles/5fc1271964c7830006494a7a/original/Specs_EcommG_970x250.png";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline = "Op zoek naar een nieuwe bril?";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline2 = "Koop online en krijg hem thuisbezorgd";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline3 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline = "Koop ze wanneer het jou uitkomt";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline2 = "En krijg ze thuisbezorg";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline3 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline2 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline3 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].currency = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Image = {};
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Image.Url = "https://cdn.ad-lib.io/v2/partners/5c5578a2e50cb95de10c079e/assets/single-files/image/png/152d175dde739a79e9397f1373ad1fa6/blank.png";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaText = "Koop nu";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaText2 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaColor1 = "Racing";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaColor2 = "N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize1 = "28, 22, 0";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize2 = "28, 22, 0";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize3 = "0, 0, 0";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor1 = "Carbon, Carbon, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor2 = "Carbon, Carbon, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor3 = "N\/A, N\/A, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable = "Bold, Medium, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable2 = "Bold, Medium, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable3 = "N\/A, N\/A, N\/A";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgMask1 = "White";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgMask2 = "Racing";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgColor = "White";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].cssAttrib = "#frame1-headline2, #frame2-headline2{margin-top:5px;}";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].landingPage = {};
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].landingPage.Url = "https://www.specsavers.nl/brillen";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].startDate = "";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].endDate = "";
+    devDynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].readableLabel = "Non-targeted";
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+
+    
+  defaultValues.animationType = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].animationType;
+  defaultValues.logo = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].logo.Url;
+  defaultValues.frame1Headline = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline;
+  defaultValues.frame1Headline2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline2;
+  defaultValues.frame1Headline3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Headline3;
+  defaultValues.frame2Headline = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline;
+  defaultValues.frame2Headline2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline2;
+  defaultValues.frame2Headline3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame2Headline3;
+  defaultValues.frame3Headline = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline;
+  defaultValues.frame3Headline2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline2;
+  defaultValues.frame3Headline3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame3Headline3;
+  defaultValues.baseImage = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].baseImage.Url;
+  defaultValues.frame1Image = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Image.Url;
+  //defaultValues.frame1Background = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].frame1Background.Url;
+  defaultValues.currency = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].currency;
+  defaultValues.ctaText = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaText;
+  defaultValues.ctaText2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaText2;
+  defaultValues.ctaColor1 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaColor1;
+  defaultValues.ctaColor2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].ctaColor2;
+  defaultValues.fontSize1 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize1;
+  defaultValues.fontSize2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize2;
+  defaultValues.fontSize3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontSize3;
+  defaultValues.fontColor1 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor1;
+  defaultValues.fontColor2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor2;
+  defaultValues.fontColor3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].fontColor3;
+  defaultValues.customVariable = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable;
+  defaultValues.customVariable2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable2;
+  defaultValues.customVariable3 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].customVariable3;
+  defaultValues.bgMask1 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgMask1;
+  defaultValues.bgMask2 = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgMask2;
+  defaultValues.cssAttrib = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].cssAttrib;
+  defaultValues.bgColor = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].bgColor;
+  defaultValues.landingPage = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].landingPage.Url;
+/*defaultValues.startDate = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0]
+  defaultValues.endDate = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0] */
+  defaultValues.readableLabel = dynamicContent.NL_01_01_0_Other_Specs_no_offer_AO_RTG_Ecomm_glasses_AdLib_Feed[0].readableLabel;
+}
