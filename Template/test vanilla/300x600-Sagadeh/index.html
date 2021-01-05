@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="ad.size" content="width=300, height=600">
+	<meta name="ad.size" id="adSize">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
@@ -33,14 +33,14 @@
 			box-sizing: border-box;
 			overflow: hidden;
 		}
-        .adSize{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 300px;
-			height: 600px;
-			object-fit: contain;
-		}
+        .img-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
         .aligned-v-h-centered {
             display: flex;
             justify-content: center;
@@ -49,9 +49,6 @@
         #frame1Headline-wrapper {
             position: absolute;
             margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             perspective: 1000px;
             top: 297px;
             left: 0;
@@ -73,9 +70,6 @@
         }
         #frame2Headline-wrapper {
             position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             top: 18px;
             left: 25px;
             width: 237px;
@@ -184,20 +178,20 @@
 	</style>
 </head>
 <body>
-	<div id="main" class="adSize" adlib-style="bgColor">
+	<div id="main" adlib-style="bgColor">
         <!--FRAME 1-->
-        <div id=frame1Image-wrapper class="adSize">
-            <img id="frame1Image" src="" class="adSize" adlib-image="frame1Image">
+        <div id=frame1Image-wrapper class="img-fill">
+            <img id="frame1Image" src="" class="img-fill" adlib-image="frame1Image">
         </div>
         <div id=frame1Headline-wrapper>
             <div id="frame1Headline" adlib-text="frame1Headline"></div>
         </div>
         <!--FRAME 2-->
-        <div id=frame2Image-wrapper class="adSize">
-            <img id="frame2Image" src="" class="adSize" adlib-image="frame2Image">
+        <div id=frame2Image-wrapper class="img-fill">
+            <img id="frame2Image" src="" class="img-fill" adlib-image="frame2Image">
         </div>
-        <div id=frame2Image2-wrapper class="adSize">
-            <img id="frame2Image2" src="" class="adSize" adlib-image="frame2Image2">
+        <div id=frame2Image2-wrapper class="img-fill">
+            <img id="frame2Image2" src="" class="img-fill" adlib-image="frame2Image2">
         </div>
         <div id=frame2Headline-wrapper>
             <div id="frame2Headline" adlib-text="frame2Headline"></div>
@@ -274,21 +268,25 @@
 		}
 
 		function dynamic() {
-			try{!Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {console.log(defaultValues[platform]),defaultValues[platform];})):(
-				invocationCode(),
-				Object.keys(defaultValues).forEach((studio) => {
-					if (imgKeywordArr.some(word => studio.indexOf(word) > -1) || vidKeywordArr.some(word => studio.indexOf(word) > -1) || audioKeywordArr.some(word => studio.indexOf(word) > -1) || landingPageArr.some(word => studio.indexOf(word) > -1)) {
-						try{
-		    				//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
-		    				defaultValues[studio] = dynamicContent.Paolo_Test_Campaign_Virgin_Decision_Tree__Vanilla_Template_AdLib_Feed[0][studio].Url; 
-		    			}catch(Error){}	
-		    		}else{
-			    			//replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
-			    			defaultValues[studio] = dynamicContent.Paolo_Test_Campaign_Virgin_Decision_Tree__Vanilla_Template_AdLib_Feed[0][studio];
-			    		}
-			    	})
-				);}catch(Error){}	
-		}
+            try {
+                !Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {
+                    console.log(defaultValues[platform]), defaultValues[platform];
+                })) : (
+                    invocationCode(),
+                    Object.keys(defaultValues).forEach((studio) => {
+                        if (imgKeywordArr.some(word => studio.indexOf(word) > -1) || vidKeywordArr.some(word => studio.indexOf(word) > -1) || audioKeywordArr.some(word => studio.indexOf(word) > -1) || landingPageArr.some(word => studio.indexOf(word) > -1)) {
+                            try {
+                                //replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+                                defaultValues[studio] = dynamicContent.Paolo_Test_Campaign_Virgin_Decision_Tree__Vanilla_Template_AdLib_Feed[0][studio].Url;
+                            } catch (Error) {}
+                        } else {
+                            //replace 'your_feedName_here' with an actual feed | e.g Clinique_Remarketing_Q1_Remarketing_Q1_Refresh
+                            defaultValues[studio] = dynamicContent.Paolo_Test_Campaign_Virgin_Decision_Tree__Vanilla_Template_AdLib_Feed[0][studio];
+                        }
+                    })
+                );
+            } catch (Error) {}
+        }
 
 		function populate() {
             document.querySelectorAll('body *').forEach(val => {
@@ -322,8 +320,9 @@
         gsap.globalTimeline.pause();
 
         function init() {
-		    // templateCSS(defaultValues.cssAttrib); 
             dynamic();
+		    templateCSS(defaultValues.cssAttrib); 
+            adlib.creativeSize(300,600); //just replace this with the creative size
 		    adlibStart();
 		    populate();
             startAnimation();
@@ -377,6 +376,15 @@
             document.dispatchEvent(event);
 
         }
+        
+        var adlib = {
+			creativeSize: function(cWidth,cHeight) {
+				document.querySelector("#main").style.width = cWidth +"px";
+				document.querySelector("#main").style.height = cHeight +"px";
+				document. getElementById("adSize").setAttribute("content", "width="+cWidth+", "+ "height="+cHeight+"");
+				//setTimeout(function(){populate();initAnim();},100);	
+			}
+		}
         
     </script>
 </body>
