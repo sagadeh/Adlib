@@ -13,7 +13,7 @@
 		p{
 			margin: 0 auto;
 		}
-        @font-face {
+        /*@font-face {
           font-family: VMCircularNatter-Medium;
           src: url("VMCircularNatter-Medium.woff") format("woff");
         }
@@ -24,7 +24,7 @@
         @font-face {
           font-family: VMCircularYell-Black;
           src: url("VMCircularYell-Black.woff") format("woff");
-        }
+        }*/
 		#main {
 			position: absolute;
 			top: 0;
@@ -270,7 +270,7 @@
 		function dynamic() {
             try {
                 !Enabler.isServingInLiveEnvironment() ? (Object.keys(defaultValues).forEach((platform) => {
-                    console.log(defaultValues[platform]), defaultValues[platform];
+                    //console.log(defaultValues[platform]), defaultValues[platform];
                 })) : (
                     invocationCode(),
                     Object.keys(defaultValues).forEach((studio) => {
@@ -290,15 +290,9 @@
 
 		function populate() {
             document.querySelectorAll('body *').forEach(val => {
-				if(val.getAttribute('adlib-text') != null) {
-					document.querySelector('#'+val.id).innerHTML = defaultValues[val.getAttribute('adlib-text')];
-				}
-				if(val.getAttribute('adlib-image') != null) {
-					document.querySelector('#'+val.id).src = defaultValues[val.getAttribute('adlib-image')];
-				}
-                if(val.getAttribute('adlib-style') != null) {
-					document.querySelector('#'+val.id).style.backgroundColor = defaultValues[val.getAttribute('adlib-style')];
-				}
+				if(val.getAttribute('adlib-text') != null) document.querySelector('#'+val.id).innerHTML = defaultValues[val.getAttribute('adlib-text')];
+				if(val.getAttribute('adlib-image') != null) document.querySelector('#'+val.id).src = defaultValues[val.getAttribute('adlib-image')];
+                if(val.getAttribute('adlib-style') != null) document.querySelector('#'+val.id).style.backgroundColor = defaultValues[val.getAttribute('adlib-style')];
             })
 		}
 
@@ -321,15 +315,15 @@
 
         function init() {
             dynamic();
-		    templateCSS(defaultValues.cssAttrib); 
             adlib.creativeSize(300,600); //just replace this with the creative size
+            populate();
+            templateCSS(defaultValues.cssAttrib);
 		    adlibStart();
-		    populate();
             startAnimation();
             buttonEventListeners();
 		}
 		function startAnimation() {
-			console.log("startAnimation")
+			console.log("Start Animation");
 			gsap.globalTimeline.resume();
             
             var tl = gsap.timeline({onComplete: animationEnd});
