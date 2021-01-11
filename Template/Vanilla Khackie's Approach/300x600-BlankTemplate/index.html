@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <!--<link rel="preload" as="font" href="MetricHPE-Desktop-Black.otf" type="font/woff2" crossorigin="anonymous">-->
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <!--FRAME 1-->
+            <div id=frame1Image-wrapper class="img-fill">
+                <img id="frame1Image" src="" class="img-fill" adlib-image="frame1Image">
+            </div>
+            <div id=frame1Headline-wrapper>
+                <p id="frame1Headline" adlib-text="frame1Headline"></p>
+            </div>
+            <!--FRAME 2-->
+            <div id=frame2Image-wrapper class="img-fill">
+                <img id="frame2Image" src="" class="img-fill" adlib-image="frame2Image">
+            </div>
+            <div id=frame2Image2-wrapper class="img-fill">
+                <img id="frame2Image2" src="" class="img-fill" adlib-image="frame2Image2">
+            </div>
+            <div id=frame2Headline-wrapper>
+                <p id="frame2Headline" adlib-text="frame2Headline"></p>
+            </div>
+            <!--LOGO-->
+            <div id=logo-wrapper>
+                <img id="logo" src="" adlib-image="logo">
+            </div>
+            <!--CTA-->
+            <div id=cta-wrapper class="aligned-v-h-centered">
+                <div id="ctaText" adlib-text="ctaText"></div>
+            </div>
+            <!--LEGAL-->
+            <div id='exitButton' class='exitButton'></div>
+            <div id=legal-btn-wrapper class="aligned-v-h-centered">
+                <p id="legalButton" adlib-text="legalButton"></p>
+            </div>
+            <div id="legal-text-wrapper" class="aligned-v-h-centered">
+                <div id="legal" adlib-text="legal"></div>
+                <div id="close">CLOSE X</div>
+                <div id="taparea-legal"></div>
+            </div>
+            <div id="legal-close-btn"></div>
+        </div>
+    </body>
+    <script>           
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '300x600'; // Set the width and height of the ad.
+        var adType = 'cm'; //Possible values = pre-render, cm
+        var allDVLoaded = false; // Variable to check if all DV loaded in the platform has been assigned
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend
+        /**************************************/
+        var defaultValues = { 
+            frame1Headline:"Our lowest<br> ever prices this<br><span style='color: black'>Black Friday</span>",
+            frame1Image:"frame1Image.png",
+            frame2Headline:"Lightning-fast<br>and reliable<br>broadband",
+            frame2Image:"frame2Image.png",
+            frame2Image2:"frame2Image2.png",
+            logo:"logo.png",
+            ctaText:"Shop now",
+            legalButton:"Legal stuff ^",
+            legal:"VIRGIN FIBRE AREAS ONLY. New customers only. Average download speed 108Mbps. £24.99 per month. 18 month minimum term. Standard pricing applies from month 19, currently £44. £35 set up fee. Engineer installation fee (£30) may apply. Legal stuff applies. Offer ends 30/11/2020.",
+            bgColor:"rgb(255, 0, 0)",
+            cssAttrib:"/* CSS STYLE */",
+            landingPage:"https://ad-lib.io/"
+        };
+        function exitCall() {
+            //use exitOverride for non pre-render ads, and exit for pre-render, make sure to change the variable adType above.
+            Enabler.exitOverride("MainClick", defaultValues.landingPage); // for non pre-render ads
+            //Enabler.exit('clickTag', defaultValues.landingPage); // for pre-render ads
+        };
+        function buttonEventListeners() {
+            document.getElementById("legal-btn-wrapper").addEventListener("mouseover", legalMouseOver);
+            document.getElementById("legal-close-btn").addEventListener("click", closeLegalClick);
+        }
+        function clickThrough() {
+            Enabler.exitOverride("Clickthrough", defaultValues.landingPage);
+        }
+        function legalMouseOver() {
+            gsap.to("#legal-text-wrapper", {duration: 0.25, y: "-100%", force3D: false, onComplete: function(){
+                document.getElementById("legal-close-btn").style.display = "block";
+            }});
+        }
+        function closeLegalClick() {
+            document.getElementById("legal-close-btn").style.display = "none";
+            gsap.to("#legal-text-wrapper", {duration: 0.25, y: "0%", force3D: false});
+        }
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                Object.keys(defaultValues).forEach(dv => {dv;})
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {            
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+            document.querySelector('#mainContent').style.backgroundColor = defaultValues.bgColor;
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+    
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause(); 
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume(); 
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }   
+        function enablerInitHandler() {
+            initDynamic();
+            buttonEventListeners();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                //document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': ( adType == 'pre-render' ) ? retVal = 'tools' : retVal = 'studio';
+            return retVal;
+        }
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>

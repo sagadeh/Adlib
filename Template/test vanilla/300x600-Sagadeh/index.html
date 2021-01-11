@@ -231,7 +231,7 @@
             ctaText:"Shop now",
             legal:"VIRGIN FIBRE AREAS ONLY. New customers only. Average download speed 108Mbps. £24.99 per month. 18 month minimum term. Standard pricing applies from month 19, currently £44. £35 set up fee. Engineer installation fee (£30) may apply. Legal stuff applies. Offer ends 30/11/2020.",
             logo:"logo.png",
-            legalButton:"Legal stuff&nbsp; ^",
+            legalButton:"Legal stuff&nbsp;&nbsp;^",
             bgColor:"rgb(255, 0, 0)",
             landingPage:"https://www.google.com"
         }
@@ -332,7 +332,7 @@
 			console.log("startAnimation")
 			gsap.globalTimeline.resume();
             
-            var tl = gsap.timeline({onComplete: adlibEnd});
+            var tl = gsap.timeline({onComplete: animationEnd});
             //FRAME 1 ANIMATION
             tl.to("#main", {duration: 0.5, visibility: "visible"})
               .from("#frame1Headline", {duration: 0.5, opacity: 0, force3D: false, onComplete: takeScreenshot})
@@ -342,6 +342,11 @@
               .from("#frame2Image", {duration: 0.5, opacity: 0})
               .from("#frame2Image2", {duration: 0.5, opacity: 0})
               .from("#cta-wrapper", {duration: 0.5, y: "50%", opacity: 0, force3D: false});
+        }
+        function animationEnd() {
+             // call this function on the very end of the last animation.
+             takeScreenshot();
+             setTimeout(function() {adlibEnd();},1000);
         }
         function buttonEventListeners() {
             document.getElementById("taparea").addEventListener("click", clickThrough);
@@ -368,7 +373,6 @@
         		Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
         	}
         }
-
         function enablerInitHandler() {
         	init();
             // this is from engineering team. this is strictly required
@@ -376,7 +380,6 @@
             document.dispatchEvent(event);
 
         }
-        
         var adlib = {
 			creativeSize: function(cWidth,cHeight) {
 				document.querySelector("#main").style.width = cWidth +"px";
