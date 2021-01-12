@@ -52,6 +52,8 @@ let Adlib = {
     },
     createAd: function(s) {
         document.getElementById("adSize").setAttribute("content","width="+s.split("x")[0]+", height="+s.split("x")[1]),document.querySelector("#mainContent").setAttribute("style","width:"+s.split("x")[0]+"px;height:"+s.split("x")[1]+"px"),null!=isMobile?document.querySelector("#exitButton").addEventListener("touchend",exitCall):document.querySelector("#exitButton").addEventListener("click",exitCall),_obj.dvLoader(),_obj.verifyDVLoaded(_obj.imgLoader);
+        document.querySelector("#exitButton-legal").addEventListener("touchend",exitCall);
+        document.querySelector("#exitButton-legal").addEventListener("click",exitCall);
     },
     populateElements: function() {
         document.querySelectorAll("body *").forEach(e=>{null!=e.getAttribute("adlib-text")&&(Adlib.isEmpty(defaultValues[e.getAttribute("adlib-text")])||(document.querySelector("#"+e.id).innerHTML=defaultValues[e.getAttribute("adlib-text")])),null!=e.getAttribute("adlib-image")&&(document.querySelector("#"+e.id).src=defaultValues[e.getAttribute("adlib-image")]),null!=e.getAttribute("adlib-video")&&(Adlib.isEmpty(defaultValues[e.getAttribute("adlib-video")])||(document.querySelector("#"+e.id).src="tools"===checkEnvironment()?defaultValues[e.getAttribute("adlib-video")]:defaultValues[e.getAttribute("studio-video")],myVideo=document.querySelector("#"+e.id),Enabler.loadModule(studio.module.ModuleId.VIDEO,function(){studio.video.Reporter.attach("adVideo",myVideo)}),_obj.tabActiveCheck()))});

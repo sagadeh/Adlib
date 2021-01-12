@@ -46,9 +46,10 @@
             <div id="legal-text-wrapper" class="aligned-v-h-centered">
                 <div id="legal" adlib-text="legal"></div>
                 <div id="close">CLOSE X</div>
-                <div id="taparea-legal"></div>
+<!--                <div id="taparea-legal"></div>-->
+                <div id='exitButton-legal' class='exitButton'></div>
+                <div id="legal-close-btn"></div>
             </div>
-            <div id="legal-close-btn"></div>
         </div>
     </body>
     <script>           
@@ -70,7 +71,7 @@
             frame2Image2:"frame2Image2.png",
             logo:"logo.png",
             ctaText:"Shop now",
-            legalButton:"Legal stuff ^",
+            legalButton:"Legal stuff&nbsp^",
             legal:"VIRGIN FIBRE AREAS ONLY. New customers only. Average download speed 108Mbps. £24.99 per month. 18 month minimum term. Standard pricing applies from month 19, currently £44. £35 set up fee. Engineer installation fee (£30) may apply. Legal stuff applies. Offer ends 30/11/2020.",
             bgColor:"rgb(255, 0, 0)",
             cssAttrib:"/* CSS STYLE */",
@@ -85,16 +86,10 @@
             document.getElementById("legal-btn-wrapper").addEventListener("mouseover", legalMouseOver);
             document.getElementById("legal-close-btn").addEventListener("click", closeLegalClick);
         }
-        function clickThrough() {
-            Enabler.exitOverride("Clickthrough", defaultValues.landingPage);
-        }
         function legalMouseOver() {
-            gsap.to("#legal-text-wrapper", {duration: 0.25, y: "-100%", force3D: false, onComplete: function(){
-                document.getElementById("legal-close-btn").style.display = "block";
-            }});
+            gsap.to("#legal-text-wrapper", {duration: 0.25, y: "-100%", force3D: false});
         }
         function closeLegalClick() {
-            document.getElementById("legal-close-btn").style.display = "none";
             gsap.to("#legal-text-wrapper", {duration: 0.25, y: "0%", force3D: false});
         }
         function initDynamic() {
@@ -137,7 +132,7 @@
             buttonEventListeners();
             setTimeout(function() {
                 Adlib.createAd(creativeSize);
-                //document.querySelector("#mainContent").style.opacity = 1;
+                document.querySelector("#mainContent").style.opacity = 1;
             }, 100);
             // this is from engineering team. this is strictly required
             var event = new CustomEvent("adinitialized");

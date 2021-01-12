@@ -5,7 +5,6 @@
 // tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
 //let tween;
-gsap.set([".mainContent"], {visibility: "hidden"});
 
 function initAnimation() {
      startAnimation();
