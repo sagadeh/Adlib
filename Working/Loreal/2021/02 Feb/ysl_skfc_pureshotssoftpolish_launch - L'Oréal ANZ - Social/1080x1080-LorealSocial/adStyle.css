@@ -1,0 +1,27 @@
+
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+    border: 1px solid black;
+}
+.exitButton {
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index: 999; /* in case there would be a button above the exitButton change this z-index*/
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+     width: inherit;
+}
+#frame1Image {
+    position: absolute;
+    width: 1080px;
+    height: 1080px;
+}

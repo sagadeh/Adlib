@@ -1,0 +1,27 @@
+
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+/*    border: 1px solid black;*/
+    visibility: hidden;
+}
+.exitButton {
+    position: absolute;
+    display: none;
+    width:100%;
+    height:100%;
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+}
+#frame1Image {
+    position: absolute;
+    width: 1080px;
+    height: 1080px;
+}

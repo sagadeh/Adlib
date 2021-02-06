@@ -1,0 +1,183 @@
+@font-face {
+    font-family: MontHeavy;
+    src: url("Mont-Heavy.woff2");
+}
+@font-face {
+   font-family: SSTCondMd;
+   src: url("SST-CondensedMd.woff2");
+}
+@font-face {
+   font-family: SSTMd;
+   src: url("SST-Medium.woff2");
+}
+.images {
+    position:absolute;
+    width:300px;
+    height:600px;
+    left:0px;
+    top:0px;
+    opacity:0;
+}
+#splash {
+    opacity:1;
+}
+#taglineParent {
+    position:absolute;
+    width:272px;
+    height:38px;
+    left:14px;
+    top:73px;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    opacity:0;
+}
+#tagLine {
+    position: absolute;
+    font-family: MontHeavy;
+    font-size:20px;
+    line-height: 1em; 
+    color:white;
+    text-align: center;
+    width:100%;
+    top:49%;
+    transform: translateY(-49%);
+}
+#offerParent {
+    position:absolute;
+    width:273px;
+    height:27px;
+    left:14px;
+    top:443px;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    opacity:0;
+}
+#offer {
+    position: absolute;
+    font-family: SSTCondMd;
+    font-size:10px;
+    line-height: 12px;
+    color:white;
+    text-align: center;
+    bottom:0px;
+    letter-spacing: -0.09px;
+    width:100%;
+}
+.ctaContainer {
+    position:absolute;
+    width:130px;
+    height:28px;
+    left:161px;
+    top:475px;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    opacity:0;
+    background-color: #CD4012;
+    overflow: hidden;
+}
+#cta {
+    position: absolute;
+    font-family: SSTMd;
+    font-size:12px;
+    line-height: 11px;
+    color:white;
+    text-align: center;
+    top:8px;
+    width:100%;
+}
+#ctaEffect {
+    position: relative;
+    opacity: 0.2;
+    left:-258px;
+}
+#game1Image {
+    position: absolute;
+    width:359px;
+    height:359px;
+    top:600px;
+    left:-20px;
+    transform: rotate(-90deg);
+    image-rendering: auto;
+}
+#game2Image {
+    position: absolute;
+    width:204px;
+    height:204px;  
+    left:300px;
+    top:286px;
+    transform: rotate(-90deg);
+    image-rendering: auto;
+}
+#game3Image {
+    position: absolute;
+    width:166px;
+    height:166px;  
+    left:45px;
+    top:235px; 
+    opacity:0;
+    transform: rotate(-90deg);
+    image-rendering: auto;
+}
+.horizontal {
+    position:absolute;
+    width:130px;
+    height:28px;
+    left:161px;
+    top:475px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    background-color: #CD4012;
+    overflow: hidden;
+}
+.vertical {
+    position:absolute;
+    width:130px;
+    height:28px;
+    left:87px;
+    top:475px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    background-color: #CD4012;
+    overflow: hidden;
+}
+.NONE {
+    position:absolute;
+    width:130px;
+    height:28px;
+    left:87px;
+    top:475px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    background-color: #CD4012;
+    overflow: hidden;
+}
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+    border: 1px solid black;
+    opacity:0;
+}
+.exitButton {
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index: 999; /* in case there would be a button above the exitButton change this z-index*/
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+}
