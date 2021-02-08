@@ -25,5 +25,5 @@ function populate() {
   document.querySelector("#frame1Background").setAttribute("source", defaultValues.frame1Background);
   document.querySelector("#frame1Image").setAttribute("source", defaultValues.frame1Image);
   document.querySelector('#frame1Headline').style.backgroundColor = defaultValues.bgColor;
-  document.querySelector('#frame1Headline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+ defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
+  document.querySelector('#frame1Headline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+       defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
 }

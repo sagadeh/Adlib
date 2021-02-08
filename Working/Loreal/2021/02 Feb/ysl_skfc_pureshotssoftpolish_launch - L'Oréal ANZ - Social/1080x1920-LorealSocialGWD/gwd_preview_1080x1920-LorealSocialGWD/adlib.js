@@ -2,10 +2,10 @@
 
 
 var defaultValues = {
-    bgColor:"#FF0000",
+    bgColor:"rgb(64, 64, 64)",
     frame1Background:"frame1Background.png",
     frame1Image:"frame1Image.png",
-    frame1Headline:"Revitalise your skincare routine with PURE SHOTS. Receive a complimentary Discovery Kit containing deluxe minis when you spend $120+ and use code PURELOVE.",
+    frame1Headline:" ",
     cssAttrib:"/* CSS STYLE */"
 };
 
@@ -26,5 +26,4 @@ function populate() {
   document.querySelector("#frame1Image").setAttribute("source", defaultValues.frame1Image);
   document.querySelector('#frame1Headline').style.backgroundColor = defaultValues.bgColor;
   document.querySelector('#frame1Headline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+ defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
-  
 }
