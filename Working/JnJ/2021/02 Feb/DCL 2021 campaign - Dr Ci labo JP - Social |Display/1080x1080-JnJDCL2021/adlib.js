@@ -14,7 +14,7 @@ var defaultValues = {
   
   
   
-    //frame1Headline2:"うるおいのある澄んだ肌へ",
+    frame1Headline2:"うるおいのある澄んだ肌へ",
   
     //frame1Headline2:"うト会投け稿両セチ実革マオエ",
     //frame1Headline2:"礎クスロ妙<br>聞ドにこ制違",
