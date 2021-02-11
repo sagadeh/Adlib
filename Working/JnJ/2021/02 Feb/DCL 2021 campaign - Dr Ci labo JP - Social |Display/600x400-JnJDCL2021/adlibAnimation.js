@@ -12,7 +12,7 @@ function initAnim(){
   gsap.globalTimeline.resume(); //<-- dont delete, this is strictly implemented
   
   console.log("init animation");
-  var tl = gsap.timeline();
+  var tl = gsap.timeline({onComplete: animationEnd});
   
   tl.to("#main", {duration: 0.5, visibility: "visible"});
   
@@ -92,4 +92,9 @@ function initAnim(){
     document.querySelector("#disclaimer-wrapper").style.height = "40px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
+}
+
+function animationEnd() {
+  takeScreenshot();
+  setTimeout(function() {adlibEnd();},1000);
 }

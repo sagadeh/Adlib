@@ -12,7 +12,7 @@ function initAnim(){
   gsap.globalTimeline.resume(); //<-- dont delete, this is strictly implemented
   
   console.log("init animation");
-  var tl = gsap.timeline();
+  var tl = gsap.timeline({onComplete: animationEnd});
   
   tl.to("#main", {duration: 0.5, visibility: "visible"});
   
@@ -47,14 +47,14 @@ function initAnim(){
     document.querySelector("#frame1Image-wrapper").style.display = "block";
     //frame1Headline
     document.querySelector("#frame1Headline-wrapper").style.position = "absolute";
-    document.querySelector("#frame1Headline-wrapper").style.top = "103px";
-    document.querySelector("#frame1Headline-wrapper").style.left = "68px";
+    document.querySelector("#frame1Headline-wrapper").style.top = "99px";
+    document.querySelector("#frame1Headline-wrapper").style.left = "67px";
     document.querySelector("#frame1Headline-wrapper").style.width = "220px";
     document.querySelector("#frame1Headline-wrapper").style.height = "54px";
     document.getElementById("frame1Headline").classList.add("frame1Headline-AQUAINDERM");
     //frame1Headline2
     document.querySelector("#frame1Headline2-wrapper").style.position = "absolute";
-    document.querySelector("#frame1Headline2-wrapper").style.top = "212px";
+    document.querySelector("#frame1Headline2-wrapper").style.top = "206px";
     document.querySelector("#frame1Headline2-wrapper").style.left = "40px";
     document.querySelector("#frame1Headline2-wrapper").style.width = "265px";
     document.querySelector("#frame1Headline2-wrapper").style.height = "115px";
@@ -92,4 +92,9 @@ function initAnim(){
     document.querySelector("#disclaimer-wrapper").style.height = "40px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
+}
+
+function animationEnd() {
+  takeScreenshot();
+  setTimeout(function() {adlibEnd();},1000);
 }

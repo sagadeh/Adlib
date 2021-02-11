@@ -28,7 +28,7 @@ var defaultValues = {
   
     logo:"logo.png",
     frame1Image:"frame1Image.png",
-    trigger:"377VC"
+    trigger:"VC100"
 };
 
 function initDynamic() {
