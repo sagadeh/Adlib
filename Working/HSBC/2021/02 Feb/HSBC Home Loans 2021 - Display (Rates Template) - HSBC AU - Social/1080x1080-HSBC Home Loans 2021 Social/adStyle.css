@@ -32,6 +32,7 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
+    /*display: none;*/
 }
 .img-fill {
     position: absolute;
@@ -44,29 +45,29 @@ p {
 #frame1Headline-wrapper {
     position: absolute;
     margin: auto;
-    top: 171px;
+    top: 160px;
     left: 0;
     right: 0;
-    width: 550px;
+    width: 900px;
     height: auto;
 }
 #frame1Headline {
     font-family: UniversNextforHSBCBold;
-    font-weight: bold;
-    font-size: 46px;
-    letter-spacing: -0.04em;
+    font-size: 72px;
+    letter-spacing: -0.02em;
     text-align: center;
     color: #fff;
 }
 #rate-container {
     position: relative;
-    display: table;
     margin: auto;
-    top: 217px;
-    left: 0px;
+    top: 232px;
+    left: 0;
     right: 0;
+    display: table;
     width: auto;
-    height: auto;
+    height: 610px;
+    
 }
 #rate-wrapper {
     position: relative;
@@ -83,9 +84,8 @@ p {
     width: auto;
     height: auto;
     font-family: UniversNextforHSBCBold;
-    font-weight: normal;
-    font-size: 148px;
-    letter-spacing: -0.09em;
+    font-size: 234px;
+    letter-spacing: -0.08em;
     text-align: center;
     color: #fff;
 }
@@ -94,40 +94,42 @@ p {
 }
 #percent, #percent2 {
     position: relative;
+    top: -43px;
+    left: 13px;
     display: inline-block;
-    top: -25px;
-    left: 11px;
-    width: 73.5px;
+    width: 113px;
     height: auto;
 }
 #percent2 {
-    top: -29px;
+    top: -44px;
 }
 #frame1Subheadline, #frame1Subheadline2 {
     position: relative;
     width: auto;
     height: auto;
     font-family: UniversNextforHSBCMedium;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0em;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+    line-height: 34px;
     text-align: center;
     color: #fff;
 }
 #frame1Subheadline {
-    top: -7px;
+    top: -12px;
+    left: -1px;
 }
 #frame1Subheadline2 {
-    top: -11px;
+    top: -20px;
+    left: 0px;
 }
 #line-red {
     position: relative;
     margin: auto;
-    top: 14px;
-    left: 16px;
+    top: 22px;
+    left: 0px;
     right: 0;
-    width: 245px;
-    height: 3px;
+    width: 388px;
+    height: 4px;
     background-color: #db0110;
 }
 
@@ -136,15 +138,15 @@ p {
     margin: auto;
     left: 0;
     right: 0;
-    top: 630px;
-    width: 500px;
+    top: 884px;
+    width: 1000px;
     height: auto;
 }
 #legal {
     font-family: UniversNextforHSBCMedium;
-    font-weight: 500;
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: -0.02em;
+    line-height: 21px;
     text-align: center;
     color: #fff;
 }
