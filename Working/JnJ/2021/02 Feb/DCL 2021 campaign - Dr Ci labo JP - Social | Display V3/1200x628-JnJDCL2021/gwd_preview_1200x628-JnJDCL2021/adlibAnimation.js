@@ -72,8 +72,8 @@ function initAnim(){
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "531px";
     document.querySelector("#disclaimer-wrapper").style.left = "914px";
-    document.querySelector("#disclaimer-wrapper").style.width = "250px";
-    document.querySelector("#disclaimer-wrapper").style.height = "79px";
+    document.querySelector("#disclaimer-wrapper").style.width = "271px";
+    document.querySelector("#disclaimer-wrapper").style.height = "90px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
 }

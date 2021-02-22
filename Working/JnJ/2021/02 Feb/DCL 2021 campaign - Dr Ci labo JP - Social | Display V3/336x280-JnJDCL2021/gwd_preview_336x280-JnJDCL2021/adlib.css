@@ -330,7 +330,8 @@ TRIGGER*/
   text-shadow: 0px 3px 6px #fff;
 }
 .disclaimer-377VC {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: auto;
   height: auto;
   /*font-family: "NotoSansCJKjpRegular";*/

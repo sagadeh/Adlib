@@ -27,10 +27,11 @@ function initAnim(){
     document.querySelector("#headline-container").style.height = "44px";
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.position = "absolute";
-    document.querySelector("#disclaimer-wrapper").style.top = "287px";
-    document.querySelector("#disclaimer-wrapper").style.left = "12px";
-    document.querySelector("#disclaimer-wrapper").style.width = "275px";
+    document.querySelector("#disclaimer-wrapper").style.top = "286px";
+    document.querySelector("#disclaimer-wrapper").style.left = "0px";
+    document.querySelector("#disclaimer-wrapper").style.width = "100%";
     document.querySelector("#disclaimer-wrapper").style.height = "10px";
+    document.querySelector("#disclaimer-wrapper").style.paddingLeft = "11px";
     document.getElementById("disclaimer").classList.add("disclaimer-377VC");
     
     document.getElementById("frame1Headline").classList.add("frame1Headline-377VC");

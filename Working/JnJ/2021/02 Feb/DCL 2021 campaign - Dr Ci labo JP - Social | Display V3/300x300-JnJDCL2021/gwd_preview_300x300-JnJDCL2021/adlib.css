@@ -332,7 +332,8 @@ TRIGGER*/
 
 }
 .disclaimer-377VC {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: auto;
   height: auto;
   /*font-family: "NotoSansCJKjpRegular";*/

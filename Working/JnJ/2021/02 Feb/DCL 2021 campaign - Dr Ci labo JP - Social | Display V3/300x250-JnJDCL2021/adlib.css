@@ -330,7 +330,8 @@ TRIGGER*/
   text-shadow: 0px 3px 6px #fff;
 }
 .disclaimer-377VC {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: auto;
   height: auto;
   /*font-family: "NotoSansCJKjpRegular";*/
@@ -371,7 +372,8 @@ TRIGGER*/
   text-shadow: 0px 0px 0px #000;
 }
 .disclaimer-AQUAINDERM {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: auto;
   height: auto;
   /*font-family: "NotoSansRegular";*/
@@ -412,7 +414,8 @@ TRIGGER*/
   text-shadow: 0px 0px 0px #000;
 }
 .disclaimer-VC100 {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: auto;
   height: auto;
   /*font-family: "NotoSansCJKjpRegular";*/

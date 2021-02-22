@@ -27,9 +27,10 @@ function initAnim(){
     document.querySelector("#headline-container").style.height = "45px";
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "265px";
-    document.querySelector("#disclaimer-wrapper").style.left = "12px";
-    document.querySelector("#disclaimer-wrapper").style.width = "315px";
+    document.querySelector("#disclaimer-wrapper").style.left = "0px";
+    document.querySelector("#disclaimer-wrapper").style.width = "100%";
     document.querySelector("#disclaimer-wrapper").style.height = "12px";
+    document.querySelector("#disclaimer-wrapper").style.paddingLeft = "12px";
     document.getElementById("disclaimer").classList.add("disclaimer-377VC");
     
     document.getElementById("frame1Headline").classList.add("frame1Headline-377VC");

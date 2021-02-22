@@ -26,7 +26,6 @@ function initAnim(){
     document.querySelector("#headline-container").style.width = "565px";
     document.querySelector("#headline-container").style.height = "82px";
     //disclaimer
-    document.querySelector("#disclaimer-wrapper").style.position = "absolute";
     document.querySelector("#disclaimer-wrapper").style.top = "377px";
     document.querySelector("#disclaimer-wrapper").style.left = "15px";
     document.querySelector("#disclaimer-wrapper").style.width = "565px";
@@ -53,7 +52,6 @@ function initAnim(){
     //document.querySelector("#frame1Headline2-wrapper").style.paddingTop = "2px";
     
     //disclaimer
-    document.querySelector("#disclaimer-wrapper").style.position = "absolute";
     document.querySelector("#disclaimer-wrapper").style.top = "367px";
     document.querySelector("#disclaimer-wrapper").style.left = "22px";
     document.querySelector("#disclaimer-wrapper").style.width = "305px";
@@ -72,7 +70,6 @@ function initAnim(){
     document.getElementById("frame1Headline").classList.add("frame1Headline-VC100");
     document.getElementById("frame1Headline2").classList.add("frame1Headline2-VC100");
     //disclaimer
-    document.querySelector("#disclaimer-wrapper").style.position = "absolute";
     document.querySelector("#disclaimer-wrapper").style.top = "348px";
     document.querySelector("#disclaimer-wrapper").style.left = "427px";
     document.querySelector("#disclaimer-wrapper").style.width = "165px";

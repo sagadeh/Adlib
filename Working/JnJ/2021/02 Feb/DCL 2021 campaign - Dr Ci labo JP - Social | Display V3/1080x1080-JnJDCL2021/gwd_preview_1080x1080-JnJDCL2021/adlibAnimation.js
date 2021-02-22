@@ -72,7 +72,7 @@ function initAnim(){
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "981px";
     document.querySelector("#disclaimer-wrapper").style.left = "818px";
-    document.querySelector("#disclaimer-wrapper").style.width = "240px";
+    document.querySelector("#disclaimer-wrapper").style.width = "250px";
     document.querySelector("#disclaimer-wrapper").style.height = "68px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
