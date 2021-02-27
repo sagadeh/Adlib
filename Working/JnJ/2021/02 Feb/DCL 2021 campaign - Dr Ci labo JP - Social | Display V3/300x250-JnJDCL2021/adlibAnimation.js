@@ -28,7 +28,7 @@ function initAnim(){
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "234px";
     document.querySelector("#disclaimer-wrapper").style.left = "0px";
-    document.querySelector("#disclaimer-wrapper").style.width = "100%";
+    document.querySelector("#disclaimer-wrapper").style.width = "99%";
     document.querySelector("#disclaimer-wrapper").style.height = "12px";
     document.querySelector("#disclaimer-wrapper").style.paddingLeft = "11px";
     document.getElementById("disclaimer").classList.add("disclaimer-377VC");
@@ -55,7 +55,7 @@ function initAnim(){
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "228px";
     document.querySelector("#disclaimer-wrapper").style.left = "14px";
-    document.querySelector("#disclaimer-wrapper").style.width = "161px";
+    document.querySelector("#disclaimer-wrapper").style.width = "94%";
     document.querySelector("#disclaimer-wrapper").style.height = "14px";
     document.getElementById("disclaimer").classList.add("disclaimer-AQUAINDERM");
   }
@@ -72,9 +72,9 @@ function initAnim(){
     document.getElementById("frame1Headline2").classList.add("frame1Headline2-VC100");
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "214px";
-    document.querySelector("#disclaimer-wrapper").style.left = "196px";
-    document.querySelector("#disclaimer-wrapper").style.width = "102px";
-    document.querySelector("#disclaimer-wrapper").style.height = "33px";
+    document.querySelector("#disclaimer-wrapper").style.right = "5px";
+    document.querySelector("#disclaimer-wrapper").style.width = "290px";
+    document.querySelector("#disclaimer-wrapper").style.height = "14px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
 }

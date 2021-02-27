@@ -20,7 +20,7 @@ var defaultValues = {
   
     //disclaimer:"のをば伴案ソム見選っよね計丘つめくご崩朝がおょど禁6気武利ヲ",
     //disclaimer:"誌由トソ暮浩ニメ鬼見極ほびス平",
-    disclaimer:"産ソスヘニ獣属競<br>テケワ略79阪しなー",
+    disclaimer:"産ソスヘニ獣属競テケワ略79阪しなー",
   
     logo:"logo.png",
     frame1Image:"600x400-AQUAINDERM-RATINGS.png",

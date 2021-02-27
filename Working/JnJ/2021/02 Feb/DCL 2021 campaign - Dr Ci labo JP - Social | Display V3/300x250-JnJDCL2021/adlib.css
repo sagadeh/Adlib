@@ -395,7 +395,7 @@ TRIGGER*/
   font-size: 14px;
   letter-spacing: 0.1em;
   line-height: 20px;
-  text-align: left;
+  text-align: center;
   color: #000;
   text-shadow: 0px 0px 0px #000;
 }
@@ -409,12 +409,12 @@ TRIGGER*/
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 37px;
-  text-align: left;
+  text-align: center;
   color: #000;
   text-shadow: 0px 0px 0px #000;
 }
 .disclaimer-VC100 {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: auto;
   height: auto;
@@ -423,7 +423,7 @@ TRIGGER*/
   font-size: 9px;
   letter-spacing: 0.1em;
   line-height: 13px;
-  text-align: left;
+  text-align: right;
   color: #000;
   text-shadow: 0px 0px 0px #000;
 }

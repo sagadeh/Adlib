@@ -6,7 +6,8 @@
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
 let tween;
 function initAnimation() {
-     startAnimation();
+    startAnimation();
+    animationEnd();
 }
 function startAnimation() {  
      tween = gsap.timeline();

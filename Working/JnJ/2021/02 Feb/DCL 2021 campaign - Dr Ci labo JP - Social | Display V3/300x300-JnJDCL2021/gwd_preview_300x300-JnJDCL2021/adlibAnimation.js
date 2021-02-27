@@ -29,8 +29,8 @@ function initAnim(){
     document.querySelector("#disclaimer-wrapper").style.position = "absolute";
     document.querySelector("#disclaimer-wrapper").style.top = "286px";
     document.querySelector("#disclaimer-wrapper").style.left = "0px";
-    document.querySelector("#disclaimer-wrapper").style.width = "100%";
-    document.querySelector("#disclaimer-wrapper").style.height = "10px";
+    document.querySelector("#disclaimer-wrapper").style.width = "99%";
+    document.querySelector("#disclaimer-wrapper").style.height = "9px";
     document.querySelector("#disclaimer-wrapper").style.paddingLeft = "11px";
     document.getElementById("disclaimer").classList.add("disclaimer-377VC");
     
@@ -56,8 +56,8 @@ function initAnim(){
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "274px";
     document.querySelector("#disclaimer-wrapper").style.left = "8px";
-    document.querySelector("#disclaimer-wrapper").style.width = "174px";
-    document.querySelector("#disclaimer-wrapper").style.height = "20px";
+    document.querySelector("#disclaimer-wrapper").style.width = "96%";
+    document.querySelector("#disclaimer-wrapper").style.height = "17px";
     document.getElementById("disclaimer").classList.add("disclaimer-AQUAINDERM");
   }
   if(defaultValues.trigger=="VC100"){
@@ -73,9 +73,9 @@ function initAnim(){
     document.getElementById("frame1Headline2").classList.add("frame1Headline2-VC100");
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "261px";
-    document.querySelector("#disclaimer-wrapper").style.left = "196px";
-    document.querySelector("#disclaimer-wrapper").style.width = "100px";
-    document.querySelector("#disclaimer-wrapper").style.height = "37px";
+    document.querySelector("#disclaimer-wrapper").style.right = "5px";
+    document.querySelector("#disclaimer-wrapper").style.width = "285px";
+    document.querySelector("#disclaimer-wrapper").style.height = "13px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");
   }
 }
