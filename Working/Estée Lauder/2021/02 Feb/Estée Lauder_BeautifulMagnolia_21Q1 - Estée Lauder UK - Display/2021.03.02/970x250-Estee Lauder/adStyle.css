@@ -1,0 +1,131 @@
+ @font-face {
+     font-family: OptimaDisplayRoman;
+     src: url("OptimaDisplay-Roman.woff");
+}
+
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+    border: 1px solid black;
+    opacity:0;
+    background-color: white;
+}
+.exitButton {
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index: 999; /* in case there would be a button above the exitButton change this z-index*/
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+     width: inherit;
+}
+.img-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 970px;
+    height: 250px;
+    object-fit: fill;
+}
+#background-container {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    perspective: 1000px;
+}
+#copy-container, #copy-container2  {
+    position: absolute;
+    left: 0px;
+    bottom: 64px;
+    width: 337px;
+    height: auto;
+    align-items: flex-end;
+    perspective: 1000px;
+}
+#frame1Headline_loc, #frame2Headline_loc  {
+    position: relative;
+    top: -7px;
+    display: table;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    font-family: OptimaDisplayRoman;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+#frame1Headline2_loc, #frame2Headline2_loc  {
+    position: relative;
+    display: table;
+    margin: auto;
+    padding-left: 6px;
+    top: -3px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    font-family: OptimaDisplayRoman;
+    font-size: 28px;
+    letter-spacing: 0.3em;
+    line-height: 36px;
+    text-align: center;
+    color: #000;
+}
+#frame1Subheadline_loc, #frame2Subheadline_loc {
+    position: relative;
+    display: table;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    font-family: OptimaDisplayRoman;
+    font-size: 17px;
+    text-align: center;
+    color: #000;
+}
+
+#ctaContainer {
+    position: absolute;
+    left: 110px;
+    top: 204px;
+    width: 116px;
+    height: 28px;
+    background-color: #A75397;
+    
+}
+
+
+#ctaTextParent {
+    position: absolute;
+    left: 0px;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+    
+}
+
+#ctaText_loc {
+    text-align: center;
+    font-family: OptimaDisplayRoman;
+    font-size: 17px;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    
+}
+
+.v-center {
+  position: relative;
+  top: 49%;
+  transform: translateY(-50%);
+}
