@@ -21,8 +21,10 @@ function initAnim(){
     document.querySelector("#circle-wrapper").style.right = "64px";
   }
   if(defaultValues.trigger2=="removeTextBackground"){
-    document.querySelector('#frame1Headline').style.backgroundColor = "transparent";
-    document.querySelector('#frame1Headline').style.boxShadow = "none";
+    document.querySelector('#frame1headline').style.backgroundColor = "transparent";
+    document.querySelector('#frame1headline').style.boxShadow = "none";
+    document.querySelector('#frame1subheadline').style.backgroundColor = "transparent";
+    document.querySelector('#frame1subheadline').style.boxShadow = "none";
   }
 }
 function animationEnd() {

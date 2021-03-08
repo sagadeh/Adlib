@@ -73,7 +73,7 @@ function initAnim(){
     document.getElementById("frame1Headline2").classList.add("frame1Headline2-VC100");
     //disclaimer
     document.querySelector("#disclaimer-wrapper").style.top = "261px";
-    document.querySelector("#disclaimer-wrapper").style.right = "5px";
+    document.querySelector("#disclaimer-wrapper").style.right = "6px";
     document.querySelector("#disclaimer-wrapper").style.width = "285px";
     document.querySelector("#disclaimer-wrapper").style.height = "13px";
     document.getElementById("disclaimer").classList.add("disclaimer-VC100");

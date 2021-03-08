@@ -5,12 +5,10 @@ var defaultValues = {
     bgColor:"rgb(0, 0, 0)",
     frame1Background:"frame1Background.png",
     frame1Image:"frame1Image.png",
-    frame1Headline:"COMPLEXION PERFECTION<br>INCLUDES MY WAY 15ML EDP & MORE!",
-    frame1Subheadline:"VALUED AT $290",
-    trigger:"left",
-    trigger2:"removeTextBackground", //removeTextBackground
-    fontSize1:"45px",
-    fontSize2:"41px",
+    frame1Headline:"ET NETUS ET MALESUADA<BR>FAMES AC TURPIS EGESTA A bb",
+    frame1Subheadline:"NISL SUSCIPIT ADIPISCING BIBENDUM",
+    frame1Overlay:"morbi<br>enim<br>nunc<br>faucib",
+    trigger:"left", //left or right
     cssAttrib:"/* CSS STYLE */"
 };
 
@@ -25,12 +23,19 @@ function initDynamic() {
 }
 
 function populate() {
-  document.querySelector("#frame1Headline").innerHTML = defaultValues.frame1Headline;
-  document.querySelector("#frame1Headline").style.fontSize = defaultValues.fontSize1;
-  document.querySelector("#frame1Subheadline").innerHTML = defaultValues.frame1Subheadline;
-  document.querySelector("#frame1Subheadline").style.fontSize = defaultValues.fontSize2;
+  document.querySelector("#frame1headline").innerHTML = defaultValues.frame1Headline;
+  document.querySelector("#frame1subheadline").innerHTML = defaultValues.frame1Subheadline;
+  document.querySelector("#small-frame1headline-wrapper #frame1headline").innerHTML = defaultValues.frame1Headline;
+  
+  
+  
+  document.querySelector("#frame1overlay").innerHTML = defaultValues.frame1Overlay;
+  
   document.querySelector("#frame1Background").setAttribute("source", defaultValues.frame1Background);
   document.querySelector("#frame1Image").setAttribute("source", defaultValues.frame1Image);
-  document.querySelector('#frame1Headline').style.backgroundColor = defaultValues.bgColor;
-  document.querySelector('#frame1Headline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+       defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
+  
+  document.querySelector('#frame1headline').style.backgroundColor = defaultValues.bgColor;
+  document.querySelector('#frame1headline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+ defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
+  document.querySelector('#frame1subheadline').style.backgroundColor = defaultValues.bgColor;
+  document.querySelector('#frame1subheadline').style.boxShadow = defaultValues.bgColor + "-10px 0px 0px 7px,"+ defaultValues.bgColor + "10px 0px 0px 7px," + defaultValues.bgColor + "0px 0px 0px 7px";
 }
