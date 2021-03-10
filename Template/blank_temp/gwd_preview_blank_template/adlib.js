@@ -2,19 +2,21 @@
 
 
 var defaultValues = {
-   cssAttrib:"<! –– css styling if necessary ––>", //<-- dont remove, this is strictly in the first row of default values
-  // dynamic naming convension from http://ad-lib.io/internal/tools/adlib.js/
-  // ...
-  // ...
-  // ...
-  landingPage:"https.yourUrl.com"
+    cssAttrib:"<! –– css styling if necessary ––>", //<-- dont remove, this is strictly in the first row of default values
+    // dynamic naming convension from http://ad-lib.io/internal/tools/adlib.js/
+    // ...
+    // ...
+    // ...
+    readableLabel:" ",
+    landingPage:"https.yourUrl.com"
 };
 
 function initDynamic() {
     if (!Enabler.isServingInLiveEnvironment()) {
     	// defaultValues.frame1Headline; <-- example dynamic naming convension
     	// defaultValues.baseImage; <-- example dynamic naming convension
-      defaultValues.landingPage; //<-- make sure always have a landing page
+        defaultValues.readableLabel;
+        defaultValues.landingPage; //<-- make sure always have a landing page
     	
 
     } else {
@@ -26,5 +28,4 @@ function initDynamic() {
 function populate() {
 	// document.querySelector("#your-text-element").innerHTML = defaultValues.frame1Headline; <-- text headline
 	// document.querySelector("#your-image-element").setAttribute("source", defaultValues.baseImage);  <-- image source
-	
 }
