@@ -1,0 +1,194 @@
+@font-face {
+     font-family: VerizonNHGDSBold;
+     src: url("VerizonNHGDSBold.woff");
+}
+@font-face {
+     font-family: VerizonNHGDSRegular;
+     src: url("VerizonNHGDSRegular.woff");
+}
+#guide {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#frame5-container {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 600px;
+}
+#subheadline5-wrapper {
+    position: relative;
+    margin: auto;
+    top: 153px;
+    display: table;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+#subheadline5 {
+    text-align: center;
+    font-family: VerizonNHGDSRegular;
+    font-size: 8px;
+}
+
+#cta-wrapper {
+    position: relative;
+    margin: auto;
+    top: 165px;
+    width: auto;
+    display: table;
+    overflow: hidden;
+}
+#cta {
+    position: relative;
+    padding-right: 8px;
+    font-family: VerizonNHGDSBold;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 17px;
+}
+#arrow {
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    padding-right: 
+}
+
+#frame1-container, #frame2-container, #frame3-container {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+}
+#headline1, #headline2, #headline3, #headline5 {
+    text-align: center;
+    font-family: VerizonNHGDSBold;
+    font-size: 42px;
+    perspective: 1000px;
+}
+#headline5 {
+    position: relative;
+    top: 140px;
+    font-size: 43px;
+    /*line-height: 40.85px;*/
+}
+#frame4-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#frame4background, #iphonelogo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#footer-wrapper {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#disclaimer-wrapper {
+    position: relative;
+    bottom: 0px;
+    margin: 0px 13px 14px 13px;
+    overflow: hidden;
+}
+#disclaimer {
+    font-family: VerizonNHGDSRegular;
+    font-size: 8px;
+    letter-spacing: -0.01em;
+    line-height: 9px;
+    text-align: left;
+}
+#logo-container {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#logo-wrapper {
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    bottom: 9px;
+    overflow: hidden;
+}
+#frame5logo {
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: auto;
+}
+#check-wrapper {
+    position: relative;
+    top: -11px;
+    left: 15px;
+    bottom: 9px;
+    width: 17px;
+    height: 21px;
+}
+#check1-holder, #check2-holder {
+    position: absolute;
+    width: 17px;
+    height: 21px;
+    overflow: hidden;
+}
+#check1-holder {
+    top: 0px;
+}
+#check2-holder {
+    left: -1px;
+}
+#check1, #check2 {
+    position: absolute;
+    width: 17px;
+    height: auto;
+}
+#logo3 {
+    position: absolute;
+    left: 14px;
+    bottom: 15px;
+    width: 146px;
+    height: 31px;
+}
+#check-only-wrapper {
+    position: absolute;
+    width: 24px;
+    height: 30px;
+    bottom: 15px;
+    left: 15px;
+}
+#check1-only-holder, #check2-only-holder {
+    position: absolute;
+    width: 24px;
+    height: 30px;
+    overflow: hidden;
+}
+#check1-only, #check2-only {
+    position: absolute;
+    width: 24px;
+    height: 30px;
+}
+#check1-only {
+    top: 0px;
+}
+#check2-only {
+    left: -1px;
+}
+

@@ -1,0 +1,74 @@
+@font-face {
+     font-family: SST;
+     src: url("SST-Medium.woff2");
+}
+.images {
+     position:absolute;
+     top:0px;
+     left:0px;
+     width:100%;
+     height:100%;
+     opacity:0;
+}
+#intro {
+     opacity:1;
+}
+#Overlay_drop {
+     top: -10px;     
+}
+.gameImages {
+     position: absolute;
+     border: 2px solid rgb(255, 255, 255);
+     left: 50px;
+     height: 200px;
+     width: 200px;
+     top: 230px;
+     opacity:0;   
+}
+.promos {
+     position: absolute;
+     top: 200px;
+     width: 340px;
+     height: 226.67px;
+     left: -20px;  
+     opacity:0;  
+}
+.ctaButton {
+     position: absolute;
+     width: 130px;
+     height: 28px;
+     left: 85px;
+     top: 470px; 
+     opacity:0;  
+     display:flex;
+     align-items: center;
+     justify-content: center;
+}
+#ctaBackground {
+     position: absolute;
+     width: 130px;
+     height: 28px;
+}
+.cta-text {
+     position:absolute;
+     text-align:center;
+     width:100%;
+     font-size:12px;
+     font-family: SST;
+     color:white;
+     top:7px;
+}
+#cta_text.macFirefox, #cta_text.winFirefox {
+     top:6px !important;
+}
+.legalEndLine {
+     position: absolute;
+     width: 80px;
+     height: 14.0503px;
+     font-family: SST;
+     color: rgb(252, 248, 248);
+     text-align: center;
+     font-size: 9px;
+     left: 110px;
+     top: 501px;  
+}

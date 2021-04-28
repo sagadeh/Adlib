@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <!--<link rel="preload" as="font" href="myFont.woff" type="font/woff" crossorigin="anonymous">-->
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+        <script type="text/javascript" src="SplitText.min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <!--<img id="guide" src="guide.png">-->
+            <div id="frame5-container">
+                <p id="headline5" adlib-text="frame5Headline"></p>
+                <div id="subheadline5-wrapper">
+                    <p id="subheadline5" adlib-text="frame5Subheadline"></p>
+                </div>
+                <div id="cta-wrapper">
+                    <p id="cta" adlib-text="ctaText"></p>
+                    <img id="arrow" src="arrow.png">
+                </div>
+                <div id="footer-wrapper">
+                    <div id="logo-container">
+                        <div id="logo-wrapper">
+                            <img id="frame5logo" src="" adlib-image="logo">
+                        </div>
+                        <div id="check-wrapper">
+                            <div id="check1-holder">
+                                <img id="check1" src="check1.png">
+                            </div>
+                            <div id="check2-holder">
+                                <img id="check2" src="check2.png">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="disclaimer-wrapper">
+                        <p id="disclaimer" adlib-text="disclaimer"></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="frame4-container">
+                <img id="frame4background" src="" adlib-image="frame4Background">
+                <img id="iphonelogo" src="" adlib-image="logo2">
+            </div>
+            <div id="frame1-container">
+                <p id="headline1" adlib-text="frame1Headline"></p>
+            </div>
+            <div id="frame2-container">
+                <p id="headline2" adlib-text="frame2Headline"></p>
+            </div>
+            <div id="frame3-container">
+                <p id="headline3" adlib-text="frame3Headline"></p>
+            </div>
+            <img id="logo3" src="" adlib-image="logo3">
+            <div id="check-only-wrapper">
+                <div id="check1-only-holder">
+                    <img id="check1-only" src="check1.png">
+                </div>
+                <div id="check2-only-holder">
+                    <img id="check2-only" src="check2.png">
+                </div>
+            </div>
+            <div id='exitButton' class='exitButton'></div>
+        </div>
+    </body>
+    <script>           
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '300x600'; // Set the width and height of the ad.
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
+        /**************************************/
+        var defaultValues = {  
+            frame1Headline:"Lorem ipsum dolor sit amet con",
+            frame2Headline:"Consetetur<br>sadipscing<br>elit sed",
+            frame3Headline:"Sed diam<br> nonumy<br> eirmod<br> tempor.",
+            frame5Headline:"At vero eos<br>et accusam,<br> et justo<br>duo dolores<br> et ea.",
+            frame5Subheadline:"Stet clita kasd gubergren, no sea takimata sanctus est",
+            frame4Background:"iphone.png",
+            disclaimer:"Labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br> justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est<br> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing",
+            ctaText:"Lorem Ipsum",
+            logo:"verizon-logo.png",
+            logo2:"iphone-logo.png",
+            logo3:"full-logo.png",
+            cssAttrib:"/* CSS STYLE */",
+            landingPage:"https://ad-lib.io/"
+        };
+        function exitCall() {
+            Enabler.exitOverride("MainClick", defaultValues.landingPage);
+        }
+        var videoCuePoint = [
+            //"cuePoint:funcName" ex. "1:firstAninmation" please do not included the parenthesis after the function name.
+        ]
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {            
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+    
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause(); 
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume(); 
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }   
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                //document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>

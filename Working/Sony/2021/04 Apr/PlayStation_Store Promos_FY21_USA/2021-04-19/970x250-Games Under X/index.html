@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <link rel="preload" as="font" href="SST-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.0.1_min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <img id="bg" adlib-image="baseImage" class="images"/>
+            <img id="Overlay_drop" adlib-image="baseImage2" class="images"/>
+            <img id="Overlay_fade" adlib-image="baseImage3" class="images"/>
+            <img id="Overlay_bounce" adlib-image="baseImage4" class="images"/>
+            <img id="game3" adlib-image="productImage1" class="gameImages"/>
+            <img id="game2" adlib-image="productImage2" class="gameImages"/>
+            <img id="game1" adlib-image="productImage3" class="gameImages"/>
+            <img id="Promo" adlib-image="baseImage5" class="promos"/>
+            <img id="BLUE_SET" adlib-image="baseImage6" class="images"/>
+            <div id="CTA" class="ctaButton">
+                <img id="ctaBackground" adlib-image="frame1Image3"/>
+                <p class="cta-text" id="cta_text" adlib-text="ctaText"></p>
+            </div>
+            <p id="legal-text" class="legalEndLine" adlib-text="legal"></p>
+            <img id="rating" adlib-image="frame1Image2" class="images"/>
+            <img id="intro" adlib-image="frame1Image" class="images"/>
+            <div id='exitButton' class='exitButton'></div>
+        </div>
+    </body>
+    <script>           
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '970x250'; // Set the width and height of the ad.
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
+        /**************************************/
+        var defaultValues = {  
+            baseImage:"bg.jpg",
+            baseImage2:"overlay_drop.png",
+            baseImage3:"overlay_fade.png",
+            baseImage4:"overlay_bounce.png",
+            productImage1:"game1.jpg",
+            productImage2:"game2.jpg",
+            productImage3:"game3.jpg",
+            baseImage5:"promo.png",
+            baseImage6:"branding.png",
+            frame1Image:"intro.jpg",
+            frame1Image2:"rating.png",
+            frame1Image3:"cta.png",
+            ctaText:"LOREM IPSUM",
+            legal:"n/a",
+            cssAttrib:"/* CSS STYLE */",
+            landingPage:"https://store.playstation.com/en-us/deals",
+            readableLabel:"970x250",
+            startDate:"04/01/2021",
+            endDate:"05/01/2021",
+            trigger:"NONE"
+        };
+        var possibleValues = {
+            trigger:"NONE,Horizontal,Vertical"
+        }
+        function exitCall() {
+            Enabler.exit("MainClick");
+        }
+        var videoCuePoint = [
+            //"cuePoint:funcName" ex. "1:firstAninmation" please do not included the parenthesis after the function name.
+        ]
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                Enabler.setProfileId(10623472);
+
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed = [{}];
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0]._id = 0;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].id = 1;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].Reporting_Label = "607b40e6cda01200063616c5-607b488acda012000636183e_15";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].Active = true;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].Weights = 1;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].Scoring_status = "Unscored";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/bg.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage2 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage2.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/overlay_drop.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage3 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage3.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/overlay_fade.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage4 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage4.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/overlay_bounce.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage1 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage1.Url = "https://cdn.ad-lib.io/v3/partners/5f476f9f0464ed0006bc02ac/assets/singleFiles/607c776ecda0120006367b71/original/StarWars_Squadrons.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage2 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage2.Url = "https://cdn.ad-lib.io/v3/partners/5f476f9f0464ed0006bc02ac/assets/singleFiles/607c7780cda0120006367b8d/original/COD_Zombies.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage3 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].productImage3.Url = "https://cdn.ad-lib.io/v3/partners/5f476f9f0464ed0006bc02ac/assets/singleFiles/607c7792cda0120006367ba9/original/TombRaider.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage5 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage5.Url = "https://cdn.ad-lib.io/v3/partners/5f476f9f0464ed0006bc02ac/assets/singleFiles/607c7974cda0120006367c25/original/Promo_en_US.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage6 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].baseImage6.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/branding.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/intro.jpg";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image2 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image2.Url = "https://cdn.ad-lib.io/v3/partners/5f476f9f0464ed0006bc02ac/assets/singleFiles/602fb3446a39b30006594e42/original/blank.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image3 = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].frame1Image3.Url = "https://cdn.ad-lib.io/v2/partners/5f476f9f0464ed0006bc02ac/assets/concepts/606370abab93b40006dc1250/templates/607995b9cda012000634e413/content/cta.png";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].ctaText = "Shop now";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].legal = "Ends 5\/12";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].cssAttrib = "\/* CSS STYLE *\/";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].landingPage = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].landingPage.Url = "https://store.playstation.com/en-us/deals";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].readableLabel = "160x600 US_EN Games Under X Non-targeted";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].startDate = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].startDate.RawValue = "04/01/2021";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].startDate.UtcValue = 1617260400000;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].endDate = {};
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].endDate.RawValue = "05/01/2021";
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].endDate.UtcValue = 1619852400000;
+                devDynamicContent.PlayStation_Store_Promos_FY21_USA_AdLib_Feed[0].trigger = "NONE";
+                Enabler.setDevDynamicContent(devDynamicContent);
+                
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {            
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+    
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause(); 
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume(); 
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }   
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>

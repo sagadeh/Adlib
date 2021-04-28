@@ -1,0 +1,87 @@
+console.log("studio invocation script");
+function studioInvocation() {
+    Enabler.setProfileId(10588107);
+    var devDynamicContent = {};
+
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed = [{}];
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0]._id = 0;
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].id = 1;
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].Reporting_Label = "5fc77c2be322390006f9980c-5fd2053250eff30006844d18_46";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].Active = true;
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].Weights = 1;
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].Scoring_status = "Unscored";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].animationType = "frame1";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].logo = {};
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].logo.Url = "https://cdn.ad-lib.io/v2/partners/5c5578a2e50cb95de10c079e/assets/singleFiles/image/png/f93c153b092f8f2d77a81573e18c360c/louis_nielsen_logo_rgb_flat_green";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline = "Yes! Gratis flerstyrkeglas, n&aring;r du k&oslash;ber briller fra kun 495 kr.";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline2 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline3 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline2 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline3 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline2 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline3 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage = {};
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage.Url = "https://cdn.ad-lib.io/v3/partners/5c5578a2e50cb95de10c079e/assets/singleFiles/5fdce92d7ccb740006e16add/original/udsalg_160x600.png";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage2 = {};
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage2.Url = "https://cdn.ad-lib.io/v3/partners/5c5578a2e50cb95de10c079e/assets/singleFiles/5fdce7b67ccb740006e169f5/original/160x600-static_curve.jpg";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].currency = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaText = "L&aelig;s mere";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaText2 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaColor1 = "Racing";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaColor2 = "N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize1 = "18, 0, 0";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize2 = "0, 0, 0";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize3 = "0, 0, 0";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor1 = "#666666, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor2 = "N\/A, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor3 = "N\/A, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable = "Medium, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable2 = "N\/A, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable3 = "N\/A, N\/A, N\/A";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].cssAttrib = "\/* custom css *\/";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].landingPage = {};
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].landingPage.Url = "https://www.louisnielsen.dk/tilbud-og-kampagner/udsalg-glas";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].startDate = "02\/15\/2021 0:00:00";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].endDate = "02\/28\/2021 0:00:00";
+    devDynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].readableLabel = "";
+    Enabler.setDevDynamicContent(devDynamicContent);
+    
+    
+  defaultValues.animationType = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].animationType;
+  defaultValues.logo = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].logo.Url;
+  defaultValues.frame1Headline = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline;
+  defaultValues.frame1Headline2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline2;
+  defaultValues.frame1Headline3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Headline3;
+  defaultValues.frame2Headline = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline;
+  defaultValues.frame2Headline2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline2;
+  defaultValues.frame2Headline3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame2Headline3;
+  defaultValues.frame3Headline = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline;
+  defaultValues.frame3Headline2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline2;
+  defaultValues.frame3Headline3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame3Headline3;
+  defaultValues.baseImage = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage.Url;
+  defaultValues.baseImage2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].baseImage2.Url;
+  //defaultValues.frame1Image = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Image.Url;
+  //defaultValues.frame1Background = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].frame1Background.Url;
+  defaultValues.currency = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].currency;
+  defaultValues.ctaText = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaText;
+  defaultValues.ctaText2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaText2;
+  defaultValues.ctaColor1 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaColor1;
+  defaultValues.ctaColor2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].ctaColor2;
+  defaultValues.fontSize1 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize1;
+  defaultValues.fontSize2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize2;
+  defaultValues.fontSize3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontSize3;
+  defaultValues.fontColor1 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor1;
+  defaultValues.fontColor2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor2;
+  defaultValues.fontColor3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].fontColor3;
+  defaultValues.customVariable = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable;
+  defaultValues.customVariable2 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable2;
+  defaultValues.customVariable3 = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].customVariable3;
+  defaultValues.cssAttrib = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].cssAttrib;
+  //defaultValues.bgColor = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].bgColor;
+  defaultValues.landingPage = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].landingPage.Url;
+/*defaultValues.startDate = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0]
+  defaultValues.endDate = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0] */
+  defaultValues.readableLabel = dynamicContent.DK_53_08_2021_Feel_smart_Sale_Free_upgrade_VF_tandl_coating_from_495_AdLib_Feed[0].readableLabel;
+}
