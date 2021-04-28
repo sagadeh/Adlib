@@ -1,0 +1,88 @@
+@font-face {
+     font-family: DTAC2018-Bold;
+     src: url("DTAC2018-Bold.woff");
+}
+@font-face {
+     font-family: DTAC2018-Regular;
+     src: url("DTAC2018-Regular.woff");
+}
+@font-face {
+     font-family: DTAC2018-Light;
+     src: url("DTAC2018-Light.woff");
+}
+
+
+#frame1Image, #frame1Background, #ctaImage, #logo, #baseImage{
+position: absolute;
+width:100%;
+height:100%;
+}
+
+#frame1Headline{
+font-family: DTAC2018-Bold;
+font-size: 26px;
+text-align: center;
+color: #f9ed3c;
+position: absolute;
+left:0;
+top:114px;
+width: 100%;
+
+}
+
+#headline-wrapper{
+position: absolute;
+width: 100%;
+height: 90px;
+left: 0;
+top: 182px;
+}
+
+#frame1Headline2{
+width: 100%;
+height: auto;
+position: relative;
+font-family: DTAC2018-Regular;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+color: #fff;
+}
+#frame1Headline3{
+width: 100%;
+height: auto;
+position: relative;
+font-family: DTAC2018-Regular;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+color: #fff;
+margin-top: -1px;
+}
+#frame1Headline4{
+width: 100%;
+height: auto;
+position: relative;
+font-family: DTAC2018-Regular;
+font-size: 15px;
+line-height: 14px;
+text-align: center;
+color: #f9ed3c;
+margin-top: 5px;
+}
+
+
+
+#frame1Headline5{
+position: absolute;
+width: 100%;
+height: 36px;
+left: 0;
+top: 274px;
+
+font-family: DTAC2018-Bold;
+font-size: 15px;
+line-height: 15px;
+text-align: center;
+color: #fff;
+}

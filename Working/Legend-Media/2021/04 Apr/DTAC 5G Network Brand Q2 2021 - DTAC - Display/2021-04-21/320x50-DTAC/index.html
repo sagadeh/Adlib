@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <link rel="preload" as="font" href="DTAC2018-Bold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="DTAC2018-Regular.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="DTAC2018-Light.woff" type="font/woff" crossorigin="anonymous">
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <img id='frame1Background' adlib-image="frame1Background"/>
+            <img id='frame1Image' adlib-image="frame1Image"/>
+			<img id='baseImage' adlib-image="baseImage"/>
+            <img id='ctaImage' adlib-image="ctaImage"/>
+			<img id='logo' adlib-image="logo"/>
+			<p id='frame1Headline' adlib-text="frame1Headline"></p>
+			<div id="headline-wrapper">
+				<p id='frame1Headline2' adlib-text="frame1Headline2"></p>
+				<p id='frame1Headline4' adlib-text="frame1Headline4"></p>
+			</div>
+			<p id='frame1Headline3' adlib-text="frame1Headline3"></p>
+            <div id="frame1Headline5-wrapper">
+				<p id='frame1Headline5' adlib-text="frame1Headline5"></p>
+			</div>
+            <div id='exitButton' class='exitButton'></div>
+			<!--<img id='guide' src="guide1.png" style="position:absolute; width:100%; height: 100%; top:0; opacity:0.4"/> -->
+        </div>
+    </body>
+    <script>
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '320x50'; // Set the width and height of the ad.
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend
+        /**************************************/
+        var defaultValues = {
+            cssAttrib:"/* CSS STYLE */",
+            landingPage:"https://www.dtac.co.th/",
+            frame1Image:"model.png",
+			baseImage:"baseImage.png",
+            frame1Background:"background.png",
+            ctaImage:"cta.png",
+			logo:"logo.png",
+            frame1Headline:"#ป็นตัวหนังส", //#GoodforAll
+            frame1Headline2:"อาจจะด้วยการสอดแทรก<br>มุกตลกหรืห้เป็ๆย", //Castella Cake
+            frame1Headline3:"ไม่มีอะไรน่าอับอายซ่อน<br>อยู่ภายในท่อน", //Bangkok
+			frame1Headline4:"088-243-8321",
+            frame1Headline5:"ตรงกันข้กัคชื่ด้ 700 MHz", //The new 700 MHz spectrum by dtac
+        };
+        function exitCall() {
+            Enabler.exitOverride("MainClick", defaultValues.landingPage);
+        }
+        var videoCuePoint = [
+            //"cuePoint:funcName" ex. "1:firstAninmation" please do not included the parenthesis after the function name.
+        ]
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+
+                //Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause();
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume();
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                //document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>
