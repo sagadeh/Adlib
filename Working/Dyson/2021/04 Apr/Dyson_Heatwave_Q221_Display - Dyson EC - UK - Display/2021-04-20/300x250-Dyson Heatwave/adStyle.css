@@ -1,0 +1,296 @@
+@font-face {
+     font-family: DysonHeavy;
+     src: url("DysonFutura-Heavy.woff");
+}
+@font-face {
+     font-family: DysonBook;
+     src: url("DysonFutura-Book.woff");
+}
+@font-face {
+     font-family: DysonMedium;
+     src: url("DysonFutura-Medium.woff");
+}
+#introImage {
+     opacity:1;
+}
+.images {
+     position:absolute;
+     top:0px;
+     left:0px;
+     width:100%;
+     height:100%;
+     opacity:0;
+}
+/* BG Covers */
+.covers {
+     position: absolute;
+     top:0px;
+     left:0px;
+     width:300px;
+     height:250px;
+     overflow: hidden;
+}
+/* it hot in &loc today string */
+#frame1Text1 {
+     position:absolute;
+     width:260px;
+     height:21px;
+     left:19px;
+     top:57px;
+     opacity:0;
+}
+#frame1Text1Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: -0.10px;
+     color: black;
+     font-family: DysonHeavy;
+}
+#flareContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#flare1 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 150px;
+    left: 150px;
+    opacity: 0;
+}
+#flare2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 180px;
+    left: 220px;
+    opacity: 0;
+}
+#modelContainer, #model2Container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#modelContainer {
+    left: 100%;
+}
+#hairContainer {
+    position: absolute;
+    top: 104px;
+    right: -1px;
+    width: 30px;
+    height: 46px;
+    overflow: hidden;
+}
+#hairSeq {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 46px;
+}
+#hair2Container {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    width: 20px;
+    height: 28px;
+    overflow: hidden;
+    opacity: 0;
+}
+#hair2Seq {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 260px;
+    height: 28px;
+}
+/******************************/
+/* Temperature */
+#frame1Text2 {
+     position:absolute;
+     width:262px;
+     height:61px;
+     left:17px;
+     top:78px;
+     opacity:0;
+}
+#frame1Text2Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: -0.40px;
+     color: black;
+     font-family: DysonHeavy;
+}
+/******************************/
+/* Frame 2 and 3headline */
+#frame2Text1,#frame3Text1 {
+     position:absolute;
+     width:150px;
+     height:83px;
+     left:20px;
+     top:57px;
+     opacity:0;
+}
+#frame2Text1Content,#frame3Text1Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: -0.10px;
+     color: black;
+     font-family: DysonHeavy;
+}
+/******************************/
+/* Frame 4 Headline */
+#frame4Text1 {
+     position:absolute;
+     width:168px;
+     height:64px;
+     left:20px;
+     top:57px;
+     opacity:0;
+}
+#frame4Text1Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: -0.10px;
+     color: black;
+     font-family: DysonHeavy;
+}
+/******************************/
+/* Frame 5 Footer Text */
+#frame5Text3 {
+     position:absolute;
+     width:235px;
+     height:17px;
+     left:46px;
+     top:228px;
+     opacity:0;
+}
+#frame5Text3Content {
+     position:absolute;
+     width:100%;
+     font-size:12px;
+     line-height: 1em;
+     letter-spacing: 0px;
+     color: white;
+     font-family: DysonMedium;
+}
+/******************************/
+/* Frame 5 Headline */
+#frame5Text1 {
+     position:absolute;
+     width:154px;
+     height:30px;
+     left:18px;
+     top:37px;
+     opacity:0;
+}
+#frame5Text1Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: 0px;
+     color: black;
+     font-family: DysonHeavy;
+}
+/******************************/
+/* Frame 5 Subheadline 2*/
+#frame5Text2 {
+     position:absolute;
+     width:130px;
+     height:45px;
+     left:20px;
+     top:72px;
+     opacity:0;
+     display:flex;
+     align-items: center;
+}
+#frame5Text2Content {
+     position:absolute;
+     width:100%;
+     font-size:17px;
+     line-height: 1em;
+     letter-spacing: 0px;
+     color: black;
+     font-family: DysonBook;
+}
+/******************************/
+
+#ctaButton {
+     position: absolute;
+     width:83px;
+     height:22px;
+     left:20px;
+     top:132px;
+     display:flex;
+     align-items: center;
+     opacity:0;
+}
+#ctaArrow {
+     position:relative;
+     width:24px;
+     height:24px;
+     left:0px;
+     top:0px;
+}
+#ctaTextContent {
+     position:relative;
+     left: 5px;
+     width:100%;
+     font-size:15px;
+     line-height: 1em;
+     letter-spacing: 0px;
+     color: black;
+     font-family: DysonBook;  
+     right:0px;   
+}
+/* Legal */
+#legalText {
+     position:absolute;
+     width:260px;
+     height:13px;
+     left:20px;
+     top:203px;
+     opacity:0;
+     display:flex;
+     align-items: center;
+}
+#legalTextContent {
+     position:absolute;
+     width:100%;
+     font-size:7px;
+     line-height: 1em;
+     letter-spacing: -0.10px;
+     color: black;
+     font-family: DysonBook;
+}
+/* Frame 6 Footer Text */
+#frame6Text1 {
+     position:absolute;
+     width:235px;
+     height:17px;
+     left:49px;
+     top:228px;
+     opacity:0;
+}
+#frame6Text1Content {
+     position:absolute;
+     width:100%;
+     font-size:12px;
+     line-height: 1em;
+     letter-spacing: 0px;
+     color: white;
+     font-family: DysonMedium;
+}
+/******************************/
