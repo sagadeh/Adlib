@@ -5,24 +5,26 @@ var defaultValues = {
   frame1Headline:"Lorem ipsum<br>dolor sit amaet<br>elit consectetur.",
   frame1Background:"frame1Background.png",
   logo:"logo.png",
-  trigger:"show text", /*showText, hideText*/
-  trigger2:"show logo", /*showLogo hideLogo*/
-  trigger3:"show curve", /*showCurve hideCurve*/
+  customVariable:"showText", /*showText, hideText*/
+  customVariable2:"showLogo", /*showLogo hideLogo*/
+  customVariable3:"showCurve", /*showCurve hideCurve*/
+  customVariable4:"rightCurve" /*rightCurve | UCurve*/
 };
 
 function initDynamic() {
     if (!Enabler.isServingInLiveEnvironment()) {
-        defaultValues.frame1Headline;
-        defaultValues.frame1Background;
-        defaultValues.frame1Image;
+        //defaultValues.frame1Headline;
+        //defaultValues.frame1Background;
+        //defaultValues.frame1Image;
     } else {
       //invocation code from studio here...
     }
 }
 var possibleValues = {
-  trigger:"show text,hide text",
-  trigger2:"show logo,hide logo",
-  trigger3:"show curve,hide curve"
+  customVariable:"showText,hideText",
+  customVariable2:"showLogo,hideLogo",
+  customVariable3:"showCurve,hideCurve",
+  customVariable4:"rightCurve,UCurve"
 }
 function populate() {
   document.querySelector("#logo").setAttribute("source", defaultValues.logo);

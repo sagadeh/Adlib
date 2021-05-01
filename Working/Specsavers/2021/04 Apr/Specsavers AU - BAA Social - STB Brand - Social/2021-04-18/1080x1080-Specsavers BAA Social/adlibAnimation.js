@@ -16,19 +16,23 @@ function initAnim(){
   
   tl.to("#main", {duration: 0.5, visibility: "visible"});
   
-  if(defaultValues.trigger=="hide text"){
+  if(defaultValues.customVariable=="hideText"){
     console.log("hide text")
     document.querySelector("#frame1headline").style.opacity = "0";
   }
   
-  if(defaultValues.trigger2=="hide logo"){
+  if(defaultValues.customVariable2=="hideLogo"){
     console.log("hide logo");
     document.querySelector("#logo-wrapper").style.display = "none";
   }
   
-  if(defaultValues.trigger3=="hide curve"){
+  if(defaultValues.customVariable3=="hideCurve"){
     document.querySelector("#curve").style.display = "none";
     document.querySelector("#frame1headline-wrapper").style.backgroundColor = "transparent";
+  }
+  
+  if(defaultValues.customVariable4=="UCurve"){
+    document.querySelector("#curve").setAttribute("source", "curve2.png");
   }
 }
 function animationEnd() {
