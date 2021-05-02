@@ -7,23 +7,33 @@
         <link rel="stylesheet" type="text/css" href="adlib.css">
         <link rel="stylesheet" type="text/css" href="adStyle.css">
         <!--<link rel="preload" as="font" href="myFont.woff" type="font/woff" crossorigin="anonymous">-->
+        <script type="text/javascript" src="SplitText.min.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
         <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
         <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <style></style>
     <body>
         <div id='mainContent' class='mainContent'>
-            <!--<img src="guide.png">-->
+            
             <img id="frame1bg" adlib-image="frame1Background" src="">
+            
             <div id="headerContainer">
                 <div id="logoWrapper">
                     <img adlib-image="logo" id="logo" src="">
                 </div>
                 <div id="headlineWrapper">
-                    <p id="frame1headline" adlib-text="frame1Headline">
+                        <p id="frame1headline" adlib-text="frame1Headline">
+                        <p id="frame2headline" adlib-text="frame2Headline">
+                        <p id="frame3headline" adlib-text="frame3Headline">
+                </div>
+                <div id="subHeadlineWrapper">
                     <p id="frame1subheadline" adlib-text="frame1Subheadline">
+                </div>
+                <div id="subHeadline2Wrapper">
+                    <p id="frame1subheadline2" adlib-text="frame1Subheadline2">
                 </div>
                 <div id="ctaContainer">
                     <div id="ctaWrapper">
@@ -31,9 +41,11 @@
                     </div>
                 </div>
             </div>
+            
             <div id="footerContainer">
                 <p id="disclaimer" adlib-text="disclaimer"></p> 
             </div>
+            <!--<img id="guide" src="guide.png">-->
             <div id='exitButton' class='exitButton'></div>
         </div>
     </body>
@@ -47,21 +59,22 @@
         var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
         /**************************************/
         var defaultValues = {  
-            frame1Headline:"Is it time to <br>switch brokers?",
-            frame1Subheadline:"Trade with Pepperstone and <br>use reliable platforms during <br>market volatility.",
-            ctaText:"Upgrade Today",
-            disclaimer:"Trading CFDs and FX is risky and if you are a professional<br> client, losses can exceed deposits. You have no interest<br> in the underlying asset. Refer to our PDS and legal docs. <br>Pepperstone Group Limited, AFSL 414530.",
+            frame1Headline:"Lorem ipsum dolor sit <br>amet, consectetur abor",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus",
+            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Ut enim ad minim veniam, quis nostrud<br> exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velitese",
+            frame2Headline:"Adipiscing elit, sed dolor eiusmod sed tempo",
+            frame3Headline:"Utenimad minime veniam <br>quise nostru depellat",
+            
+            ctaText:"Lorem Ipsum",
+            disclaimer:"At vero eos et accusamus iusto odio dignissimos<br> ducimus blanditiis praesentium voluptatum deleniti<br> atque corrupti quos dolores et quas molestias excepturi<br> sint occaecati cupiditate non provident, similique sunt in<br> culpa qui officia deserunt",
             frame1Background:"bg.png",
-            logo:"logo-landscape.png",
-            bgColor:"#00279c",
+            logo:"logo.png",
+            bgColor:"#fff",
             ctaColor1:"#ed2e3a",
             trigger:"withPanel", //withPanel or noPanel
             cssAttrib:"/* CSS STYLE */",
             landingPage:"https://ad-lib.io/"
         };
-        var possibleValues = {
-          trigger:"withPanel,noPanel"
-        }
         function exitCall() {
             Enabler.exitOverride("MainClick", defaultValues.landingPage);
         }
@@ -134,6 +147,7 @@
             window.CustomEvent = CustomEvent;
         })();
     </script>
+    
     <script src="adlibUtils-v3.js"></script>
     <script src='animation.js'></script>
 </html>

@@ -16,9 +16,10 @@
     <style></style>
     <body>
         <div id='mainContent' class='mainContent'>
-            <img id="guide" src="guide.png">
+            
 
             <img id="frame1bg" adlib-image="frame1Background" src="">
+            <!--<img id="guide" src="guide.png">-->
             <!-- Frame 1 -->
             <div id="headerContainer">
                 <div id="logoWrapper">
@@ -35,12 +36,12 @@
                 <div id="subheadline2Wrapper">
                      <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
                 </div>
-                <div id="ctaContainer">
+            </div>
+            <div id="ctaContainer">
                     <div id="ctaWrapper">
                         <div id="cta" adlib-text="ctaText"></div>
                     </div>
                 </div>
-            </div>
             <div id="footerContainer">
                 <p id="disclaimer" adlib-text="disclaimer"></p> 
             </div>
@@ -53,7 +54,7 @@
         /***************************************
             DO NOT DELETE VARIABLES BELOW
         ***************************************/
-        var creativeSize = '300x600'; // Set the width and height of the ad.
+        var creativeSize = '300x250'; // Set the width and height of the ad.
         var devDynamicContent = {}; // Variable for studio invocation code.
         var myVideo; // Variable to hold video element.
         var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
@@ -63,13 +64,13 @@
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
             frame1Headline:"Lorem ipsum dolor sit amet, consectetur abor",
-            frame1Subheadline:"At vero eos et accusamus iusto <br>odio dignissimos ducimus",
-            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Ut enim ad minim veniam, quis nostrud<br> exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velitese",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos<br> ducimus blanditiis praesentium",
+            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velitese",
             frame2Headline:"Adipiscing elit, sed dolor eiusmod sed tempo",
-            frame3Headline:"Utenimad minime veniam quise nostru depellat",
+            frame3Headline:"Utenimad minime veniam<br> quise nostru depellat",
             logo:"logo.png",
             ctaText:"Lorem Ipsum",
-            disclaimer:"At vero eos et accusamus iusto odio dignissimos<br> ducimus blanditiis praesentium voluptatum deleniti<br> atque corrupti quos dolores et quas molestias excepturi<br> sint occaecati cupiditate non provident, similique sunt in<br> culpa qui officia deserunt",
+            disclaimer:"At vero eos et accusamus iusto odio dignissimos ducimus<br> blanditiis praesentium voluptatum deleniti atque corrupti quos<br> dolores et quas molestias excepturi sint occaecati cupiditate<br> non provident, similique sunt in culpa qui officia deserunt",
             trigger:"withPanel", //withPanel or noPanel
         };
         function exitCall() {

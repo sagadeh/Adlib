@@ -16,13 +16,13 @@
     <style></style>
     <body>
         <div id='mainContent' class='mainContent'>
-            <img id="guide" src="guide.png">
-
             <img id="frame1bg" adlib-image="frame1Background" src="">
+            <!--<img id="guide" src="guide.png">-->
             <!-- Frame 1 -->
             <div id="headerContainer">
                 <div id="logoWrapper">
                      <img id="logo" adlib-image="logo" src="">
+                     <img id="logo2" adlib-image="logo2" src="">
                 </div>
                 <div id="headlineWrapper">
                     <p id="headline1" adlib-text="frame1Headline"></p>
@@ -36,12 +36,12 @@
                      <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
                 </div>
                 <div id="ctaContainer">
-                    <div id="ctaWrapper">
-                        <div id="cta" adlib-text="ctaText"></div>
-                    </div>
+                <div id="ctaWrapper">
+                    <div id="cta" adlib-text="ctaText"></div>
                 </div>
             </div>
-            <div id="footerContainer">
+            </div>
+            <div id="disclaimerContainer">
                 <p id="disclaimer" adlib-text="disclaimer"></p> 
             </div>
             <!-- Frame 1 -->
@@ -53,7 +53,7 @@
         /***************************************
             DO NOT DELETE VARIABLES BELOW
         ***************************************/
-        var creativeSize = '300x600'; // Set the width and height of the ad.
+        var creativeSize = '728x90'; // Set the width and height of the ad.
         var devDynamicContent = {}; // Variable for studio invocation code.
         var myVideo; // Variable to hold video element.
         var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
@@ -62,14 +62,15 @@
             cssAttrib:"/* CSS STYLE */",
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
-            frame1Headline:"Lorem ipsum dolor sit amet, consectetur abor",
-            frame1Subheadline:"At vero eos et accusamus iusto <br>odio dignissimos ducimus",
-            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Ut enim ad minim veniam, quis nostrud<br> exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velitese",
-            frame2Headline:"Adipiscing elit, sed dolor eiusmod sed tempo",
-            frame3Headline:"Utenimad minime veniam quise nostru depellat",
+            frame1Headline:"Lorem ipsum dolor sit amet,<br> consectetur abor",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus<br> blanditiis praesentium voluptatum deleniti",
+            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br> enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velitese",
+            frame2Headline:"Adipiscing elit, sed dolor<br> eiusmod sed tempo",
+            frame3Headline:"Utenimad minime veniam<br> quise nostru depellat",
             logo:"logo.png",
+            logo2:"logo-white.png",
             ctaText:"Lorem Ipsum",
-            disclaimer:"At vero eos et accusamus iusto odio dignissimos<br> ducimus blanditiis praesentium voluptatum deleniti<br> atque corrupti quos dolores et quas molestias excepturi<br> sint occaecati cupiditate non provident, similique sunt in<br> culpa qui officia deserunt",
+            disclaimer:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt",
             trigger:"withPanel", //withPanel or noPanel
         };
         function exitCall() {

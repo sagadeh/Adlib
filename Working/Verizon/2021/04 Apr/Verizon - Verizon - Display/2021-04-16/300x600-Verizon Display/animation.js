@@ -63,6 +63,7 @@ function startAnimation() {
 function setParentLineText() {
     for (var i = 0; i < textHeadlines1.length; i++) {
       parent1 = textHeadlines1[i];
+        //console.log(parent1)
       setHeadlineText1();
     }
     for (var i = 0; i < textHeadlines2.length; i++) {

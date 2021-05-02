@@ -4,9 +4,10 @@
 // sample tween codes:
 // tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
-var time = (defaultValues.trigger=="withPanel") ? '+=1' : '+=0.5';
+var time = (defaultValues.trigger=="withPanel") ? '+=0.5' : '+=0';
 
 gsap.set("#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper, #footerContainer, #ctaContainer", {rotationZ:0.01, force3D:false});
+gsap.set("#subheadline2, #headerContainer", {rotationZ:0.01, force3D:false});
 
 function initAnimation() {
      // place all fluid elements before text resize and css attrib.
@@ -21,23 +22,32 @@ function startAnimation() {
         if(defaultValues.disclaimer == "N/A") document.getElementById("disclaimer").style.opacity = 0;
         switch(defaultValues.trigger) {
             case "withPanel":
-                gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, delay: 0.5, force3D: false})
+                gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, force3D: false})
                 break;
             case "noPanel":
-                gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})  
+                gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})
+                gsap.to("#logo", {duration: 0, opacity: 0});
+                gsap.to("#logo2", {duration: 0, opacity: 1});
                 break;
         }
     },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
-    tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
-      .from("#logo", {duration: 0.5, opacity: 0},time)
-      .from("#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
-      .from("#footerContainer", {duration: 0.5, opacity: 0, y:"100%"})
-      .from("#ctaContainer", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'-=0.5')
-      .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
-      .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: takeScreenshot})
-      .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
-      .from("#headline3", {duration: 0.5, opacity: 0, y:"20%"})
-      .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1},'+=0.5');
+    tl.to("#mainContent", {duration: 0, visibility: "visible"})
+      .from("#logo", {duration: 0.25, opacity: 0},time)
+      .from("#headlineWrapper, #subheadlineWrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
+      .from("#ctaContainer", {duration: 0.25, opacity: 0, onComplete: takeScreenshot})
+      .to("#headline1", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
+      .from("#headline2", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
+      .to("#headline2", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
+      .from("#headline3", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
+      .to("#headlineWrapper, #subheadlineWrapper", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
+      
+      .from("#subheadline2", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
+      .to("#subheadline2", {duration: 0.25, opacity: 0},'+=4')
+      .to("#headerContainer", {duration: 0.25, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.25')
+      .to("#logo", {duration: 0.25, opacity: 0},'-=0.25')
+      .from("#logo2", {duration: 0.25, opacity: 0},'-=0.25')
+      .from("#disclaimer", {duration: 0.25, opacity: 0, y:"10%"})
+      .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
 }
 
 function splitTextHeadline(elem) {

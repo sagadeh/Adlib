@@ -33,10 +33,10 @@ function startAnimation() {
       .from("#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
       .from("#footerContainer", {duration: 0.5, opacity: 0, y:"100%"})
       .from("#ctaContainer", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'-=0.5')
-      .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
-      .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: takeScreenshot})
-      .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
-      .from("#headline3", {duration: 0.5, opacity: 0, y:"20%"})
+      .to("#headline1", {duration: 0.5, opacity: 0, y:"-10%"},'+=2.5')
+      .from("#headline2", {duration: 0.5, opacity: 0, y:"10%", onComplete: takeScreenshot})
+      .to("#headline2", {duration: 0.5, opacity: 0, y:"-10%"},'+=2.5')
+      .from("#headline3", {duration: 0.5, opacity: 0, y:"10%"})
       .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1},'+=0.5');
 }
 
