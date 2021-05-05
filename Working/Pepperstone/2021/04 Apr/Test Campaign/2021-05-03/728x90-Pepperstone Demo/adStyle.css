@@ -1,0 +1,122 @@
+@font-face {
+     font-family: VerizonNHGDSBold;
+     src: url("VerizonNHGDSBold.woff");
+}
+@font-face {
+     font-family: VerizonNHGDSRegular;
+     src: url("VerizonNHGDSRegular.woff");
+}
+#guide {
+    position: absolute;
+    opacity: 0.5;
+}
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#headerContainer {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    top: 0px;
+    width: 494px;
+    height: 100%;
+    padding: 33px 5px 5px 8px;
+    border-top-right-radius: 20px;
+    background-color: white;
+}
+#logoWrapper {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+#logo,#logo2{
+    height: 18px;
+}
+#logo2 {
+    position: absolute;
+    left: 0px;
+}
+#headlineWrapper {
+    position: relative;
+    margin-top: -5px;
+}
+#subheadlineWrapper{
+
+}
+#subheadline2Wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    left: 0px;
+    bottom: 0px;
+    width: 360px;
+    height: auto;
+    margin: 0px 0px 5px 10px;
+}
+#headline1, #headline2, #headline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 19px;
+    line-height: 16px;
+    text-align: left;
+    color: #231f20;
+}
+#subheadline1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 11px;
+    text-align: left;
+    color: #231f20;
+}
+#subheadline2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: left;
+    color: #231f20;
+}
+#ctaContainer {
+    position: absolute;
+    top: 10px;
+    right: 29px;
+    display: flex;
+    perspective: 1000px; 
+}
+#ctaWrapper {
+    border-radius: 20px;
+    background-color: red;
+}
+#cta {
+    text-align: center;
+    margin: 7px 16px 7px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    color: white;
+}
+#disclaimerContainer {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    bottom: 0px;
+    width: 365px;
+    height: 65px;
+    padding: 5px 0px 5px 10px;
+}
+#disclaimer {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9px;
+    color: white;
+    line-height: 11px;
+}

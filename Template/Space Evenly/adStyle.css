@@ -1,0 +1,54 @@
+/* @font-face {
+     font-family: name;
+     src: url("path");
+} */
+#logoWrapper {
+    position: absolute;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 285px;
+    height: 100%;
+}
+#frame1BgWrapper {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+#copiesWrapper {
+    position: absolute;
+    display: flex;
+     flex-flow: column wrap;
+    justify-content: space-evenly;
+    top: 0px;
+    right: 0px;
+    width: 408px;
+    height: 100%;
+}
+#headlineWrapper {
+    position: relative;
+}
+#headline1, #headline2 {
+    text-align: center;
+}
+
+
+#ctaContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#ctaWrapper {
+    background-color: red;
+    border: 2px black solid;
+}
+#cta {
+    text-align: center;
+    margin: 12px 23px 12px 23px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: white;
+}
