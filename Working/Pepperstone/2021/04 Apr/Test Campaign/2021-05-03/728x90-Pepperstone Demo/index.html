@@ -32,8 +32,8 @@
                 <div id="subheadlineWrapper">
                     <p id="subheadline1" adlib-text="frame1Subheadline"></p>
                 </div>
-                <div id="subheadline2Wrapper">
-                     <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
+                <div id="frame4HeadlineWrapper">
+                     <p id="headline4" adlib-text="frame4Headline"></p>
                 </div>
                 <div id="ctaContainer">
                 <div id="ctaWrapper">
@@ -63,8 +63,8 @@
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
             frame1Headline:"Lorem ipsum dolor sit amet,<br> consectetur abor",
-            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus<br> blanditiis praesentium voluptatum deleniti",
-            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br> enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velitese",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti",
+            frame4Headline:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velitese",
             frame2Headline:"Adipiscing elit, sed dolor<br> eiusmod sed tempo",
             frame3Headline:"Utenimad minime veniam<br> quise nostru depellat",
             logo:"logo.png",
@@ -72,6 +72,8 @@
             ctaText:"Lorem Ipsum",
             disclaimer:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt",
             trigger:"withPanel", //withPanel or noPanel
+            bgColor:"white",
+            ctaColor1:"red"
         };
         var possibleValues = {
           trigger:"withPanel,noPanel"
@@ -98,6 +100,8 @@
             /*****************************************
             If you need to manually assign a defaultValue to a style of an element, add it below.
             *****************************************/
+            document.querySelector("#headerContainer").style.backgroundColor = defaultValues.bgColor;
+            document.querySelector("#ctaWrapper").style.backgroundColor = defaultValues.ctaColor1;
         };
     /*-----------------------------------------------------------------
 

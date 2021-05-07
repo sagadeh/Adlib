@@ -19,17 +19,10 @@ function initAnimation() {
 
 function startAnimation() {  
     var tl = gsap.timeline({onStart: function(){
-        if(defaultValues.disclaimer == "N/A") document.getElementById("disclaimer").style.opacity = 0;
-        switch(defaultValues.trigger) {
-            case "withPanel":
-                gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, force3D: false})
-                break;
-            case "noPanel":
-                gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})
-                gsap.to("#logo", {duration: 0, opacity: 0});
-                gsap.to("#logo2", {duration: 0, opacity: 1});
-                break;
-        }
+        
+        if(defaultValues.frame1Subheadline == "") document.getElementById("subheadlineWrapper").style.display = "none";
+        panelAnimation();
+        
     },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0, visibility: "visible"})
       .from("#logo", {duration: 0.25, opacity: 0},time)
@@ -38,14 +31,44 @@ function startAnimation() {
       .to("#headline1", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
       .from("#headline2", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
       .to("#headline2", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
-      .from("#headline3", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
-      .to("#headlineWrapper, #subheadlineWrapper", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
-      
-      .from("#headline4", {duration: 0.25, opacity: 0, y:"10%", onComplete: takeScreenshot})
-      .to("#headline4", {duration: 0.25, opacity: 0},'+=4')
+      .from("#headline3", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
+          //NO FRAME 4 HEADLINE AND DISCLAIMER
+          if(defaultValues.frame4Headline == "" && defaultValues.disclaimer == "") {
+              tl.paused(true);
+              gsap.to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
+          }else{
+              takeScreenshot();
+          }
+      }})
+      .to("#headlineWrapper, #subheadlineWrapper", {duration: 0.25, opacity: 0, y:"-10%", onStart: function(){
+          //NO FRAME 4 HEADLINE, IT WILL SEEK FRAME 5 ANIMATION
+          if(defaultValues.frame4Headline == "") tl.seek(13);
+      }},'+=2')
+      .from("#headline4", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
+          //NO DISCLAIMER, IT WILL ANIMATE CTA
+          if(defaultValues.disclaimer == "") {
+              tl.paused(true);
+              gsap.to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
+          }else{
+              takeScreenshot();
+          }
+      }})
+      .to("#headline4", {duration: 0.25, opacity: 0},'+=4')//13 SEC
       .to("#headerContainer", {duration: 0.25, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.25')
       .from("#disclaimer", {duration: 0.25, opacity: 0, y:"10%"})
       .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
+}
+function panelAnimation() {
+    switch(defaultValues.trigger) {
+        case "withPanel":
+            gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, force3D: false})
+            break;
+        case "noPanel":
+            gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})
+            gsap.to("#logo", {duration: 0, opacity: 0});
+            gsap.to("#logo2", {duration: 0, opacity: 1});
+            break;
+    }
 }
 
 function splitTextHeadline(elem) {

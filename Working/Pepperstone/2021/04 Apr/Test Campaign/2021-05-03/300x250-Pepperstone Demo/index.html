@@ -71,7 +71,10 @@
             logo:"logo.png",
             ctaText:"Lorem Ipsum",
             disclaimer:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt",
+            disclaimerBgColor:"rgb(0, 0, 0, 0.4)",
             trigger:"withPanel", //withPanel or noPanel
+            bgColor:"white",
+            ctaColor1:"red"
         };
         var possibleValues = {
           trigger:"withPanel,noPanel"
@@ -98,6 +101,9 @@
             /*****************************************
             If you need to manually assign a defaultValue to a style of an element, add it below.
             *****************************************/
+            document.querySelector("#headerContainer").style.backgroundColor = defaultValues.bgColor;
+            document.querySelector("#ctaWrapper").style.backgroundColor = defaultValues.ctaColor1;
+            document.querySelector("#disclaimer").style.backgroundColor = defaultValues.disclaimerBgColor;
         };
     /*-----------------------------------------------------------------
 
