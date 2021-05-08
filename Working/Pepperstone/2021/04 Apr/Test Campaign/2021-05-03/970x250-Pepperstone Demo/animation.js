@@ -47,7 +47,7 @@ function startAnimation() {
 function panelAnimation() {
     switch(defaultValues.trigger) {
         case "withPanel":
-            gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, delay: 0.5, force3D: false})
+            gsap.fromTo("#panel-white", {x:"-100%"}, {x:"0%", duration: 0.5, delay: 0.5, force3D: false})
             break;
         case "noPanel":
             gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})  

@@ -16,17 +16,26 @@
     width: 100%;
     height: 100%;
 }
+#panel-white {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 585px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background-color: #ffffff;
+}
 #headerContainer {
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-flow: column wrap;
     top: 0px;
-    width: 585px;
+    width: 100%;
     height: 100%;
     padding-top: 10px;
-    border-top-right-radius: 20px;
-    background-color: white;
+    /*border-top-right-radius: 20px;
+    background-color: white;*/
 }
 #logoWrapper {
     position: relative;
@@ -38,6 +47,7 @@
 }
 #headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper {
     margin-left: 10px;
+    width: 570px;
 }
 #headline1, #headline2, #headline3 {
     margin: auto;
@@ -67,10 +77,9 @@
 }
 #ctaContainer {
     position: absolute;
-    top: 1px;
-    right: 15px;
+    top: 9px;
+    right: 400px;
     display: flex;
-    padding: 9px 0px 19px 11px;
     perspective: 1000px; 
 }
 #ctaWrapper {

@@ -119,13 +119,13 @@
     justify-content: space-around;
     top: 0px;
     left: 45px;
-    width: 170px;
+    width: 185px;
     height: 100%;
 }
 #disclaimer {
     text-align: left;
     font-family: 'Roboto', sans-serif;
-    font-size: 5px;
+    font-size: 6px;
     color: white;
-    line-height: 7px;
+    line-height: 8px;
 }
