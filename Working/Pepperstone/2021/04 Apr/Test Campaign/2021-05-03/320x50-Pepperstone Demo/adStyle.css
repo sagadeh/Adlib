@@ -21,7 +21,7 @@
     top: 0px;
     display: flex;
     justify-content: flex-start;
-    width: 220px;
+    width: 230px;
     height: 100%;
     border-top-right-radius: 20px;
     background-color: white;
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 70px;
     height: 100%;
 }
 #textContainer {
@@ -39,8 +39,9 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
-    width: 160px;
+    /*width: 160px;*/
     height: 100%;
+    margin-right: 10px;
 }
 #logo{
     height: 25px;
@@ -80,8 +81,8 @@
 /*subheadline2*/
 #headline4 {
     font-family: 'Roboto', sans-serif;
-    font-size: 5px;
-    line-height: 7px;
+    font-size: 6px;
+    line-height: 8px;
     text-align: left;
     color: #231f20;
 }
@@ -92,7 +93,7 @@
     align-items: center;
     top: 0px;
     right: 0px;
-    width: 100px;
+    width: 90px;
     height: 100%;
 }
 #ctaContainer {

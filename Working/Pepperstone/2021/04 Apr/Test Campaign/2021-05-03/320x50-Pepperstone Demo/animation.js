@@ -4,7 +4,6 @@
 // sample tween codes:
 // tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
-var time = (defaultValues.trigger=="withPanel") ? '+=0.5' : '+=0';
 
 gsap.set("#headlineWrapper, #subheadlineWrapper, #frame4Wrapper, #footerContainer, #ctaContainer", {rotationZ:0.01, force3D:false});
 gsap.set("#headline4, #headerContainer", {rotationZ:0.01, force3D:false});
@@ -19,13 +18,12 @@ function initAnimation() {
 
 function startAnimation() {  
     var tl = gsap.timeline({onStart: function(){
-        
         if(defaultValues.frame1Subheadline == "") document.getElementById("subheadlineWrapper").style.display = "none";
-        panelAnimation();
-        
+        if(defaultValues.trigger == "") gsap.set("#headerContainer", {backgroundColor: "transparent"});
     },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0, visibility: "visible"})
-      .from("#logo", {duration: 0.25, opacity: 0},time)
+      .from("#headerContainer", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
+      .from("#logo", {duration: 0.25, opacity: 0})
       .from("#headlineWrapper, #subheadlineWrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
       .from("#ctaContainer", {duration: 0.25, opacity: 0, onComplete: takeScreenshot})
       .to("#headline1", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
@@ -57,18 +55,6 @@ function startAnimation() {
       .to("#headerContainer", {duration: 0.25, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.25')
       .from("#disclaimer", {duration: 0.25, opacity: 0, y:"10%"})
       .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
-}
-function panelAnimation() {
-    switch(defaultValues.trigger) {
-        case "withPanel":
-            gsap.fromTo("#headerContainer", {x:"-100%"}, {x:"0%", duration: 0.5, force3D: false})
-            break;
-        case "noPanel":
-            gsap.to("#headerContainer", {duration: 0, backgroundColor: "transparent"})
-            gsap.to("#logo", {duration: 0, opacity: 0});
-            gsap.to("#logo2", {duration: 0, opacity: 1});
-            break;
-    }
 }
 
 function splitTextHeadline(elem) {
