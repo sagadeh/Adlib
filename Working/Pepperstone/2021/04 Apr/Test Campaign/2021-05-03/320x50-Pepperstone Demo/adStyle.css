@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
 }
-#headerContainer {
+#header-container {
     position: relative;
     top: 0px;
     display: flex;
@@ -26,7 +26,7 @@
     border-top-right-radius: 20px;
     background-color: white;
 }
-#logoWrapper {
+#logo-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
     width: 70px;
     height: 100%;
 }
-#textContainer {
+#text-container {
     position: relative;
     display: flex;
     flex-flow: column wrap;
@@ -50,13 +50,13 @@
     position: absolute;
     left: 10px;
 }
-#headlineWrapper {
+#headline-wrapper {
     position: relative;
 }
-#subheadlineWrapper{
+#subheadline-wrapper{
 
 }
-#frame4Wrapper {
+#frame4-wrapper {
     position: absolute;
 }
 #headline1, #headline2, #headline3 {
@@ -86,7 +86,7 @@
     text-align: left;
     color: #231f20;
 }
-#panelRight {
+#panel-right {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -96,12 +96,12 @@
     width: 90px;
     height: 100%;
 }
-#ctaContainer {
+#cta-container {
     position: relative;
     display: flex;
     perspective: 1000px; 
 }
-#ctaWrapper {
+#cta-wrapper {
     border-radius: 20px;
     background-color: red;
 }
@@ -113,7 +113,7 @@
     letter-spacing: 0.02em;
     color: white;
 }
-#disclaimerContainer {
+#disclaimer-container {
     position: absolute;
     display: flex;
     flex-flow: column wrap;

@@ -2,13 +2,13 @@
 
 
 var defaultValues = {
-  frame1Headline:"Lorem ipsum<br>dolor sit amaet<br>elit consectetur.",
+  frame1Headline:"Lorem ipsum<br> dolor sit amaet<br>elit consectetur.",
   frame1Background:"frame1Background.png",
   logo:"logo.png",
   customVariable:"showText", /*showText, hideText*/
-  customVariable2:"hideLogo", /*showLogo hideLogo*/
+  customVariable2:"showLogo", /*showLogo hideLogo*/
   customVariable3:"showCurve", /*showCurve hideCurve*/
-  customVariable4:"rightCurve" /*rightCurve | UCurve*/
+  customVariable4:"uCurve" /*rightCurve | UCurve*/
 };
 
 function initDynamic() {
@@ -24,7 +24,7 @@ var possibleValues = {
   customVariable:"showText,hideText",
   customVariable2:"showLogo,hideLogo",
   customVariable3:"showCurve,hideCurve",
-  customVariable4:"rightCurve,UCurve"
+  customVariable4:"rightCurve,uCurve"
 }
 function populate() {
   document.querySelector("#logo").setAttribute("source", defaultValues.logo);

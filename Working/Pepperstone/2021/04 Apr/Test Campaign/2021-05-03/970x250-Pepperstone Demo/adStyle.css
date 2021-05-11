@@ -25,7 +25,7 @@
     border-top-right-radius: 20px;
     background-color: #ffffff;
 }
-#headerContainer {
+#header-container {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@
     /*border-top-right-radius: 20px;
     background-color: white;*/
 }
-#logoWrapper {
+#logo-wrapper {
     position: relative;
     padding-left: 7px;
     /*padding: 19px 0px 6px 18px;*/
@@ -45,7 +45,7 @@
 #logo {
     height: 28px;
 }
-#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper {
+#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper {
     margin-left: 10px;
     width: 570px;
 }
@@ -75,14 +75,14 @@
     text-align: left;
     color: #231f20;
 }
-#ctaContainer {
+#cta-container {
     position: absolute;
     top: 9px;
     right: 400px;
     display: flex;
     perspective: 1000px; 
 }
-#ctaWrapper {
+#cta-wrapper {
     border-radius: 20px;
     background-color: red;
 }
@@ -94,7 +94,7 @@
     letter-spacing: 0.02em;
     color: white;
 }
-#footerContainer {
+#footer-container {
     position: relative;
     width: 100%;
     height: auto;

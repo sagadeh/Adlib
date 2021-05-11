@@ -31,7 +31,7 @@ function initAnim(){
     document.querySelector("#frame1headline-wrapper").style.backgroundColor = "transparent";
   }
   
-  if(defaultValues.customVariable4=="UCurve"){
+  if(defaultValues.customVariable4=="uCurve"){
     document.querySelector("#curve").setAttribute("source", "curve2.png");
   }
 }

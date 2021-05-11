@@ -5,7 +5,7 @@
 // tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
 
-gsap.set("#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper, #footerContainer, #ctaContainer", {rotationZ:0.01, force3D:false});
+gsap.set("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper, #footer-container, #cta-container", {rotationZ:0.01, force3D:false});
 
 function initAnimation() {
      // place all fluid elements before text resize and css attrib.
@@ -17,22 +17,22 @@ function initAnimation() {
 
 function startAnimation() {  
     var tl = gsap.timeline({onStart: function(){
-        if(defaultValues.frame1Subheadline == "") document.getElementById("subheadlineWrapper").style.display = "none";
-        if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2Wrapper").style.display = "none";
+        if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
+        if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
         if(defaultValues.disclaimer == "") document.getElementById("disclaimer").style.display = "none";
-        if(defaultValues.trigger != "noPanel") gsap.set("#headerContainer", {backgroundColor: "transparent"});
+        if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
     },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
-      .from("#headerContainer", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
+      .from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.5, opacity: 0})
-      .from("#headlineWrapper, #subheadlineWrapper, #subheadline2Wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
-      .from("#footerContainer", {duration: 0.5, opacity: 0, y:"100%"})
-      .from("#ctaContainer", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'-=0.5')
+      .from("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
+      .from("#footer-container", {duration: 0.5, opacity: 0, y:"100%"})
+      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'-=0.5')
       .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
       .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: takeScreenshot})
       .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
       .from("#headline3", {duration: 0.5, opacity: 0, y:"20%"})
-      .to("#ctaWrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1},'+=0.5');
+      .to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1},'+=0.5');
 }
 
 function splitTextHeadline(elem) {
@@ -64,36 +64,26 @@ function splitTextHeadline(elem) {
     }
     
     if(countLineText1 >= countLineText2 && countLineText1 >= countLineText3) {
-        document.getElementById(elem+3).style.position = "absolute";
-        document.getElementById(elem+2).style.position = "absolute";
-    }else if(countLineText2 >= countLineText3 && countLineText2 >= countLineText1){
-        document.getElementById(elem+1).style.position = "absolute";
-        document.getElementById(elem+3).style.position = "absolute";   
-    }else if(countLineText3 >= countLineText2 && countLineText3 >= countLineText1){
-        document.getElementById(elem+1).style.position = "absolute";
-        document.getElementById(elem+2).style.position = "absolute";
-    }
-    
-    if(countLineText1 <= countLineText3 || countLineText1 <= countLineText2) {
-        var frame = 1;
-        vAlignText(elem, frame);
-    }
-    if(countLineText2 <= countLineText3 || countLineText2 <= countLineText1) {
-        var frame = 2;
-        vAlignText(elem, frame);
-    }
-    if(countLineText3 <= countLineText1 || countLineText3 <= countLineText2) {
-        var frame = 3;
-        vAlignText(elem, frame);
+        vAlignText(elem, 3);
+        vAlignText(elem, 2);
+    }else if(countLineText2 >= countLineText3 && countLineText2 >= countLineText1) {
+        vAlignText(elem, 1);
+        vAlignText(elem, 3);
+    }else if(countLineText3 >= countLineText2 && countLineText3 >= countLineText1) {
+        vAlignText(elem, 1);
+        vAlignText(elem, 2);
     }
 }
 
 function vAlignText(elem, frame) {
-    document.getElementById(elem+frame).style.height = "100%";
-    document.getElementById(elem+frame).style.width = "100%";
-    document.getElementById(elem+frame).style.display = "flex";
-    document.getElementById(elem+frame).style.flexDirection = "column";
-    document.getElementById(elem+frame).style.justifyContent = "center";
+    document.getElementById(elem+frame).style.cssText = `
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    `;
 }
 
 
