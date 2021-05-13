@@ -18,10 +18,12 @@ function initAnimation() {
 }
 
 function startAnimation() {  
-    tl = gsap.timeline({onStart: function(){
-        if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
-        if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
-    },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
+    tl = gsap.timeline({
+        onStart: function(){
+            if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
+            if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
+        },onComplete: animationEnd
+    }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0, visibility: "visible"})
       .from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.25, opacity: 0})

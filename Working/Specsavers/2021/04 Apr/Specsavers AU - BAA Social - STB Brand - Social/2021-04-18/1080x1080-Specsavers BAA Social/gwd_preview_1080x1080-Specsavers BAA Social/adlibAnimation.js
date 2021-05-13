@@ -21,17 +21,12 @@ function initAnim(){
     document.querySelector("#frame1headline").style.opacity = "0";
   }
   
-  if(defaultValues.customVariable2=="hideLogo"){
-    console.log("hide logo");
-    document.querySelector("#logo-wrapper").style.display = "none";
-  }
-  
-  if(defaultValues.customVariable3=="hideCurve"){
+  if(defaultValues.customVariable2=="hideCurve"){
     document.querySelector("#curve").style.display = "none";
     document.querySelector("#frame1headline-wrapper").style.backgroundColor = "transparent";
   }
   
-  if(defaultValues.customVariable4=="uCurve"){
+  if(defaultValues.customVariable3=="uCurve"){
     document.querySelector("#curve").setAttribute("source", "curve2.png");
   }
 }

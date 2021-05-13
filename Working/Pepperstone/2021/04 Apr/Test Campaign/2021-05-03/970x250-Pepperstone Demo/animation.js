@@ -16,19 +16,21 @@ function initAnimation() {
 }
 
 function startAnimation() {  
-    var tl = gsap.timeline({onStart: function(){
-        if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
-        if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
-        if((defaultValues.disclaimer == "") && (defaultValues.frame1Subheadline == "") && (defaultValues.frame1Subheadline2 == "")) {
-            //frame1Subheadline, frame1Subheadline2, disclaimer are Empty/Null
-            document.getElementById("disclaimer").style.opacity = 0;
-        }else if(defaultValues.disclaimer == ""){
-            //disclaimer are Empty/Null
-            document.getElementById("footer-container").style.display = "none";
-            document.getElementById("header-container").style.paddingBottom = "10px";
-        }
-        if(defaultValues.trigger == "noPanel") gsap.set("#panel-white", {backgroundColor: "transparent"}); 
-    },onComplete: animationEnd}); //Screenshot FRAME5 / adlibEnd
+    var tl = gsap.timeline({
+        onStart: function(){
+            if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
+            if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
+            if((defaultValues.disclaimer == "") && (defaultValues.frame1Subheadline == "") && (defaultValues.frame1Subheadline2 == "")) {
+                //frame1Subheadline, frame1Subheadline2, disclaimer are Empty/Null
+                document.getElementById("disclaimer").style.opacity = 0;
+            }else if(defaultValues.disclaimer == ""){
+                //disclaimer are Empty/Null
+                document.getElementById("footer-container").style.display = "none";
+                document.getElementById("header-container").style.paddingBottom = "10px";
+            }
+            if(defaultValues.trigger == "noPanel") gsap.set("#panel-white", {backgroundColor: "transparent"}); 
+        },onComplete: animationEnd
+    }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
       .from("#panel-white", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.5, opacity: 0})
