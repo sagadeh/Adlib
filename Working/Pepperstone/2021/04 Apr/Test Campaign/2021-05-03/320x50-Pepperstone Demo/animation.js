@@ -34,15 +34,18 @@ function startAnimation() {
       .to("#headline2", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
       .from("#headline3", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
           //NO FRAME 4 HEADLINE AND DISCLAIMER
-          skipTextAnimation("frame3");
+          var frame = (defaultValues.frame4Headline == "" && defaultValues.disclaimer == "") ? "cta" : "screenshot";
+          skipTextAnimation(frame);
       }})
       .to("#headline-wrapper, #subheadline-wrapper", {duration: 0.25, opacity: 0, y:"-10%", onStart: function(){
           //NO FRAME 4 HEADLINE, IT WILL SEEK FRAME 5 ANIMATION
-          skipTextAnimation("frame4");
+          var frame = (defaultValues.frame4Headline == "") ? "end" : "";
+          skipTextAnimation(frame);
       }},'+=2')
       .from("#headline4", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
           //NO DISCLAIMER, IT WILL ANIMATE CTA
-          skipTextAnimation("frame5");
+          var frame = (defaultValues.disclaimer == "") ? "cta" : "screenshot";
+          skipTextAnimation(frame);
       }})
       .to("#headline4", {duration: 0.25, opacity: 0},'+=4')//13 SEC
       .to("#header-container", {duration: 0.25, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.25')
@@ -52,24 +55,15 @@ function startAnimation() {
 
 function skipTextAnimation(frame) {
     switch(frame) {
-        case "frame3":
-            if(defaultValues.frame4Headline == "" && defaultValues.disclaimer == "") {
-                tl.paused(true);
-                gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
-            }else{
-                takeScreenshot();
-            }
+        case "cta":
+            tl.paused(true);
+            gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
             break;
-        case "frame4":
-            if(defaultValues.frame4Headline == "") tl.seek(13);
+        case "end":
+            tl.seek(13);
             break;
-        case "frame5":
-            if(defaultValues.disclaimer == "") {
-                tl.paused(true);
-                gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
-            }else{
-                takeScreenshot();
-            }
+        case "screenshot":
+            takeScreenshot();
             break;
     }
 }
