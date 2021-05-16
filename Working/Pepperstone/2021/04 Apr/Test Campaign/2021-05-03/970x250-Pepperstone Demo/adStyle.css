@@ -79,7 +79,6 @@
     position: absolute;
     top: 9px;
     right: 400px;
-    display: flex;
     perspective: 1000px; 
 }
 #cta-wrapper {
@@ -88,7 +87,7 @@
 }
 #cta {
     text-align: center;
-    margin: 12px 23px 12px 23px;
+    padding: 12px 23px 12px 23px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     letter-spacing: 0.02em;

@@ -74,7 +74,7 @@
 }
 #cta-container {
     position: relative;
-    margin-left: 10PX;
+    margin-left: 10px;
     display: flex;
     perspective: 1000px; 
 }
@@ -84,7 +84,7 @@
 }
 #cta {
     text-align: center;
-    margin: 9px 22px 9px 22px;
+    padding: 9px 22px 9px 22px;
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     letter-spacing: 0.02em;
