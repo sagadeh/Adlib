@@ -187,16 +187,57 @@ h2 > span {
     width: 100%;
     bottom: -1px;
 }
-.gwd-image-jpfb {
-    width: 100%;
-    height: auto;
-    bottom: 0px;
+#curved-long-bottomright {
+    width: 1200px;
+    height: 100px;
+    overflow: hidden;
     position: absolute;
+    right: 0px;
 }
-.gwd-div-1qeq {
-    position: relative;
+#curved-corner-bottomleft {
+    width: 600px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    display: none;
+}
+#curved-corner-bottomright {
+    width: 600px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+#curved-corner-bottomleft::before,
+#curved-corner-bottomright::before,
+#curved-long-bottomright::before {
+    content: "";
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    border-radius: 50%;
+}
+#curved-corner-bottomleft::before {
+    bottom: 0px;
+    left: 0px;
+    box-shadow: var(--check-secondary);
+}
+#curved-corner-bottomright::before {
+    bottom: 0px;
+    right: 0px;
+    box-shadow: var(--check-secondary);
+}
+#curved-long-bottomright::before {
+    bottom: 0px;
+    right: 0px;
+    box-shadow: var(--check-secondary);
+}
+.gwd-div-1clf {
     width: 100%;
-    top: 2px;
+    height: 100px;
 }</style><style type="text/css" data-gwd-secondary-animations="">#page1.gwd-play-animation .event-1-animation {
     animation: 0.5s linear 0s 1 normal forwards gwd-empty-animation;
     -webkit-animation: 0.5s linear 0s 1 normal forwards gwd-empty-animation;
@@ -306,11 +347,13 @@ h2 > span {
           <div class="gwd-div-t0fn" id="main">
             <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-1jxq"></gwd-taparea>
             <div class="gwd-div-1jgf" id="frame1background-wrapper">
-              <gwd-image id="frame1background" source="frame1Background.png?1621308358796" scaling="stretch" class="gwd-image-mov5"></gwd-image>
+              <gwd-image id="frame1background" source="frame1Background.png?1621410106989" scaling="stretch" class="gwd-image-mov5"></gwd-image>
             </div>
             <div class="gwd-div-ykqp" id="headline-text-container">
-              <div class="gwd-div-1qeq" id="curveWrapper">
-                <gwd-image id="curve" source="curve1.png?1621308358796" scaling="stretch" class="gwd-image-jpfb"></gwd-image>
+              <div class="gwd-div-1clf" id="curved-wrapper">
+                <div class="" id="curved-corner-bottomleft"></div>
+                <div class="" id="curved-corner-bottomright"></div>
+                <div class="" id="curved-long-bottomright"></div>
               </div>
               <div class="gwd-div-q41m" id="frame1headline-wrapper">
                 <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum<br>

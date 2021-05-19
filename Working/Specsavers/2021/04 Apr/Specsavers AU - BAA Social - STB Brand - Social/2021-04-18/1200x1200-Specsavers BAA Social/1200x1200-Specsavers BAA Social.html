@@ -207,6 +207,56 @@
       width: 100%;
       top: 2px;
     }
+    #curved-long-bottomright {
+      width: 1200px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      right: 0px;
+    }
+    #curved-corner-bottomleft {
+      width: 600px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      left: 0px;
+      display: none;
+    }
+    #curved-corner-bottomright {
+      width: 600px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      right: 0px;
+      display: none;
+    }
+    #curved-corner-bottomleft::before, #curved-corner-bottomright::before, #curved-long-bottomright::before {
+      content: "";
+      display: block;
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      border-radius: 50%;
+    }
+    #curved-corner-bottomleft::before {
+      bottom: 0px;
+      left: 0px;
+      box-shadow: var(--check-secondary);
+    }
+    #curved-corner-bottomright::before {
+      bottom: 0px;
+      right: 0px;
+      box-shadow: var(--check-secondary);
+    }
+    #curved-long-bottomright::before {
+      bottom: 0px;
+      right: 0px;
+      box-shadow: var(--check-secondary);
+    }
+    .gwd-div-1clf {
+      width: 100%;
+      height: 100px;
+    }
   </style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
@@ -291,8 +341,13 @@
               <gwd-image id="frame1background" source="assets/frame1Background.png" scaling="stretch" class="gwd-image-mov5"></gwd-image>
             </div>
             <div class="gwd-div-ykqp" id="headline-text-container">
-              <div class="gwd-div-1qeq" id="curveWrapper">
+              <div class="gwd-div-1qeq" id="curveWrapper" data-gwd-guide="" data-gwd-tl-hidden="">
                 <gwd-image id="curve" source="assets/curve1.png" scaling="stretch" class="gwd-image-jpfb"></gwd-image>
+              </div>
+              <div class="gwd-div-1clf" id="curved-wrapper">
+                <div class="" id="curved-corner-bottomleft"></div>
+                <div class="" id="curved-corner-bottomright"></div>
+                <div class="" id="curved-long-bottomright"></div>
               </div>
               <div class="gwd-div-q41m" id="frame1headline-wrapper">
                 <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum<br>

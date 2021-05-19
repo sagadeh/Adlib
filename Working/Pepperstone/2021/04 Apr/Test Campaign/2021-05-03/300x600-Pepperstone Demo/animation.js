@@ -4,19 +4,21 @@
 // sample tween codes:
 // tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
+var tl;
 
 gsap.set("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper, #footer-container, #cta-container", {rotationZ:0.01, force3D:false});
 
 function initAnimation() {
-     // place all fluid elements before text resize and css attrib.
-     Adlib.textResize(); // This is optional if your build doesn't use text resize you can delete this
-     Adlib.templateCSS(defaultValues.cssAttrib); // DO NOT DELETE THIS
-     splitTextHeadline("headline");
-     startAnimation();
+    // place all fluid elements before text resize and css attrib.
+    Adlib.textResize(); // This is optional if your build doesn't use text resize you can delete this
+    Adlib.templateCSS(defaultValues.cssAttrib); // DO NOT DELETE THIS
+    splitTextHeadline("headline");
+    startAnimation();
+    eventListener();
 }
 
 function startAnimation() {  
-    var tl = gsap.timeline({
+    tl = gsap.timeline({
         onStart: function(){
             if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
             if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
@@ -29,16 +31,36 @@ function startAnimation() {
       .from("#logo", {duration: 0.5, opacity: 0})
       .from("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
       .from("#footer-container", {duration: 0.5, opacity: 0, y:"100%"})
-      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: takeScreenshot},'-=0.5')
+      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: function(){
+          //NO HEADLINE 2 AND HEADLINE 3
+          var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
+          skipTextAnimation(action);
+      }},'-=0.5')
       .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
-      .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: takeScreenshot})
+      .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: function(){
+          //NO HEADLINE 3
+          var action = (defaultValues.frame3Headline == "") ? "cta" : "screenshot";
+          skipTextAnimation(action);
+      }})
       .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
       .from("#headline3", {duration: 0.5, opacity: 0, y:"20%"})
       .to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1},'+=0.5');
 }
 
+function skipTextAnimation(action) {
+    switch(action) {
+        case "cta":
+            tl.paused(true);
+            gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
+            break;
+        case "screenshot":
+            takeScreenshot();
+            break;
+    }
+}
+
 function splitTextHeadline(elem) {
-    var countLineText1, countLineText2, countLineText3;
+    var countLineText1, countLineText2, countLineText3 = 0;
     
     var splitText1 = new SplitText("#"+elem+"1", {type:"words,chars,lines"});
     var text1 = splitText1.lines; 
@@ -88,6 +110,21 @@ function vAlignText(elem, frame) {
     `;
 }
 
+function eventListener() {
+    document.getElementById('exitButton').addEventListener("mouseover", stageEventListener);
+    document.getElementById('exitButton').addEventListener("mouseout", stageEventListener);
+}
+
+function stageEventListener(e) {
+    switch(e.type) {
+        case "mouseover":
+            gsap.to("#cta-wrapper", {duration: 0.5, backgroundColor: defaultValues.ctaColor2});
+            break;
+        case "mouseout":
+            gsap.to("#cta-wrapper", {duration: 0.5, backgroundColor: defaultValues.ctaColor1});
+            break;
+    }
+}
 
 function animationEnd() {
      takeScreenshot();

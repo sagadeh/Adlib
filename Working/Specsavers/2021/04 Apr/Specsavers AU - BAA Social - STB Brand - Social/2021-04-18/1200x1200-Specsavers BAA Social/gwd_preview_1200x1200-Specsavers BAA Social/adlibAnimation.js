@@ -22,12 +22,16 @@ function initAnim(){
   }
   
   if(defaultValues.customVariable2=="hideCurve"){
-    document.querySelector("#curve").style.display = "none";
+    document.querySelector("#curved-corner-bottomleft").style.display = "none";
+    document.querySelector("#curved-corner-bottomright").style.display = "none";
+    document.querySelector("#curved-long-bottomright").style.display = "none";
     document.querySelector("#frame1headline-wrapper").style.backgroundColor = "transparent";
   }
   
   if(defaultValues.customVariable3=="uCurve"){
-    document.querySelector("#curve").setAttribute("source", "curve2.png");
+    document.querySelector("#curved-corner-bottomleft").style.display = "block";
+    document.querySelector("#curved-corner-bottomright").style.display = "block";
+    document.querySelector("#curved-long-bottomright").style.display = "none";
   }
 }
 function animationEnd() {
