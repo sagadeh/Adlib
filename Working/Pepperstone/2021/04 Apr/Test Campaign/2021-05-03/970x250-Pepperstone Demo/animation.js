@@ -30,19 +30,22 @@ function startAnimation() {
                 document.getElementById("footer-container").style.display = "none";
                 document.getElementById("header-container").style.paddingBottom = "10px";
             }
-            if(defaultValues.trigger == "noPanel") gsap.set("#panel-white", {backgroundColor: "transparent"}); 
+            if(defaultValues.trigger == "noPanel") {
+                gsap.set("#panel-white", {backgroundColor: "transparent"}); 
+                document.getElementById("footer-container").style.width = "100%";
+            } 
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
-      .from("#panel-white", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
+      //.from("#panel-white", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.5, opacity: 0})
-      .from("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
-      .from("#footer-container", {duration: 0.5, opacity: 0, y:"100%"})
-      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: function(){
+      .from("#headline-wrapper, #subheadline-wrapper, #cta-container", {duration: 0.5, opacity: 0, force3D: false})
+      .from("#subheadline2-wrapper", {duration: 0.5, opacity: 0, y: "10%", force3D: false})
+      .from("#footer-container", {duration: 0.5, opacity: 0, y:"100%", onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
           var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
           skipTextAnimation(action);
-      }},'-=0.5')
+      }})
       .to("#headline1", {duration: 0.5, opacity: 0, y:"-10%"},'+=2.5')
       .from("#headline2", {duration: 0.5, opacity: 0, y:"10%", onComplete: function(){
           //NO HEADLINE 3

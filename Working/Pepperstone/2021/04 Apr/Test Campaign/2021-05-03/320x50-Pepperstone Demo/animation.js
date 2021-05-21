@@ -25,15 +25,15 @@ function startAnimation() {
             if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
-    tl.to("#mainContent", {duration: 0, visibility: "visible"})
-      .from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
+    tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
+      //.from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.25, opacity: 0})
-      .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.5, y: "20%", opacity: 0, force3D: false, stagger: 0.2},"-=0.25")
+      .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.25, opacity: 0, force3D: false})
       .from("#cta-container", {duration: 0.25, opacity: 0, onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
           var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
           skipTextAnimation(action);
-      }})
+      }},'-=0.25')
       .to("#headline1", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
       .from("#headline2", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
           //NO HEADLINE 3
@@ -69,7 +69,7 @@ function skipTextAnimation(action) {
             gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
             break;
         case "end":
-            tl.seek(13);
+            tl.seek(12.5);
             break;
         case "screenshot":
             takeScreenshot();
