@@ -78,17 +78,23 @@
 }
 #cta-container {
     position: absolute;
-    top: 15px;
-    right: 401px;
+    top: 16px;
+    left: 428px;
     perspective: 1000px; 
 }
 #cta-wrapper {
     border-radius: 22px;
     background-color: red;
+    min-width: 140px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
 }
 #cta {
     text-align: center;
-    padding: 11px 22px 11px 22px;
+    /*padding: 11px 22px 11px 22px;*/
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;

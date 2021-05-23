@@ -24,6 +24,9 @@ function startAnimation() {
             if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
             if(defaultValues.disclaimer == "") document.getElementById("disclaimer").style.display = "none";
             if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
+            if(defaultValues.frame1Subheadline == "" && defaultValues.frame1Subheadline2 == "") {
+                gsap.set("#header-container", {display: "flex", flexFlow: "row wrap", alignItems: "flex-start"});
+            }
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})

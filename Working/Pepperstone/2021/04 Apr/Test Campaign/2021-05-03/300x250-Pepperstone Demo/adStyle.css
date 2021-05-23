@@ -27,6 +27,8 @@
 #header-container {
     position: relative;
     width: 100%;
+    min-height: 125px;
+    max-height: 200px;
     padding: 8px;
     border-bottom-right-radius: 20px;
     background-color: white;
@@ -81,10 +83,16 @@
 #cta-wrapper {
     border-radius: 20px;
     background-color: red;
+    min-width: 126px;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
 }
 #cta {
     text-align: center;
-    padding: 9px 22px 9px 22px;
+    /*padding: 9px 22px 9px 22px;*/
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     font-weight: 700;

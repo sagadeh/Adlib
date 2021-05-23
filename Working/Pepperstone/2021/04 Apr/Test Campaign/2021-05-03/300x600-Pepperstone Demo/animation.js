@@ -25,8 +25,7 @@ function startAnimation() {
             if(defaultValues.disclaimer == "") document.getElementById("disclaimer").style.display = "none";
             if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
             if(defaultValues.frame1Subheadline == "" && defaultValues.frame1Subheadline2 == "") {
-                document.getElementById("logo-wrapper").style.margin = "10px 0px 40px 0px";
-                document.getElementById("headline-wrapper").style.margin = "0px 0px 40px 0px";
+                gsap.set("#header-container", {display: "flex", flexFlow: "row wrap", alignContent: "space-between", justifyContent: "center"});
             } 
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd

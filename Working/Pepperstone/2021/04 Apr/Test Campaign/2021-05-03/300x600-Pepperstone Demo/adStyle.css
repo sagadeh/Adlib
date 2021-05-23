@@ -19,14 +19,16 @@
     position: absolute;
     top: 0px;
     width: 100%;
-    padding: 0px 16px 0px 16px;
+    min-height: 250px;
+    max-height: 350px;
+    padding: 16px 16px 16px 16px;
     border-bottom-right-radius: 16px;
     background-color: white;
 }
 #logo-wrapper {
     display: flex;
     justify-content: center;
-    margin: 16px 0px 16px 0px;
+    margin: 0px 0px 16px 0px;
 }
 #logo {
     height: 32px;
@@ -70,17 +72,22 @@
 }
 #cta-container {
     display: flex;
-    margin: 0px 0px 15px 0px;
     justify-content: center;
     perspective: 1000px;
 }
 #cta-wrapper {
     border-radius: 22px;
     background-color: red;
+    min-width: 156px;
+    min-height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 15px;
 }
 #cta {
     text-align: center;
-    padding: 12px 26px 12px 26px;
+    /*padding: 12px 26px 12px 26px;*/
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 16px;
