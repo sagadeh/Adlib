@@ -163,6 +163,20 @@ h2 > span {
     width: 100%;
     height: 100%;
 }
+.gwd-image-1i40 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+.gwd-div-bafd {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
 .gwd-p-7p0o {
     font-size: 66px;
     font-family: SpecsaversWebMedium;
@@ -170,74 +184,54 @@ h2 > span {
     letter-spacing: 0.01em;
     line-height: 75px;
     color: rgb(1, 108, 66);
-    margin: 20px 71px 40px;
 }
 .gwd-div-q41m {
-    width: 100%;
+    display: flex;
+    height: auto;
     position: relative;
-    background-color: white;
+    align-items: flex-end;
+    width: auto;
 }
 .gwd-div-ykqp {
-    position: absolute;
-    left: 0px;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
+    background-color: white;
+    height: auto;
+    left: 0px;
+    position: absolute;
     bottom: -1px;
 }
-#curved-long-bottomright {
-    width: 1200px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    right: 0px;
-}
-#curved-corner-bottomleft {
-    width: 600px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    left: 0px;
-    display: none;
-}
-#curved-corner-bottomright {
-    width: 600px;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    right: 0px;
-    display: none;
-}
-#curved-corner-bottomleft::before,
-#curved-corner-bottomright::before,
-#curved-long-bottomright::before {
-    content: "";
-    display: block;
-    width: 200%;
-    height: 200%;
-    position: absolute;
-    border-radius: 50%;
-}
-#curved-corner-bottomleft::before {
-    bottom: 0px;
-    left: 0px;
-    box-shadow: var(--check-secondary);
-}
-#curved-corner-bottomright::before {
-    bottom: 0px;
-    right: 0px;
-    box-shadow: var(--check-secondary);
-}
-#curved-long-bottomright::before {
-    bottom: 0px;
-    right: 0px;
-    box-shadow: var(--check-secondary);
-}
-.gwd-div-1clf {
+.gwd-div-1qeq {
+    position: relative;
     width: 100%;
-    height: 100px;
+    top: 3px;
+    height: auto;
+}
+#u-curve {
+    position: absolute;
+}
+#right-curve {
+    position: absolute;
+}
+.gwd-div-1mwi {
+    position: absolute;
+    left: 0px;
+    width: 1200px;
+    height: 178px;
+    top: -178px;
+}
+.gwd-div-ah00 {
+    position: absolute;
+    left: 0px;
+    width: 1200px;
+    height: 75px;
+    top: -75px;
+    display: none;
+}
+.gwd-div-1uzy {
+    margin: 20px 71px 79px;
 }</style><style type="text/css" data-gwd-secondary-animations="">#page1.gwd-play-animation .event-1-animation {
     animation: 0.5s linear 0s 1 normal forwards gwd-empty-animation;
     -webkit-animation: 0.5s linear 0s 1 normal forwards gwd-empty-animation;
@@ -347,19 +341,30 @@ h2 > span {
           <div class="gwd-div-t0fn" id="main">
             <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-1jxq"></gwd-taparea>
             <div class="gwd-div-1jgf" id="frame1background-wrapper">
-              <gwd-image id="frame1background" source="frame1Background.png?1621410106989" scaling="stretch" class="gwd-image-mov5"></gwd-image>
+              <gwd-image id="frame1background" source="frame1Background.png?1621933075255" scaling="stretch" class="gwd-image-mov5"></gwd-image>
             </div>
             <div class="gwd-div-ykqp" id="headline-text-container">
-              <div class="gwd-div-1clf" id="curved-wrapper">
-                <div class="" id="curved-corner-bottomleft"></div>
-                <div class="" id="curved-corner-bottomright"></div>
-                <div class="" id="curved-long-bottomright"></div>
+              <div class="gwd-div-1qeq" id="curve-wrapper">
+                <div class="gwd-div-ah00" id="u-curve-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="75" viewBox="0 0 1200 75">
+                    <path id="u-curve" data-name="u-curve" d="M3240.981,5311.579c93.333,22,350.587,78.839,653.545,67.424s476.627-50.815,546.455-68.576v75h-1200Z" transform="translate(-3240.981 -5310.428)" fill="#fff"></path>
+                  </svg>
+                </div>
+                <div class="gwd-div-1mwi" id="right-curve-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="178.254" viewBox="0 0 1200 178.254">
+                    <path id="right-curve" data-name="right-curve" d="M1200,0S874.11,103.686,500.863,143.744,0,169.709,0,169.709v8.545H1200Z" fill="#fff"></path>
+                  </svg>
+                </div>
               </div>
-              <div class="gwd-div-q41m" id="frame1headline-wrapper">
-                <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum<br>
-                   dolor sit amaet<br>
-                   elit consectetur</p>
+              <div class="gwd-div-1uzy" id="frame1headline-container">
+                <div class="gwd-div-q41m" id="frame1headline-wrapper">
+                  <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum dolor sit<br>
+                     amaetelit consectetur</p>
+                </div>
               </div>
+            </div>
+            <div class="gwd-div-bafd" id="logo-wrapper">
+              <gwd-image id="logo" source="logo.png?1621933075255" scaling="stretch" class="gwd-image-1i40"></gwd-image>
             </div>
           </div>
           <div class="gwd-div-13pw" id="gsapTrick"></div>

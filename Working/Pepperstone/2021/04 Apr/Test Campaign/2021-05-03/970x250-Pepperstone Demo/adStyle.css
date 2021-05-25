@@ -37,7 +37,7 @@
 }
 #logo-wrapper {
     position: relative;
-    margin-left: 14px;
+    margin-left: 16px;
 }
 #logo {
     height: 40px;
@@ -46,8 +46,8 @@
     margin-top: -5px;
 }
 #headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper {
-    margin-left: 14px;
-    padding-right: 14px;
+    margin-left: 16px;
+    padding-right: 16px;
     width: 570px;
 }
 #headline1, #headline2, #headline3 {
@@ -79,7 +79,7 @@
 #cta-container {
     position: absolute;
     top: 16px;
-    left: 428px;
+    left: 429px;
     perspective: 1000px; 
 }
 #cta-wrapper {
@@ -109,7 +109,7 @@
 }
 #disclaimer {
     text-align: left;
-    padding: 10px 12px 10px 12px;
+    padding: 10px 16px 10px 16px;
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
     color: white;

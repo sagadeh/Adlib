@@ -162,15 +162,15 @@
       position: absolute;
       top: 0px;
       left: 0px;
-      width: 1080px;
-      height: 1080px;
+      width: 1200px;
+      height: 1200px;
     }
     .gwd-div-bafd {
       position: absolute;
       left: 0px;
       top: 0px;
-      width: 1080px;
-      height: 1080px;
+      width: 1200px;
+      height: 1200px;
     }
     .gwd-p-7p0o {
       font-size: 66px;
@@ -179,12 +179,13 @@
       letter-spacing: 0.01em;
       line-height: 75px;
       color: rgb(1, 108, 66);
-      margin: 20px 71px 40px;
     }
     .gwd-div-q41m {
-      width: 100%;
+      display: flex;
+      height: auto;
       position: relative;
-      background-color: white;
+      align-items: flex-end;
+      width: auto;
     }
     .gwd-div-ykqp {
       position: absolute;
@@ -194,7 +195,8 @@
       flex-direction: column;
       justify-content: flex-end;
       width: 100%;
-      bottom: -1px;
+      bottom: 0px;
+      background-color: white;
     }
     .gwd-image-jpfb {
       width: 100%;
@@ -206,6 +208,9 @@
       position: relative;
       width: 100%;
       top: 2px;
+    }
+    .gwd-div-1iyg {
+      margin: 20px 71px 79px;
     }
   </style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
@@ -294,13 +299,14 @@
               <div class="gwd-div-1qeq" id="curveWrapper">
                 <gwd-image id="curve" source="assets/curve1.png" scaling="stretch" class="gwd-image-jpfb"></gwd-image>
               </div>
-              <div class="gwd-div-q41m" id="frame1headline-wrapper">
-                <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum<br>
-                   dolor sit amaet<br>
-                   elit consectetur</p>
+              <div class="gwd-div-1iyg" id="frame1headline-container">
+                <div class="gwd-div-q41m" id="frame1headline-wrapper">
+                  <p class="gwd-p-7p0o" id="frame1headline">Lorem ipsum dolor sit<br>
+                     amaetelit consectetur</p>
+                </div>
               </div>
             </div>
-            <div class="gwd-div-bafd" id="logo-wrapper" data-gwd-guide="" data-gwd-tl-hidden="">
+            <div class="gwd-div-bafd" id="logo-wrapper">
               <gwd-image id="logo" source="assets/logo.png" scaling="stretch" class="gwd-image-1i40"></gwd-image>
             </div>
           </div>

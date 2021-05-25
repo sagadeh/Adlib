@@ -6,7 +6,7 @@
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
 var tl;
 
-gsap.set("#headline-wrapper, #subheadline-wrapper, #headline4, #footer-container, #cta-container", {rotationZ:0.01, force3D:false});
+gsap.set("#headline-wrapper, #subheadline-wrapper, #subheadline2, #footer-container, #cta-container", {rotationZ:0.01, force3D:false});
 
 function initAnimation() {
     // place all fluid elements before text resize and css attrib.
@@ -20,45 +20,49 @@ function initAnimation() {
 function startAnimation() {  
     tl = gsap.timeline({
         onStart: function(){
-            if(defaultValues.trigger == "noPanel") gsap.set("#headerContainer", {backgroundColor: "transparent"});
+            if(defaultValues.trigger == "noPanel"){
+                gsap.set("#header-container", {backgroundColor: "transparent"});
+                gsap.set("#logo", {opacity: 0});
+                gsap.set("#logo2", {opacity: 1});
+                gsap.set("#header-container", {width: "100%", padding:"9px 0px 0px 0px"});
+                gsap.set("#subheadline2-wrapper", {padding:"3px 7px 3px 7px"});
+                gsap.set("#bg-subheadline2", {display: "block"});
+            } 
+            if(defaultValues.frame1Subheadline2 == "") {
+                gsap.set("#logo-headline-wrapper", {height: "100%"});
+                gsap.set("#logo-wrapper", {display: "flex", alignItems: "center"});
+                gsap.set("#text-wapper", {display: "flex", flexFlow: "row wrap", alignContent: "space-evenly"});
+                gsap.set("#header-container", {padding: "5px 7px 5px 7px"});
+                gsap.set("#disclaimer-container", {height: "80px"});
+            }
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
       //.from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
-      .from("#logo", {duration: 0.25, opacity: 0})
-      .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.25, opacity: 0, force3D: false})
-      .from("#cta-container", {duration: 0.25, opacity: 0, onComplete: function(){
+      .from("#logo", {duration: 0.5, opacity: 0})
+      .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.5, opacity: 0, force3D: false})
+      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
           var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
           skipTextAnimation(action);
-      }},'-=0.25')
-      .to("#headline1", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
-      .from("#headline2", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
+      }},'-=0.5')
+      .from("#subheadline2, #bg-subheadline2", {duration: 0.5, y: "120%", force3D: false})
+      .to("#headline1", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
+      .from("#headline2", {duration: 0.5, opacity: 0, y:"10%", onComplete: function(){
           //NO HEADLINE 3
           var action = (defaultValues.frame3Headline == "") ? "cta" : "screenshot";
           skipTextAnimation(action);
       }})
-      .to("#headline2", {duration: 0.25, opacity: 0, y:"-10%"},'+=2')
-      .from("#headline3", {duration: 0.25, opacity: 0, y:"10%", onComplete: function() {
-          //NO FRAME 4 HEADLINE AND DISCLAIMER, IT WILL ANIMATE CTA
-          var action = (defaultValues.frame4Headline == "" && defaultValues.disclaimer == "") ? "cta" : "screenshot";
-          skipTextAnimation(action);
-      }})
-      .to("#headline-wrapper, #subheadline-wrapper", {duration: 0.25, opacity: 0, y:"-10%", onStart: function(){
-          //NO FRAME 4 HEADLINE, IT WILL SEEK FRAME 5 ANIMATION
-          var action = (defaultValues.frame4Headline == "") ? "end" : "";
-          skipTextAnimation(action);
-      }},'+=2')
-      .from("#headline4", {duration: 0.25, opacity: 0, y:"10%", onComplete: function(){
+      .to("#headline2", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
+      .from("#headline3", {duration: 0.5, opacity: 0, y:"10%", onComplete: function() {
           //NO DISCLAIMER, IT WILL ANIMATE CTA
           var action = (defaultValues.disclaimer == "") ? "cta" : "screenshot";
           skipTextAnimation(action);
       }})
-      .to("#headline4", {duration: 0.25, opacity: 0},'+=4')//13 SEC
-      .to("#header-container", {duration: 0.25, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.25')
-      .to("#logo", {duration: 0.25, opacity: 0},'-=0.25')
-      .from("#logo2", {duration: 0.25, opacity: 0},'-=0.25')
-      .from("#disclaimer", {duration: 0.25, opacity: 0, y:"10%"})
+      .to("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
+      .to("#header-container", {duration: 0.5, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.5')
+      .to("#logo2", {duration: 0, opacity: 1},'-=0.5')
+      .from("#disclaimer", {duration: 0.5, opacity: 0, y:"10%"})
       .to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
 }
 
@@ -67,9 +71,6 @@ function skipTextAnimation(action) {
         case "cta":
             tl.paused(true);
             gsap.to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1, onComplete: animationEnd});
-            break;
-        case "end":
-            tl.seek(12.5);
             break;
         case "screenshot":
             takeScreenshot();

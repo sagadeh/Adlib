@@ -7,7 +7,7 @@
      src: url("VerizonNHGDSRegular.woff");
 }
 #guide {
-    opacity: 0;
+    opacity: 0.5;
 }
 #frame1bg {
     position: absolute;
@@ -31,19 +31,19 @@
     margin: 0px 0px 16px 0px;
 }
 #logo {
-    height: 32px;
+    height: 36px;
 }
 #headline-wrapper {
     position: relative;
     margin: auto;
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 16px 0px;
 }
 #subheadline-wrapper{
     margin: auto;
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 16px 0px;
 }
 #subheadline2-wrapper {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 16px 0px;
 }
 #headline1, #headline2, #headline3 {
     margin: auto;
@@ -102,10 +102,10 @@
 #disclaimer {
     position: relative;
     text-align: center;
-    padding: 7px 7px 7px 7px;
+    padding: 9px 26px 9px 26px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 10px;
     color: white;
     line-height: 110%;
     background-color: rgb(0, 0, 0, 0.2);

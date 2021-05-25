@@ -18,20 +18,22 @@ function initAnim(){
   
   if(defaultValues.customVariable=="hideText"){
     console.log("hide text")
-    document.querySelector("#frame1headline").style.opacity = "0";
+    document.querySelector("#frame1headline").style.display = "none";
   }
   
   if(defaultValues.customVariable2=="hideCurve"){
-    document.querySelector("#curved-corner-bottomleft").style.display = "none";
-    document.querySelector("#curved-corner-bottomright").style.display = "none";
-    document.querySelector("#curved-long-bottomright").style.display = "none";
+    document.querySelector("#curve-wrapper").style.display = "none";
     document.querySelector("#frame1headline-wrapper").style.backgroundColor = "transparent";
   }
   
+  if(defaultValues.customVariable5=="hideLogo"){
+    document.querySelector("#logo-wrapper").style.display = "none";
+  }
+  
   if(defaultValues.customVariable3=="uCurve"){
-    document.querySelector("#curved-corner-bottomleft").style.display = "block";
-    document.querySelector("#curved-corner-bottomright").style.display = "block";
-    document.querySelector("#curved-long-bottomright").style.display = "none";
+    //document.querySelector("#curve").setAttribute("source", "curve2.png");
+    document.querySelector("#right-curve-wrapper").style.display = "none";
+    document.querySelector("#u-curve-wrapper").style.display = "block";
   }
 }
 function animationEnd() {

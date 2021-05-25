@@ -11,50 +11,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
         <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
         <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
-        <script type="text/javascript" src="SplitText.min.js"></script>
     </head>
     <style></style>
     <body>
         <div id='mainContent' class='mainContent'>
-            
-
-            <img id="frame1bg" adlib-image="frame1Background" src="">
+            <img id="background" src="" adlib-image="frame1Background">
             <!--<img id="guide" src="guide.png">-->
-            <!-- Frame 1 -->
-            <div id="headerContainer">
-                <div id="logoWrapper">
-                     <img id="logo" adlib-image="logo" src="">
+            <img id="leaves-1" src="leaves_1.png">
+            <img id="leaves-2" src="leaves_2.png">
+            <img id="product" src="" adlib-image="frame1Image">
+            <div id="headline-container">
+                <img id="logo" src="" adlib-image="logo">
+                <div id="headline-wrapper">
+                    <p id="frame1-headline" adlib-text="frame1Headline"></p>
+                    <p id="frame2-headline" adlib-text="frame2Headline"></p>
+                    <p id="frame3-headline" adlib-text="frame3Headline"></p>
                 </div>
-                <div id="headlineWrapper">
-                    <p id="headline1" adlib-text="frame1Headline"></p>
-                    <p id="headline2" adlib-text="frame2Headline"></p>
-                    <p id="headline3" adlib-text="frame3Headline"></p>
-                </div>
-                <div id="subheadlineWrapper">
-                    <p id="subheadline1" adlib-text="frame1Subheadline"></p>
-                </div>
-                <div id="subheadline2Wrapper">
-                     <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
+                <p id="frame1-subheadline" adlib-text="frame1Subheadline"></p>
+                <p id="frame1-subheadline2" adlib-text="frame1Subheadline2"></p>
+            </div>
+            <div id="footer-container">
+                <p id="legal" adlib-text="legal"></p>
+            </div>
+            <div id="cta-container">
+                <div id="cta-wrapper">
+                    <img id="arrow" src="cta-arrow.png">
+                    <p id="cta" adlib-text="ctaText"></p>
                 </div>
             </div>
-            <div id="ctaContainer">
-                    <div id="ctaWrapper">
-                        <div id="cta" adlib-text="ctaText"></div>
-                    </div>
-                </div>
-            <div id="footerContainer">
-                <p id="disclaimer" adlib-text="disclaimer"></p> 
-            </div>
-            <!-- Frame 1 -->
-
             <div id='exitButton' class='exitButton'></div>
+            
         </div>
     </body>
     <script>           
         /***************************************
             DO NOT DELETE VARIABLES BELOW
         ***************************************/
-        var creativeSize = '300x250'; // Set the width and height of the ad.
+        var creativeSize = '300x600'; // Set the width and height of the ad.
         var devDynamicContent = {}; // Variable for studio invocation code.
         var myVideo; // Variable to hold video element.
         var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend        
@@ -63,18 +56,15 @@
             cssAttrib:"/* CSS STYLE */",
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
-            frame1Headline:"Lorem ipsum dolor sit amet, consectetur abor",
-            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos<br> ducimus blanditiis praesentium",
-            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velitese",
-            frame2Headline:"Adipiscing elit, sed dolor eiusmod sed tempo",
-            frame3Headline:"Utenimad minime veniam<br> quise nostru depellat",
+            frame1Image:"product.png",
             logo:"logo.png",
-            ctaText:"Lorem Ipsum",
-            disclaimer:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt",
-            disclaimerBgColor:"rgb(0, 0, 0, 0.4)",
-            trigger:"withPanel", //withPanel or noPanel
-            bgColor:"white",
-            ctaColor1:"red"
+            frame1Headline:"LOREM IPSUM DOLOR<br>SIT AMET CONSE",
+            frame2Headline:"QUIS AUTEM EUM IURE REPREHENDERIT",
+            frame3Headline:"SEDQUIA NON NUMQUAM EIUS TEMPORA",
+            frame1Subheadline:"QUIS AUTEM EUM IUREDE",
+            frame1Subheadline2:"LORE £XX",
+            legal:"ED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT<br> VOLUPTATEM ACCUSANTIUM DOLOREMQUERS",
+            ctaText:"SHOP NOW"
         };
         var possibleValues = {
           trigger:"withPanel,noPanel"
@@ -101,9 +91,6 @@
             /*****************************************
             If you need to manually assign a defaultValue to a style of an element, add it below.
             *****************************************/
-            document.querySelector("#headerContainer").style.backgroundColor = defaultValues.bgColor;
-            document.querySelector("#ctaWrapper").style.backgroundColor = defaultValues.ctaColor1;
-            document.querySelector("#disclaimer").style.backgroundColor = defaultValues.disclaimerBgColor;
         };
     /*-----------------------------------------------------------------
 

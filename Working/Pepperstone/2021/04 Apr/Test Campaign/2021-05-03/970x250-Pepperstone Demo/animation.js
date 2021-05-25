@@ -28,7 +28,7 @@ function startAnimation() {
             }else if(defaultValues.disclaimer == ""){
                 //disclaimer are Empty/Null
                 document.getElementById("footer-container").style.display = "none";
-                document.getElementById("header-container").style.paddingBottom = "10px";
+                document.getElementById("header-container").style.paddingBottom = "15px";
             }
             if(defaultValues.trigger == "noPanel") {
                 gsap.set("#panel-white", {backgroundColor: "transparent"}); 
