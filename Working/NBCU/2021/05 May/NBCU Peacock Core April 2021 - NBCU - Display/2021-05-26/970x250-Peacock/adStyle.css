@@ -1,0 +1,327 @@
+@font-face {
+     font-family: PeacockBlack;
+     src: url("PeacockSans-Black.woff2");
+}
+@font-face {
+     font-family: PeacockBold;
+     src: url("PeacockSans-Bold.woff2");
+}
+@font-face {
+     font-family: PeacockBook;
+     src: url("PeacockSans-Book.woff2");
+}
+@font-face {
+     font-family: PeacockLight;
+     src: url("PeacockSans-Light.woff2");
+}
+@font-face {
+     font-family: PeacockMedium;
+     src: url("PeacockSans-Medium.woff2");
+}
+
+#mainContent {
+     background-color: #FCCC12;
+}
+#image1Content {
+     position: absolute;
+     width:754px;
+     height:240px;
+     left:0px;
+     top:0px;
+}
+/**************************************** LEGAL CONTENT */
+#legalContent {
+     position: absolute;
+     width: 100%;
+     height:9px;
+     left: 0px;
+     bottom: 7px;
+     text-align: center;
+     color: white;
+     opacity:0.7;
+     font-family: PeacockBook;
+     font-size:7px;
+     line-height: 8px;
+     letter-spacing: 0.3px;
+     color:white;
+}
+/**************************************** CTA CONTENT */
+#ctaContainer {
+     position: absolute;
+     width: 171px;
+     height: 27px;
+     left:15px;
+     bottom: 32px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FCCC12;
+     border-radius: 4px;
+}
+#ctaContent {
+     font-family: PeacockBlack;
+     font-size: 14px;
+     line-height: 14px;
+     color: black;
+     text-align: center;
+     width:100%;
+}
+/**************************************** BOTTOM CONTENT */
+.bottomContent {
+     opacity:0;
+     position: absolute;
+     width:201px;
+     height:240px;
+     left:764px;
+     top:5px;
+     border-radius: 6px;
+     background-color: #000000;
+     opacity:1;
+}
+/**************************************** TOP SINGLE CONTENT */
+.topSingleContent {
+     overflow: hidden;
+     position: absolute;
+     width:754px;
+     height:240px;
+     left:5px;
+     top:5px;
+     border-radius: 6px;
+     opacity:1;
+}
+#showTitleContent {
+     position: absolute;
+     width: 100%;
+     height:auto;
+     left:0px;
+     bottom:7px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spineContent {
+     position: absolute;
+     left:361px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#backGradientContent {
+     position: absolute;
+     width:754px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** TOP MULTIPLE CONTENT */
+#topMultipleContent {
+    perspective: 1000px;
+}
+.topMultipleContent {
+     overflow: hidden;
+     opacity:1;
+     position: absolute;
+     width:754px;
+     left:5px;
+     top:5px;
+     height:240px;
+}
+/**************************************** TOP MULTIPLE CONTENT 1 */
+.show1Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:248px;  
+     left:0px;
+     height:240px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP MULTIPLE CONTENT 2 */
+.show2Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:248px;  
+     left:253px;
+     height:240px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP MULTIPLE CONTENT 3 */
+.show3Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:248px;  
+     left:506px;
+     height:240px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP SHOW TITLE CONTENT 1 */
+#showTitle1Content {
+     position: absolute;
+     width: 208px;
+     height:auto;
+     left:19px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 2 */
+#showTitle2Content {
+     position: absolute;
+     width: 208px;
+     height:auto;
+     left:19px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 3 */
+#showTitle3Content {
+     position: absolute;
+     width: 208px;
+     height:auto;
+     left:19px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spine1Content {
+     position: absolute;
+     left:108px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#spine2Content {
+     position: absolute;
+     left:108px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#spine3Content {
+     position: absolute;
+     left:108px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+.backGradientContent1 {
+     position: absolute;
+     width:248px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent2 {
+     position: absolute;
+     width:248px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent3 {
+     position: absolute;
+     width:248px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** LOGO IMAGE */
+.logoContent {
+     position: absolute;
+     width:165px;
+     height:51px;
+     left:17px;
+     top:21px;
+     opacity:1;
+}
+/**************************************** HEADLINE CONTENT */
+.frame1HeadlineContainer {
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     opacity: 1;
+}
+.frame1HeadlineContainer_A {
+     width: 171px;
+     height: 80px;
+     left:17px;
+     top: 83px;
+}
+.frame1HeadlineContainer_B {
+     width: 166px;
+     height: 36px;
+     left:17px;
+     top: 87px;
+}
+.frame1HeadlineContent {
+     font-family: PeacockBlack;
+     color: #FCCC12;
+     text-align: center;
+     width:100%;
+     opacity: 1;
+}
+.frame1HeadlineContent_A {
+     font-size: 25px;
+     line-height: 25px;
+}
+.frame1HeadlineContent_B {
+     font-size: 16px;
+     line-height: 16px;
+}
+/**************************************** SUBHEADLINE CONTENT */
+.frame1SubheadlineContainer {
+     position: absolute;
+     width: 130px;
+     height: 36px;
+     left:35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.frame1SubheadlineContainer_A {
+     display:none;
+}
+.frame1SubheadlineContainer_B {
+     top: 128px;
+}
+#frame1SubheadlineContent {
+     font-family: PeacockBook;
+     font-size: 16px;
+     line-height: 16px;
+     color: white;
+     text-align: center;
+     width:100%;
+}

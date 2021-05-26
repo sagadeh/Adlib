@@ -28,41 +28,53 @@ function startAnimation() {
                 gsap.set("#subheadline2-wrapper", {padding:"3px 7px 3px 7px"});
                 gsap.set("#bg-subheadline2", {display: "block"});
             } 
-            if(defaultValues.frame1Subheadline2 == "") {
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline2)) {
                 gsap.set("#logo-headline-wrapper", {height: "100%"});
                 gsap.set("#logo-wrapper", {display: "flex", alignItems: "center"});
                 gsap.set("#text-wapper", {display: "flex", flexFlow: "row wrap", alignContent: "space-evenly"});
                 gsap.set("#header-container", {padding: "5px 7px 5px 7px"});
                 gsap.set("#disclaimer-container", {height: "80px"});
             }
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline2) && Adlib.isEmpty(defaultValues.frame1Subheadline)) gsap.set("#headline-wrapper", {marginBottom: "0px"});
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
       //.from("#header-container", {x:"-50%", opacity: 0}, {duration: 0.5, x:"0%", opacity: 1, force3D: false})
       .from("#logo", {duration: 0.5, opacity: 0})
       .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.5, opacity: 0, force3D: false})
-      .from("#cta-container", {duration: 0.5, opacity: 0, onComplete: function(){
+      .from("#cta-container", {duration: 0.5, opacity: 0},'-=0.5')
+      .from("#subheadline2, #bg-subheadline2", {duration: 0.5, y: "120%", force3D: false, onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
-          var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
-          skipTextAnimation(action);
-      }},'-=0.5')
-      .from("#subheadline2, #bg-subheadline2", {duration: 0.5, y: "120%", force3D: false})
+          if(Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline) && Adlib.isEmpty(defaultValues.disclaimer)) {
+            skipTextAnimation("cta");
+          }else if(Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline)) {
+            takeScreenshot();
+            skipTextAnimation("seek");
+          }else{
+            skipTextAnimation("screenshot");
+          }
+      }})
       .to("#headline1", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
       .from("#headline2", {duration: 0.5, opacity: 0, y:"10%", onComplete: function(){
           //NO HEADLINE 3
-          var action = (defaultValues.frame3Headline == "") ? "cta" : "screenshot";
-          skipTextAnimation(action);
+          if(Adlib.isEmpty(defaultValues.frame3Headline) && Adlib.isEmpty(defaultValues.disclaimer)) {
+            skipTextAnimation("cta");
+          }else if(Adlib.isEmpty(defaultValues.frame3Headline)) {
+            skipTextAnimation("seek");
+          }else{
+            skipTextAnimation("screenshot");
+          }
       }})
       .to("#headline2", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
       .from("#headline3", {duration: 0.5, opacity: 0, y:"10%", onComplete: function() {
           //NO DISCLAIMER, IT WILL ANIMATE CTA
-          var action = (defaultValues.disclaimer == "") ? "cta" : "screenshot";
+          var action = (Adlib.isEmpty(defaultValues.disclaimer)) ? "cta" : "screenshot";
           skipTextAnimation(action);
-      }})
-      .to("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
+      }})// 8sec
+      .to("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, opacity: 0},'+=2')
       .to("#header-container", {duration: 0.5, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.5')
       .to("#logo2", {duration: 0, opacity: 1},'-=0.5')
-      .from("#disclaimer", {duration: 0.5, opacity: 0, y:"10%"})
+      .from("#disclaimer", {duration: 0.5, opacity: 0})
       .to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
 }
 
@@ -74,6 +86,9 @@ function skipTextAnimation(action) {
             break;
         case "screenshot":
             takeScreenshot();
+            break;
+        case "seek":
+            setTimeout(function(){tl.seek(10),'+=2';},2000);
             break;
     }
 }

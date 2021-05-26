@@ -1,0 +1,275 @@
+@font-face {
+     font-family: PeacockBlack;
+     src: url("PeacockSans-Black.woff2");
+}
+@font-face {
+     font-family: PeacockBold;
+     src: url("PeacockSans-Bold.woff2");
+}
+@font-face {
+     font-family: PeacockBook;
+     src: url("PeacockSans-Book.woff2");
+}
+@font-face {
+     font-family: PeacockLight;
+     src: url("PeacockSans-Light.woff2");
+}
+@font-face {
+     font-family: PeacockMedium;
+     src: url("PeacockSans-Medium.woff2");
+}
+
+#mainContent {
+     background-color: #FCCC12;
+}
+#image1Content {
+     position: absolute;
+     width:373px;
+     height:80px;
+     left:0px;
+     top:0px;
+}
+/**************************************** LEGAL CONTENT */
+#legalContent {
+     position: absolute;
+     width: 100%;
+     height:6px;
+     left: 0px;
+     bottom: 3px;
+     text-align: center;
+     color: white;
+     opacity:0.7;
+     font-family: PeacockBook;
+     font-size:5px;
+     line-height: 5px;
+     letter-spacing: 0.3px;
+     color:white;
+}
+/**************************************** CTA CONTENT */
+#ctaContainer {
+     position: absolute;
+     width: 123px;
+     height: 19px;
+     left:198px;
+     bottom: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FCCC12;
+     border-radius: 4px;
+}
+#ctaContent {
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     color: black;
+     text-align: center;
+     width:100%;
+     margin-bottom:1px;
+}
+/**************************************** BOTTOM CONTENT */
+.bottomContent {
+     opacity:0;
+     position: absolute;
+     width:340px;
+     height:80px;
+     left:383px;
+     top:5px;
+     border-radius: 6px;
+     background-color: #000000;
+     opacity:1;
+}
+/**************************************** TOP SINGLE CONTENT */
+.topSingleContent {
+     overflow: hidden;
+     position: absolute;
+     width:373px;
+     height:80px;
+     left:5px;
+     top:5px;
+     border-radius: 6px;
+     opacity:1;
+}
+#showTitleContent {
+     position: absolute;
+     width: 212px;
+     height:auto;
+     left:80px;
+     bottom:6px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spineContent {
+     position: absolute;
+}
+#backGradientContent {
+     position: absolute;
+     width:373px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** TOP MULTIPLE CONTENT */
+#topMultipleContent {
+    perspective: 1000px;
+}
+.topMultipleContent {
+     overflow: hidden;
+     position: absolute;
+     width:373px;
+     height:80px;
+     left:5px;
+     top:5px;
+     border-radius: 6px;
+     opacity:1;
+}
+/**************************************** TOP MULTIPLE CONTENT 1 */
+.show1Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:121px;  
+     left:0px;
+     height:80px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP MULTIPLE CONTENT 2 */
+.show2Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:121px;  
+     left:126px;
+     height:80px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP MULTIPLE CONTENT 3 */
+.show3Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:121px;  
+     left:252px;
+     height:80px; 
+     top:0px;
+     opacity:1;  
+     border-radius: 6px;
+}
+/**************************************** TOP SHOW TITLE CONTENT 1 */
+#showTitle1Content {
+     position: absolute;
+     width:111px;
+     height:auto;
+     left:4px;
+     bottom:6px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 2 */
+#showTitle2Content {
+     position: absolute;
+     width:111px;
+     height:auto;
+     left:4px;
+     bottom:6px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 3 */
+#showTitle3Content {
+     position: absolute;
+     width:111px;
+     height:auto;
+     left:4px;
+     bottom:6px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spine1Content {
+     position: absolute;
+}
+#spine2Content {
+     position: absolute;
+}
+#spine3Content {
+     position: absolute;
+}
+.backGradientContent1 {
+     position: absolute;
+     width:121px;  
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent2 {
+     position: absolute;
+     width:121px;  
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent3 {
+     position: absolute;
+     width:121px;  
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** LOGO IMAGE */
+.logoContent {
+     position: absolute;
+     width:162px;
+     height:50px;
+     left:17px;
+     top:16px;
+     opacity:1;
+}
+/**************************************** HEADLINE CONTENT */
+.frame1HeadlineContainer {
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     opacity: 1;
+     width: 130px;
+     height: 29px;
+     left:193px;
+     top: 11px;
+}
+.frame1HeadlineContent {
+     font-family: PeacockBlack;
+     color: #FCCC12;
+     text-align: center;
+     width:100%;
+     opacity: 1;
+     font-size: 13px;
+     line-height: 13px;
+}

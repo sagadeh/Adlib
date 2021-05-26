@@ -20,11 +20,11 @@ function initAnimation() {
 function startAnimation() {  
     tl = gsap.timeline({
         onStart: function(){
-            if(defaultValues.frame1Subheadline == "") document.getElementById("subheadline-wrapper").style.display = "none";
-            if(defaultValues.frame1Subheadline2 == "") document.getElementById("subheadline2-wrapper").style.display = "none";
-            if(defaultValues.disclaimer == "") document.getElementById("disclaimer").style.display = "none";
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline)) document.getElementById("subheadline-wrapper").style.display = "none";
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline2)) document.getElementById("subheadline2-wrapper").style.display = "none";
+            if(Adlib.isEmpty(defaultValues.disclaimer)) document.getElementById("disclaimer").style.display = "none";
             if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {backgroundColor: "transparent"});
-            if(defaultValues.frame1Subheadline == "" && defaultValues.frame1Subheadline2 == "") {
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline) && Adlib.isEmpty(defaultValues.frame1Subheadline2)) {
                 gsap.set("#header-container", {display: "flex", flexFlow: "row wrap", alignContent: "space-between", justifyContent: "center"});
             } 
         },onComplete: animationEnd
@@ -35,13 +35,13 @@ function startAnimation() {
       .from("#subheadline2-wrapper", {duration: 0.5, opacity: 0, y: "10%", force3D: false})
       .from("#footer-container", {duration: 0.5, opacity: 0, y:"100%", onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
-          var action = (defaultValues.frame2Headline == "" && defaultValues.frame3Headline == "") ? "cta" : "screenshot";
+          var action = (Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline)) ? "cta" : "screenshot";
           skipTextAnimation(action);
       }})
       .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
       .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: function(){
           //NO HEADLINE 3
-          var action = (defaultValues.frame3Headline == "") ? "cta" : "screenshot";
+          var action = (Adlib.isEmpty(defaultValues.frame3Headline)) ? "cta" : "screenshot";
           skipTextAnimation(action);
       }})
       .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')

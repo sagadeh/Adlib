@@ -1,0 +1,378 @@
+@font-face {
+     font-family: PeacockBlack;
+     src: url("PeacockSans-Black.woff2");
+}
+@font-face {
+     font-family: PeacockBold;
+     src: url("PeacockSans-Bold.woff2");
+}
+@font-face {
+     font-family: PeacockBook;
+     src: url("PeacockSans-Book.woff2");
+}
+@font-face {
+     font-family: PeacockLight;
+     src: url("PeacockSans-Light.woff2");
+}
+@font-face {
+     font-family: PeacockMedium;
+     src: url("PeacockSans-Medium.woff2");
+}
+
+#mainContent {
+     background-color: #FCCC12;
+}
+#image1Content {
+     position: absolute;
+     width:150px;
+     height:441px;
+     left:0px;
+     top:0px;
+}
+/**************************************** LEGAL CONTENT */
+#legalContent {
+     position: absolute;
+     width: 100%;
+     height:7px;
+     left: 0px;
+     bottom: 7px;
+     text-align: center;
+     color: white;
+     opacity:0.7;
+     font-family: PeacockBook;
+     font-size:6px;
+     line-height: 6px;
+     letter-spacing: -0.15px;
+}
+/**************************************** CTA CONTENT */
+#ctaContainer {
+     position: absolute;
+     width: 132px;
+     height: 22px;
+     left:10px;
+     bottom: 23px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FCCC12;
+     border-radius: 4px;
+}
+#ctaContent {
+     font-family: PeacockBold;
+     font-size: 11px;
+     line-height: 11px;
+     color: black;
+     text-align: center;
+     width:100%;
+}
+/**************************************** BOTTOM CONTENT */
+.bottomContent {
+     opacity:0;
+}
+.bottomContent_A {
+     position: absolute;
+     width:150px;
+     height:144px;
+     left:5px;
+     top:451px;
+     border-radius: 6px;
+     background-color: #000000;
+     opacity:1;
+}
+.bottomContent_B {
+     position: absolute;
+     width:150px;
+     height:182px;
+     left:5px;
+     top:413px;
+     border-radius: 6px;
+     background-color: #000000;
+     opacity:1;
+}
+/**************************************** TOP SINGLE CONTENT */
+.topSingleContent {
+     overflow: hidden;
+     opacity:0;
+}
+.topSingleContent_A {
+     position: absolute;
+     width:150px;
+     height:441px;
+     left:5px;
+     top:5px;
+     border-radius: 6px;
+     opacity:1;
+}
+.topSingleContent_B {
+     position: absolute;
+     width:150px;
+     height:403px;
+     left:5px;
+     top:5px;
+     border-radius: 6px;
+     opacity:1;
+}
+#showTitleContent {
+     position: absolute;
+     width: 137px;
+     height:auto;
+     left:7px;
+     bottom:6px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spineContent {
+     position: absolute;
+     left:60px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#backGradientContent {
+     position: absolute;
+     width:150px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** TOP MULTIPLE CONTENT */
+#topMultipleContent {
+    perspective: 1000px;
+}
+.topMultipleContent {
+     overflow: hidden;
+     opacity:0;
+}
+.topMultipleContent_A {
+     position: absolute;
+     width:150px;
+     height:441px;
+     left:5px;
+     top:5px;
+     opacity:1;
+}
+.topMultipleContent_B {
+     position: absolute;
+     width:150px;
+     height:403px;
+     left:5px;
+     top:5px;
+     opacity:1;
+}
+/**************************************** TOP MULTIPLE CONTENT 1 */
+.show1Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:150px;  
+     left:0px;
+     border-radius: 6px;
+}
+.show1Container_A {
+     height:144px; 
+     top:0px;
+     opacity:1;  
+}
+.show1Container_B {
+     height:131px; 
+     top:0px;
+     opacity:1;  
+}
+/**************************************** TOP MULTIPLE CONTENT 2 */
+.show2Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:150px;  
+     left:0px;
+     border-radius: 6px;
+}
+.show2Container_A {
+     height:144px; 
+     top:149px;
+     opacity:1;  
+}
+.show2Container_B {
+     height:131px; 
+     top:135px;
+     opacity:1;  
+}
+/**************************************** TOP MULTIPLE CONTENT 3 */
+.show3Container {
+     overflow: hidden;
+     opacity:0;  
+     position: absolute;
+     width:150px;  
+     left:0px;
+     border-radius: 6px;
+}
+.show3Container_A {
+     height:144px; 
+     top:297px;
+     opacity:1;   
+}
+.show3Container_B {
+     height:131px; 
+     top:271px;
+     opacity:1;   
+}
+/**************************************** TOP SHOW TITLE CONTENT 1 */
+#showTitle1Content {
+     position: absolute;
+     width: 134px;
+     height:auto;
+     left:7px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 2 */
+#showTitle2Content {
+     position: absolute;
+     width: 134px;
+     height:auto;
+     left:7px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+/**************************************** TOP SHOW TITLE CONTENT 3 */
+#showTitle3Content {
+     position: absolute;
+     width: 134px;
+     height:auto;
+     left:7px;
+     bottom:5px;
+     font-family: PeacockBold;
+     font-size: 10px;
+     line-height: 10px;
+     letter-spacing: -0.05px;
+     color:white;
+     text-align: center;
+     opacity:0.85;
+}
+#spine1Content {
+     position: absolute;
+     left:58px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#spine2Content {
+     position: absolute;
+     left:58px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+#spine3Content {
+     position: absolute;
+     left:58px;
+     height:5px;
+     width:34px;
+     opacity: 1;
+}
+.backGradientContent1 {
+     position: absolute;
+     width:150px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent2 {
+     position: absolute;
+     width:150px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+.backGradientContent3 {
+     position: absolute;
+     width:150px;
+     left:0px;
+     bottom:0px;
+     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+     opacity:1;     
+}
+/**************************************** LOGO IMAGE */
+.logoContent {
+     position: absolute;
+     width:124px;
+     height:38px;
+     left:13px;
+     opacity:0;
+}
+.logoContent_A {
+     top:14px;
+     opacity:1;
+}
+.logoContent_B {
+     top:14px;
+     opacity:1;
+}
+/**************************************** HEADLINE CONTENT */
+.frame1HeadlineContainer {
+     position: absolute;
+     width: 136px;
+     height: 29px;
+     left:6px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.frame1HeadlineContainer_A {
+     top: 63px;
+}
+.frame1HeadlineContainer_B {
+     top: 63px;
+}
+#frame1HeadlineContent {
+     font-family: PeacockBlack;
+     font-size: 13px;
+     line-height: 13px;
+     color: #FCCC12;
+     text-align: center;
+     width:100%;
+}
+/**************************************** SUBHEADLINE CONTENT */
+.frame1SubheadlineContainer {
+     position: absolute;
+     width: 106px;
+     height: 29px;
+     left:21px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.frame1SubheadlineContainer_A {
+     display:none;
+}
+.frame1SubheadlineContainer_B {
+     top: 98px;
+}
+#frame1SubheadlineContent {
+     font-family: PeacockMedium;
+     font-size: 13px;
+     line-height: 13px;
+     color: white;
+     text-align: center;
+     width:100%;
+}

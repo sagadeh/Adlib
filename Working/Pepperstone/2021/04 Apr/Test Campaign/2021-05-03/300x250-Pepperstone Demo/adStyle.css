@@ -26,6 +26,9 @@
 }
 #header-container {
     position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
     width: 100%;
     min-height: 125px;
     max-height: 200px;
@@ -41,16 +44,13 @@
 }
 #headline-wrapper {
     position: relative;
-    padding: 0px 0px 5px 5px;
-
+    padding-bottom: 5px;
 }
 #subheadline-wrapper{
-    margin: auto;
-    padding: 0px 0px 5px 5px;
+    padding-bottom: 5px;
 }
 #subheadline2-wrapper {
-    margin: auto;
-    padding: 0px 5px 0px 5px;
+
 }
 #headline1, #headline2, #headline3 {
     top: 0px;
