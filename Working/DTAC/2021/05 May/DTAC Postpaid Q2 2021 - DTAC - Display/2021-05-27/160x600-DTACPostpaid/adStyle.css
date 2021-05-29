@@ -1,0 +1,94 @@
+@font-face {
+     font-family: DTAC2018-Bold;
+     src: url("DTAC2018-Bold.woff");
+}
+@font-face {
+     font-family: DTAC2018-Regular;
+     src: url("DTAC2018-Regular.woff");
+}
+@font-face {
+     font-family: DTAC2018-Light;
+     src: url("DTAC2018-Light.woff");
+}
+
+#frame1Image, #frame1Background, #ctaImage, #logo, #baseImage{
+position: absolute;
+width:100%;
+height:100%;
+}
+
+
+
+#frame1Headline{
+font-family: DTAC2018-Bold;
+font-size: 24px;
+letter-spacing: -0.02em;
+line-height: 1.42em;
+text-align: center;
+color: #fff26d;
+
+Position:absolute;
+top:126px;
+left:0px;
+width:160px;
+height:auto;
+}
+
+#frame1Headline2{
+font-family: DTAC2018-Regular;
+font-size: 16px;
+letter-spacing: -0.01em;
+text-align: center;
+color: #fff;
+
+Position:absolute;
+top:203px;
+left:3px;
+width:154px;
+height:auto;
+
+}
+#frame1Headline3{
+font-family: DTAC2018-Bold;
+font-size: 40px;
+letter-spacing: -0.03em;
+line-height: 29px;
+text-align: center;
+color: #ff648c;
+text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+
+Position:absolute;
+top:232px;
+left:3px;
+width:154px;
+height:auto;
+}
+
+#frame1Headline4{
+font-family: DTAC2018-Bold;
+font-size: 16px;
+letter-spacing: 0.01em;
+text-align: center;
+color: #fff;
+
+Position:absolute;
+top:271px;
+left:2px;
+width:154px;
+height:auto;
+
+}
+
+#frame1Headline5{
+font-family: DTAC2018-Bold;
+font-size: 11px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #fff;
+
+Position:absolute;
+top: 308px;
+left:3px;
+width:154px;
+height:auto;
+}

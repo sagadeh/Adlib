@@ -9,7 +9,7 @@ var defaultValues = {
   customVariable3:"uCurve", /*rightCurve | uCurve*/
   customVariable4:"auto",
   customVariable5:"showLogo", /*showLogo | hideLogo*/
-  logo:"logo.png"
+  logo:"logo.png",
 };
 
 function initDynamic() {
@@ -25,7 +25,7 @@ var possibleValues = {
   customVariable:"showText,hideText",
   customVariable2:"showCurve,hideCurve",
   customVariable3:"rightCurve,uCurve",
-  customVariable5:"showLogo, hideLogo"
+  customVariable5:"showLogo,hideLogo"
 }
 function populate() {
   document.querySelector("#frame1headline").innerHTML = defaultValues.frame1Headline;

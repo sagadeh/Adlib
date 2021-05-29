@@ -100,15 +100,9 @@ function splitTextHeadline(elem) {
     var splitText3 = new SplitText("#"+elem+"3", {type:"words,chars,lines"});
     var text3 = splitText3.lines; 
     
-    for (var i = 0; i < text1.length; i++) {
-        countLineText1 = i;
-    }
-    for (var i = 0; i < text2.length; i++) {
-        countLineText2 = i;
-    }
-    for (var i = 0; i < text3.length; i++) {
-        countLineText3 = i;
-    }
+    for (var i = 0; i < text1.length; i++) countLineText1 = i;
+    for (var i = 0; i < text2.length; i++) countLineText2 = i;
+    for (var i = 0; i < text3.length; i++) countLineText3 = i;
     
     if(countLineText1 == countLineText2 && countLineText1 == countLineText3 && countLineText2 == countLineText3) {
         document.getElementById(elem+2).style.position = "absolute";

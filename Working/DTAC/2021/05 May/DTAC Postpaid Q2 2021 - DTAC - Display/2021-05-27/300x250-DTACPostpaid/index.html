@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+		<link rel="preload" as="font" href="DTAC2018-Bold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="DTAC2018-Regular.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="DTAC2018-Light.woff" type="font/woff" crossorigin="anonymous">
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+			<img id='frame1Background' adlib-image="frame1Background"/>
+            <img id='frame1Image' adlib-image="frame1Image"/>
+			<img id='baseImage' adlib-image="baseImage"/>
+            <img id='ctaImage' adlib-image="ctaImage"/>
+			<img id='logo' adlib-image="logo"/>
+
+			<div id='headline-container'>
+				<div id='headline-wrapper1'>
+					<p id='frame1Headline' adlib-text="frame1Headline"></p>
+				</div>
+				<div id='headline-wrapper2'>
+					<div id='headline-wrapper2-child'>
+						<p id='frame1Headline2' adlib-text="frame1Headline2"></p>
+						<p id='frame1Headline3' adlib-text="frame1Headline3"></p>
+					</div>
+				</div>
+				<div id='headline-wrapper3'>
+					<p id='frame1Headline4' adlib-text="frame1Headline4"></p>
+				</div>
+			</div>
+			<p id='frame1Headline5' adlib-text="frame1Headline5"></p>
+		<!--<img id='guide' src="guide.png" style="position:absolute; width:100%; height: 100%; top:0; opacity:0.4"/> 	-->
+            <div id='exitButton' class='exitButton'></div>
+        </div>
+    </body>
+    <script>
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '300x250'; // Set the width and height of the ad.
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend
+        /**************************************/
+        var defaultValues = {
+            cssAttrib:"/* CSS STYLE */",
+			fontSize1:"19,13,23,18,9",//24,16,40,16,11
+            frame1Image:"model.png",
+			baseImage:"baseImage.png",
+            frame1Background:"background.png",
+            ctaImage:"cta.png",
+			logo:"logo.png",
+            frame1Headline:"ธุรกรุ๊ร ศิลร์บั้ปแาบารุ๊อัล",
+            frame1Headline2:"วัลตินปิร์พีจีกอัพโท",
+            frame1Headline3:"000.-",
+			frame1Headline4:"สต็กุอี๋เซ็นฟิร์อร์ซิมติปิ*",
+            frame1Headline5:"คีตปฏิภาณเช็งเม้<br>งเสต์เทเลกราฟทัวร์",
+			landingPage:"https://www.dtac.co.th/",
+        };
+        function exitCall() {
+            Enabler.exitOverride("MainClick", defaultValues.landingPage);
+        }
+        var videoCuePoint = [
+            //"cuePoint:funcName" ex. "1:firstAninmation" please do not included the parenthesis after the function name.
+        ]
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                Enabler.setProfileId(10636060);
+
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed = [{}];
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0]._id = 0;
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].id = 1;
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].Reporting_Label = "609e3aeea935810006957713-60a74e604f6abb0006acbc3b_13";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].Variant_name = "A";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].Active = false;
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].Weights = 1;
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].Scoring_status = "Scored";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].cssAttrib = "\/* CSS STYLE *\/";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].fontSize1 = "19,13,23,18,9";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Image = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Image.Url = "https://cdn.ad-lib.io/v3/partners/604f163ccd503100067da0b8/assets/singleFiles/60ac7b460616c400061629f9/original/crop.png";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].baseImage = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].baseImage.Url = "https://cdn.ad-lib.io/v3/partners/604f163ccd503100067da0b8/assets/singleFiles/60ac7dbc0616c40006162a59/original/crop.png";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Background = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Background.Url = "https://cdn.ad-lib.io/v3/partners/604f163ccd503100067da0b8/assets/singleFiles/60acaccc0616c4000616907b/original/crop.png";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].ctaImage = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].ctaImage.Url = "https://cdn.ad-lib.io/v3/partners/604f163ccd503100067da0b8/assets/singleFiles/60acb0eb0616c40006169353/original/crop.png";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].logo = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].logo.Url = "https://cdn.ad-lib.io/v2/partners/604f163ccd503100067da0b8/assets/concepts/60a630eda9358100069c6876/templates/60a74d5a4f6abb0006acbab2/content/logo.png";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Headline = "\u0E08\u0E2D\u0E41\u0E15\u0E01 \u0E14\u0E39\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E47\u0E44\u0E21\u0E48\u0E1F\u0E34\u0E19";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Headline2 = "\u0E21\u0E37\u0E2D\u0E16\u0E37\u0E2D\u0E43\u0E2B\u0E21\u0E48 \u0E40\u0E23\u0E34\u0E48\u0E21\u0E41\u0E04\u0E48";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Headline3 = "700.-";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Headline4 = "\u0E1F\u0E23\u0E35! \u0E1B\u0E23\u0E30\u0E01\u0E31\u0E19\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E08\u0E2D*";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].frame1Headline5 = "1-30 \u0E21\u0E34.\u0E22. 64 *\u0E40\u0E07\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E02\u0E15\u0E32\u0E21\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14";
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].landingPage = {};
+                devDynamicContent.DTAC_Postpaid_Q2_2021_AdLib_Feed[0].landingPage.Url = "https://www.dtac.co.th/";
+                Enabler.setDevDynamicContent(devDynamicContent);
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause();
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume();
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                //document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>

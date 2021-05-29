@@ -81,10 +81,10 @@
     perspective: 1000px; 
 }
 #cta-wrapper {
-    border-radius: 20px;
+    border-radius: 18px;
     background-color: red;
     min-width: 126px;
-    min-height: 32px;
+    min-height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
