@@ -1,0 +1,219 @@
+// call Adlib.screenshotterEnd() on the last animation code.
+// do not delete initAnimation function since this is the first function that will be called after initialization of defaultValues.
+// if ever there is a video for this ad, you can use myVideo as the variable to play the video.
+// sample tween codes:
+// tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
+// tween.set("#frame1HeadlineWrapper",{opacity:1})
+
+// default initial values before the animation kicks in
+gsap.set("#main", { display: "none" });
+gsap.set(["#container", "#sub-logo", "#lastframe-cta-wrapper"], {opacity: 0});
+gsap.set("#bgimage-wrapper", {perspective: "1000px"});
+gsap.set("#bgImage", {scale: 1});
+gsap.set(["#headline1-bg", "#headline2-bg", "#headline3-bg", "#extralegal-bg"], {scale: 0});
+gsap.set(["#headline1-wrapper", "#headline2-wrapper", "#headline3-wrapper", "#extralegal-wrapper"], {opacity: 0, y: 20});
+gsap.set(["#cta-wrapper","#boilerplate"], {x: -20, opacity: 0});
+
+
+gsap.globalTimeline.pause();
+
+let tween;
+function initAnimation() {
+	adlibStart();
+	setTimeout(startAnimation, 1000);
+}
+function startAnimation() {  
+     tween = gsap.timeline();
+     console.log("animation initialized")
+
+    var discHeight = document.getElementById('disc-wrapper').offsetHeight;
+    var ctatxtHeight = document.getElementById('cta-wrapper').offsetHeight;
+    var h3bgheight = (250 - (discHeight + 56)) + "px";
+    var hbgHeight = discHeight + 49 + "px";
+    var redHeight = discHeight + "px";
+    var logoHeight = discHeight + 11 + "px";
+    var boilerHeight2 = discHeight + 140 + "px";
+
+    gsap.set("#red-BG", { bottom: redHeight});
+    gsap.set("#logoContainer", { bottom: logoHeight});
+    if (ctatxtHeight > 26){
+    	gsap.set("#boilerplate", { bottom: boilerHeight2});
+    }
+	
+
+	initOptionBSettings();
+
+	gsap.globalTimeline.resume();
+
+	// animation start here after global resume.
+
+	function frame1Animation() {
+		gsap.to("#container", {duration: 1, ease: "quad.inOut", opacity: 1});
+		gsap.to("#bgImage", {duration: 12, ease: "power1.inOut", scale: 1.1, rotationZ: 0.01});
+		gsap.to("#sub-logo2white", {duration: 0.5, ease: "power1.Out", opacity: 0, delay: 1.3});
+		gsap.to("#sub-logo2", {duration: 0.5, ease: "power1.in", opacity: 1, delay: 1.3});
+
+		if(defaultValues.frame2Headline.length <= 1 || defaultValues.frame2Headline.toUpperCase() == "N/A"){
+			gsap.delayedCall(0.2, frame3Animation);
+		} else {
+			gsap.to("#headline1-bg", {duration: 0.5, ease: "quad.inOut", scale: 1, delay: 0.8});
+			gsap.to("#headline1-wrapper", {duration: 0.3, ease: "quad.inOut", opacity: 1, y: 0, delay: 1.3, onComplete:
+				function(){
+					takeScreenshot();
+					if(defaultValues.frame3Headline.length <= 1 || defaultValues.frame3Headline.toUpperCase() == "N/A"){
+						gsap.delayedCall(2, frame3Animation);
+					}else{
+						gsap.delayedCall(2, frame2Animation);
+					}
+				}
+			});
+		}
+		
+	}
+
+	function frame2Animation() {
+		gsap.to("#headline2-bg", {duration: 0.5, ease: "quad.inOut", scale: 1});
+		gsap.to("#headline2-wrapper", {duration: 0.3, ease: "quad.inOut", opacity: 1, y: 0, delay: 0.5, onComplete:
+			function(){
+				takeScreenshot();
+				gsap.delayedCall(2, frame3Animation);
+				
+			}
+		});
+		
+		if(defaultValues.animationType == "Option C") {
+			gsap.to("#headline1-wrapper", {duration: 0.5, ease: "quad.inOut", y: -70});	
+		}		
+
+	}
+
+	function frame3Animation() {
+		updateVal();
+
+		if(defaultValues.animationType == "Option C") {
+			gsap.to("#headline1-wrapper", {duration: 0.2, ease: "quad.inOut", y: 100});
+			gsap.to("#headline2-wrapper", {duration: 0.2, ease: "quad.inOut", y: 100});
+			gsap.to("#headline1-bg", {duration: 0.2, ease: "quad.inOut", scale: 0});
+			gsap.to("#headline2-bg", {duration: 0.2, ease: "quad.inOut", scale: 0});
+		} 
+		gsap.to("#headline3-bg", {duration: 0.5, ease: "quad.inOut", scale: 1});
+		gsap.to("#headline3-wrapper", {duration: 0.3, ease: "quad.inOut", opacity: 1, y: 0, delay: 0.5, onComplete:
+			function(){
+				takeScreenshot();
+				gsap.delayedCall(0.2, initCTAandRW);
+			}
+		});
+	}
+
+	function initCTAandRW() {
+		gsap.to("#boilerplate", {duration: 0.5, ease: "quad.inOut", opacity: 1, x: 0});
+		gsap.to("#cta-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 1, x: 0, delay: 0.3});
+		gsap.to("#disc-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 1, y: 0, delay: 0.3, onComplete:
+			function(){
+				takeScreenshot();
+				if(defaultValues.legal.length <= 1 || defaultValues.legal.toUpperCase() == "N/A"){
+					gsap.delayedCall(2, endFrameAnim);
+				}else{
+					gsap.delayedCall(2, extraLegalAnim);
+				}
+				
+				
+			}
+		});
+	}
+
+	function extraLegalAnim() {
+		gsap.to("#boilerplate", {duration: 0.5, ease: "quad.inOut", opacity: 0});
+		gsap.to("#cta-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 0});
+		gsap.to("#extralegal-bg", {duration: 0.5, ease: "quad.inOut", scale: 1});
+		gsap.to("#extralegal-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 1, y: 0, delay: 0.5, onComplete:
+			function(){
+				takeScreenshot();
+				gsap.delayedCall(2, endFrameAnim);
+			}
+		});
+	}
+
+	function endFrameAnim() {
+		takeScreenshot();
+		setTimeout(adlibEnd, 2000);
+		if(defaultValues.trigger != "enable endframe"){
+			gsap.to("#extralegal-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 0, y: 20});
+			gsap.to("#headline3-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 0, y: 20});
+			gsap.to("#headline2-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 0, y: 20});
+			gsap.to("#cta-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 0, x: -20});
+			gsap.to("#boilerplate", {duration: 0.5, ease: "quad.inOut", opacity: 0, x: -20});
+			gsap.to("#headline3-bg", {duration: 0.5, ease: "quad.inOut", scale: 0, delay: 0});
+			gsap.to("#headline2-bg", {duration: 0.5, ease: "quad.inOut", scale: 0, delay: 0});
+			gsap.to("#extralegal-bg", {duration: 0.5, ease: "quad.inOut", scale: 0, delay: 0.5});
+			gsap.to("#headline1-bg", {duration: 0.5, ease: "quad.inOut", scale: 1, delay: 0.8});
+			gsap.to("#headline1-wrapper", {duration: 0.3, ease: "quad.inOut", opacity: 1, y: 0, delay: 1.3});
+		} else {
+			gsap.to("#brand-logo", {duration: 0.5, ease: "quad.inOut", opacity: 0});
+			gsap.to("#red-BG", {duration: 1, ease: "quad.inOut", height: "100%", delay: 0.3});
+			gsap.to("#sub-logo", {duration: 0.5, ease: "quad.inOut", opacity: 1, delay: 0.8});
+			gsap.to("#lastframe-cta-wrapper", {duration: 0.5, ease: "quad.inOut", opacity: 1, delay: 0.8, onComplete: function(){
+				takeScreenshot();
+				setTimeout(adlibEnd, 2000);
+			}});
+		}
+	}
+	
+	frame1Animation();
+}
+
+// Pass the value of headline2 to headline3
+function updateVal() {
+	if (defaultValues.frame2Headline.length <= 1 || defaultValues.frame2Headline.toUpperCase() == "N/A"){
+		var paragraph = document.getElementById("headline3");
+		var text = document.createTextNode(defaultValues.frame1Headline);
+		paragraph.appendChild(text);
+	} else if (defaultValues.frame3Headline.length <= 1 || defaultValues.frame3Headline.toUpperCase() == "N/A"){
+		var paragraph = document.getElementById("headline3");
+		var text = document.createTextNode(defaultValues.frame2Headline);
+		paragraph.appendChild(text);
+	}
+}
+
+function initOptionBSettings() {
+	if(defaultValues.animationType == "Option B"){
+
+		gsap.set("#headline1-bg", {background: "#EF5957"})
+		gsap.set("#headline1", {color: "#fff"})
+		gsap.set("#headline2-bg", {background: "#E2ECED"})
+		gsap.set("#headline2", {color: "#002954"})
+
+	} else if(defaultValues.animationType == "Option C"){
+    var discHeight = document.getElementById('disc-wrapper').offsetHeight;
+    var hbg2Height = discHeight + 61 + "px";
+    var hbgHeight = discHeight + 71 + "px";
+    var boilerHeight = discHeight + 111 + "px";
+
+    // var h3bgheight = (250 - (discHeight + 56)) + "px";
+    // var hbgHeight = discHeight + 56 + "px";
+    // gsap.set(["#headline1-bg", "#headline2-bg", "#headline3-bg", "#extralegal-bg"], {scale: 0, bottom: hbgHeight, height: h3bgheight});
+
+		var element = document.querySelector('#headline2'); 
+		element.style.removeProperty('bottom');
+
+		gsap.set(["#headline1-bg", "#headline2-bg"], {width:"697px"});
+		gsap.set("#headline3-bg", {width:"657px"});
+		gsap.set("#headline2-bg", {height:"87px"});
+    	gsap.set("#boilerplate", { bottom: boilerHeight});
+
+    	gsap.set("#cta-wrapper", { bottom: hbgHeight});
+		gsap.set("#extralegal-wrapper", {bottom: hbgHeight});
+		gsap.set("#headline3-wrapper", {bottom: hbg2Height});
+
+		gsap.set("#headline1-wrapper", {bottom: hbgHeight, width: "677px", height: "38px"});
+		gsap.set("#headline2-wrapper", {top: "91px", width: "677px", height: "38px"})
+		gsap.set("#headline2", {top: "0px"});
+	}
+}
+
+function animationEnd() {
+     // call this function on the very end of the last animation.
+     takeScreenshot();
+     setTimeout(function() {adlibEnd();},1000);
+}
+

@@ -1,0 +1,445 @@
+@font-face {
+    font-family: 'Matter SQ Reg';
+    src: url('MatterSQ-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ Med';
+    src: url('MatterSQ-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+#endframeContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+#blockContainer {
+    position: absolute;
+    width: 100%;
+    height: initial;
+    bottom: 0;
+    /*opacity: 0;*/
+}
+
+#ctaboilerContainer {
+    position: absolute;
+    width: 100%;
+    height: initial;
+    bottom: 0;
+}
+
+#red-BG{
+    position: relative;
+    display: inline-block;
+    bottom: -3px;
+    left: 0;
+    background: #E01B1C;
+    width: 100%;
+    height: 32px;
+}
+
+#headlineContainer{
+    position: relative;
+    display: inline-block;
+    bottom: -6.5px;
+    height: inherit;
+    width: 100%;
+}
+
+#logoContainer{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 77px;
+    height: 22px;
+}
+
+#brand-logo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width:100%;
+    max-height:100%;
+}
+
+#sublogo2Container{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 59px;
+    height: 12px;
+}
+
+#sub-logo2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    max-width:100%;
+    max-height:100%;
+}
+
+#sub-logo2white{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 59px;
+    height: 12px;
+    opacity: 0;
+}
+
+#boilerContainer{
+    position: relative;
+    display: inline-block;
+    width: 106px;
+    height: 19px;
+    left: 7px;
+}
+
+#boilerplate{
+    position: absolute;
+    max-width:100%;
+    max-height:100%;
+    /* left: 440px; */
+    /*right:405px;*/
+    /*bottom: 158px;*/
+}
+
+#headline1-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0px;
+    height: 41px;
+    width: 409px;
+    background: #E2ECED;
+    transform-origin: bottom left;
+}
+
+#headline1-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5px;
+    width: 371px;
+    height: 24px;
+}
+
+#headline1{
+    position: absolute; 
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #002954;
+    font-size: 17px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+#headline2-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0px;
+    height: 41px;
+    width: 409px;
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#headline2-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5px;
+    width: 371px;
+    height: 24px;
+
+}
+
+#headline2{
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 17px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+
+#headline3-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0px;
+    height: 41px;
+    width: 524px;
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#headline3-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5px;
+    width: 380px;
+    height: 24px;
+}
+
+#headline3{
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 17px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+/*#ctaText{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 440px;
+    bottom: 117px;
+    height: 100%;
+    color: #fff;
+    min-width: 124px;
+    max-height: 26px;
+    font-size: 14px;
+    background: #67C058;
+    padding: 0px 28px 2px 28px;
+    font-family: 'Matter SQ Med';
+}*/
+
+#ctaDiv{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    bottom: 6px;
+}
+
+#cta-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 388px;
+    max-width: 131px;
+    min-width:131px;
+    min-height: 26px;
+    background: #67C058;
+}
+
+#ctaTextParent {
+     position:relative;
+     width:100%;
+     height:100%;
+     max-height: 30px;
+}
+
+#ctaText{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: auto;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1em;
+    padding: 0px 10px 2px 10px;
+    font-family: 'Matter SQ Med';
+    justify-content: center;
+    display: flex;
+
+}
+
+#ctaContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 581px;
+    height: 100%;
+    width: 20%;
+    background: transparent;
+}
+
+#lastframe-cta-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 137px;
+    max-width: 131px;
+    min-width:131px;
+    min-height: 26px;
+    background: #67C058;
+}
+
+#lastframe-ctaTextParent {
+     position:relative;
+     width:100%;
+     height:100%;
+     max-height: 30px;
+}
+
+#lastframe-ctaText{
+    position: relative;
+    vertical-align:middle;
+    text-align: center;
+    height: auto;
+    width: auto;
+    color: #fff;
+    font-size: 142px;
+    line-height: 1em;
+    padding: 0px 10px 2px 10px;
+    font-family: 'Matter SQ Med';
+    justify-content: center;
+    display:flex;
+
+}
+
+#disc-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    min-height: 17px; 
+    max-height: 25.5px;
+    left: 0px;
+    background-color: #fff;
+    z-index: 999;
+}
+
+#disclaimerText{
+    position: static;
+    font-family: 'Matter SQ Med';
+    padding: 0px 5px 0px 5px;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    line-height: 1.200em;
+    text-align: left;
+    color: #002954;
+}
+
+#extralegal-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0px;
+    height: 41px;
+    width: 100%;
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#extralegal-wrapper{
+    position: absolute;
+    width: 850px;
+    height: 35px;
+    left: 5px;
+    bottom: 2px;
+}
+
+#legalText{
+    font-family: 'Matter SQ Med';
+    width: auto;
+    text-align: center;
+    height: initial;
+    font-size: 12px;
+    line-height: 1.1em;
+    text-align: left;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+    border: 1px solid black;
+    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-style: preserve-3d;
+    width:970px;
+    height:90px;
+}
+.exitButton {
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index: 999; /* in case there would be a button above the exitButton change this z-index*/
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+}
+
+.wrap-100{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.is-img-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.is-img-fill2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.is-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

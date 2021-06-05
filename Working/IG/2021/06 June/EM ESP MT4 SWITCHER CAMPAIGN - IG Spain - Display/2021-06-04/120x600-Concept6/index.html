@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <div id="container" class="wrap-100">
+
+                <div id="bgimage-wrapper" class="wrap-100">
+                    <img id="bgImage" class="is-img-fill" adlib-image="frame1Background">
+                </div>
+
+                <div id="bgimage-wrapper2" class="wrap-100">
+                    <img id="bgImage2" class="is-img-fill" adlib-image="frame2Background">
+                </div>
+
+                <div id="blockContainer">
+                    <div id="headlineContainer">
+                        <!-- frame1 headline -->
+                        <div id="headline1-bg">
+                            <div id="headline1-wrapper" textResize=true maxFontSize='18'>
+                                <p id="headline1" adlib-text="frame1Headline"></p>
+                            </div>
+                        </div>
+                        <!-- frame2 headline -->
+                        <div id="headline2-bg">
+                            <div id="headline2-wrapper" textResize=true maxFontSize='18'>
+                                <p id="headline2" adlib-text="frame2Headline"></p>
+                            </div>
+                        </div>
+                        <!-- frame3 headline -->
+                        <div id="headline3-bg">
+                            <div id="headline3-wrapper" textResize=true maxFontSize='18'>
+                                <p id="headline3" adlib-text="frame3Headline"></p>
+                            </div>
+                        </div>
+                        <!-- extra legal -->
+                        <div id="extralegal-bg">
+                            <div id="extralegal-wrapper" textResize=true maxFontSize='14'>
+                                <p id="legalText" adlib-text="legal"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- logo image -->
+                    <div id="red-BG">
+                        <div id="logoContainer">
+                            <img id="brand-logo" adlib-image="logo">
+                        </div>
+                    </div>
+                    <!-- disclaimer -->
+                    <div id="disc-wrapper" textResize=true maxFontSize='12'>
+                        <p id="disclaimerText" adlib-text="disclaimer"></p>
+                    </div>
+
+                    
+                </div>
+                
+                
+
+                <div id="ctaboilerContainer">
+                    <!-- Boilerplate -->
+                    <div id="boilerContainer">
+                        <img id="boilerplate" adlib-image="frame3Image">
+                    </div>
+                    <!-- Headline CTA -->
+                    <div id="ctaDiv">
+                        <div id="cta-wrapper">
+                            <div id="ctaTextParent" textResize=true maxFontSize='12'>
+                                <p id="ctaText" adlib-text="ctaText"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <!-- IG.com logo -->
+                <div id="sublogo2Container">
+                    <img id="sub-logo2" adlib-image="logo2">
+                </div>
+
+                <!-- IG.com logo -->
+                <img id="sub-logo2white" src="IGdotcom.png">
+
+                <!-- End frame -->
+                <div id="endframeContainer">
+                    <!-- sublogo in the end frame -->
+                    <img id="sub-logo" class="is-img-fill2" adlib-image="subLogo">
+                    <div id="ctaContainer">
+                        <div id="lastframe-cta-wrapper">
+                            <div id="lastframe-ctaTextParent" textResize=true maxFontSize='12'>
+                                <p id="lastframe-ctaText" adlib-text="ctaText"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div id='exitButton' class='exitButton'></div>
+        </div>
+    </body>
+    <script>           
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var creativeSize = '120x600'; // Set the width and height of the ad.
+        var adType = 'cm'; //Possible values = pre-render, cm
+        var allDVLoaded = false; // Variable to check if all DV loaded in the platform has been assigned
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend
+        /**************************************/
+        var defaultValues = {  
+            logo:"seeitIGit-logo.png",
+            logo2:"IGdotcom.png",
+            frame1Background:"placeholder-img.jpg",
+            frame2Background:"placeholder-img2.jpg",
+            frame1Headline:"First paragraph placeholder copy",
+            frame2Headline:"Second paragraph placeholder copy",
+            frame3Headline:"Third paragraph placeholder copy",
+            ctaText:"Trade now",
+            disclaimer:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, eddiam.",
+            legal:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, eddiam. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, eddiam. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, eddiam. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, eddiam.",
+            subLogo:"IG-sublogo.png",
+            frame3Image:"boilerplate.png",
+            trigger:"enable endframe",
+            animationType:"Option A",
+            cssAttrib:"/* CSS STYLE */",
+            customVariable:" ",
+            landingPage:"https://www.ig.com/"
+        };
+
+        var possibleValues = {
+            trigger:"enable endframe, disable endframe",
+            animationType:"Option A, Option B, Option C"
+        }
+
+        function exitCall() {
+            //use exitOverride for non pre-render ads, and exit for pre-render, make sure to change the variable adType above.
+            Enabler.exitOverride("MainClick", defaultValues.landingPage); // for non pre-render ads
+            //Enabler.exit('clickTag', defaultValues.landingPage); // for pre-render ads
+        };
+        function initDynamic() {
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                Enabler.setProfileId(10641351);
+
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed = [{}];
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0]._id = 0;
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].id = 1;
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].Reporting_Label = "60705924cda01200062bc66d-60705adfcda01200062bc8cc_58";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].Variant_name = "DFX ROS";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].Active = true;
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].Weights = 1;
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].Scoring_status = "Unscored";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].logo = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].logo.Url = "https://cdn.ad-lib.io/v2/partners/5c8fc746b301b0322c3f5247/assets/concepts/604a0f6fc18e4a0006674e28/templates/606dcd06cda012000627d66a/content/seeitIGit-logo.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].logo2 = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].logo2.Url = "https://cdn.ad-lib.io/v2/partners/5c8fc746b301b0322c3f5247/assets/concepts/604a0f6fc18e4a0006674e28/templates/606dcd06cda012000627d66a/content/IGdotcom.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame1Background = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame1Background.Url = "https://cdn.ad-lib.io/v3/partners/5c8fc746b301b0322c3f5247/assets/singleFiles/607441d6cda01200062e4a70/original/crop.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame2Background = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame2Background.Url = "https://cdn.ad-lib.io/v3/partners/5c8fc746b301b0322c3f5247/assets/singleFiles/607441e3cda01200062e4a90/original/crop.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame1Headline = "<span style=\"font-size: 16px;\">Opera por menos en MT4<\/span>";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame2Headline = "<span style=\"font-size: 16px;\">Sin costes ocultos ni comisiones, spreads bajos<\/span>";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame3Headline = "Descubre el aut&eacute;ntico trading de bajo costo con el proveedor de CFDs N&ordm;1 en el mundo*";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].ctaText = "<span style=\"font-size: 14px;\">Compara &gt;&nbsp;<\/span>";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].disclaimer = "<span style=\"font-size: 14px;\">Los CFD son instrumentos complejos y est&aacute;n asociados a un riesgo elevado de perder dinero r&aacute;pidamente debido al apalancamiento.<\/span>";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].legal = "<span style=\"font-size: 16px;\">*Mayor proveedor minorista de CFD por ingresos (excluyendo divisas). Fuente: resultados empresariales publicados a fecha de junio de 2020.<\/span>";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].subLogo = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].subLogo.Url = "https://cdn.ad-lib.io/v2/partners/5c8fc746b301b0322c3f5247/assets/concepts/604a0f6fc18e4a0006674e28/templates/606dcd06cda012000627d66a/content/IG-sublogo.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame3Image = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].frame3Image.Url = "https://cdn.ad-lib.io/v2/partners/5c8fc746b301b0322c3f5247/assets/concepts/604a0f6fc18e4a0006674e28/templates/606dcd06cda012000627d66a/content/boilerplate.png";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].trigger = "enable endframe";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].animationType = "Option A";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].cssAttrib = "#ctaLabel{font-size:12px!important;} #headline1{bottom:85px;} #headline2{bottom:68px;} #headline3{font-size:16px!important;}";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].customVariable = "";
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].landingPage = {};
+                devDynamicContent.EM_ESP_MT4_SWITCHER_CAMPAIGN_AdLib_Feed[0].landingPage.Url = "https://www.ig.com/esp/operar-con-mt4-con-ig?CHID=2&QPID=%pQPID=!;&QPPID=1&CrID=%ecid!&PlID=%epid!";
+                Enabler.setDevDynamicContent(devDynamicContent);
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {  
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+    
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause(); 
+            if (myVideo != undefined)
+                myVideo.pause();
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume(); 
+            if (myVideo != undefined)
+                myVideo.play();
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }   
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd(creativeSize);
+                document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>

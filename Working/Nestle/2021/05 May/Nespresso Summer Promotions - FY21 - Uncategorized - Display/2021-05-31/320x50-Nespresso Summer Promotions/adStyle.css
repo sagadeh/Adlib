@@ -1,0 +1,172 @@
+@font-face {
+     font-family: NespressoLucasBold;
+     src: url("NespressoLucasBold.woff");
+}
+@font-face {
+     font-family: NespressoLucasSemiBd;
+     src: url("NespressoLucasSemiBd.woff");
+}
+@font-face {
+     font-family: NespressoLucasRegular;
+     src: url("NespressoLucasRegular.woff");
+}
+#guide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.75;
+}
+#leaves-1 {
+    position: absolute;
+    top: -119px;
+    left: -111px;
+    width: 286px;
+    height: auto;
+    transform-origin: 0% 0%;
+}
+#leaves-2 {
+    position: absolute;
+    top: -103px;
+    left: 224px;
+    width: 186xpx;
+    height: auto;
+    transform-origin: 0% 0%;
+}
+#background, #product {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#logo {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 18px;
+    bottom: 0;
+    width: auto;
+    height: 13px;
+}
+#headline-container {
+    position: absolute;
+    right: 0px;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+
+}
+#frame1-wrapper {
+    position: absolute;;
+    left: 1px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+}
+#frame2-wrapper  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+}
+#frame3-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+#frame1-headline  {
+    position: relative;
+    top: -2px;
+    left: -1px;
+    font-family: NespressoLucasSemiBd;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 10px;
+    color: white;
+}
+#frame1-subheadline {
+    position: relative;
+    top: 1px;
+    font-family: NespressoLucasSemiBd;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 9px;
+    color: white;
+}
+#frame2-subheadline {
+    position: relative;
+    top: 5px;
+    left: 1px;
+    font-family: NespressoLucasBold;
+    font-size: 10px;
+
+    text-align: center;
+    color: white;
+}
+#frame2-subheadline2 {
+    position: relative;
+    top: 1px;
+    left: 0px;
+    font-family: NespressoLucasBold;
+    font-size: 7px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 9px;
+    color: white;
+}
+#legal {
+    position: relative;
+    bottom: 1px;
+    font-family: NespressoLucasRegular;
+    font-size: 5px;
+    text-align: center;
+    color: white;
+}
+#cta-container {
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  
+}
+#ctaWrapper{
+    transform-origin: 50% 50%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 100px;
+    margin-left: 15px;
+    height: 14px;
+}
+#cta {
+    position: relative;
+    top: 1px;
+    left: 10px;
+    text-align: right;
+    font-family: NespressoLucasSemiBd;
+    font-weight: 700;
+    font-size: 11px;
+    color: white;
+    width: auto;
+    height: auto;
+}
+#arrow {
+    position: relative;
+    left: -9px;
+    height: 11px;
+    width: auto;
+}

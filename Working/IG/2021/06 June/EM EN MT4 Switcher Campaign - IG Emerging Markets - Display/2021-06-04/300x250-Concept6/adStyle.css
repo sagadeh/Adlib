@@ -1,0 +1,462 @@
+@font-face {
+    font-family: 'Matter SQ Reg';
+    src: url('MatterSQ-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ Med';
+    src: url('MatterSQ-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+#red-BG{
+    position: absolute;
+    bottom: 27px;
+    left: 0;
+    background: #E01B1C;
+    width: 300px;
+    height: 49px;
+
+}
+
+#logoContainer{
+    position: absolute;
+    bottom: 38px;
+    right: 13px;
+    width: 88px;
+    height: 25px;
+}
+
+#brand-logo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width:100%;
+    max-height:100%;
+}
+
+#sublogo2Container{
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 59px;
+    height: 12px;
+}
+
+#sub-logo2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width:100%;
+    max-height:100%;
+}
+
+#sublogo2wContainer{
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 59px;
+    height: 12px;
+}
+
+#sub-logo2white{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width:100%;
+    max-height:100%;
+    opacity: 0;
+}
+#sublogo3Container{
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 59px;
+    height: 12px;
+}
+
+#sub-logo3navy{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width:100%;
+    max-height:100%;
+    opacity: 0;
+}
+
+#headline1-bg{
+    position: absolute;
+    bottom: 76px;
+    left: 0px;
+    height: 74px;
+    width: 100%;
+    background: #E2ECED;
+    transform-origin: bottom left;
+}
+
+#headline1-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 13px;
+    width: 270px;
+    height: 74px;
+}
+
+#headline1{
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #002954;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#headline1f1-wrapper {
+    position: absolute;
+    top: 0;
+    height: auto;
+    left: 12px;
+    width: 124px;
+    height: 80px;
+}
+
+#headline1f1{
+    position: absolute;
+    top: initial;
+    bottom:0;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #002954;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#headline2-bg{
+    position: absolute;
+    bottom: 76px;
+    left: 0px;
+    height: 74px;
+    width: 100%;
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#headline2-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 13px;
+    width: 270px;
+    height: 74px;
+}
+
+#headline2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#headline2f2-wrapper {
+    position: absolute;
+    top: 0;
+    height: auto;
+    left: 12px;
+    width: 124px;
+    height: 80px;
+}
+
+#headline2f2{
+    position: absolute;
+    top: initial;
+    bottom:0;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+#headline3-bg{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 150px;
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#headline3-wrapper {
+    position: absolute;
+    top: 0;
+    height: auto;
+    left: 12px;
+    width: 124px;
+    /*height: 100%;*/
+}
+
+#headline3{
+    position: static;
+    bottom:0;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+#headline3f3-wrapper {
+    position: absolute;
+    top: 39px;
+    height: auto;
+    min-height: 27px; 
+    max-height: 50px;
+    left: 12px;
+    width: 124px;
+    /*height: 100%;*/
+}
+
+#headline3f3{
+    position: static;
+    /*top: 39px;*/
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+#headline3f4-wrapper{
+    position: absolute;
+    top: 15px;
+    height: auto;
+    min-height: 27px;
+    /* max-height: 50px; */
+    left: 12px;
+    width: 124px;
+}
+#headline3f4{
+    position: static;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Matter SQ Med';
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+}
+
+#cta-wrapper {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 13px;
+    max-width:125px;
+    min-height:23px;
+    background: #67C058;
+}
+
+#ctaTextParent{
+    position: relative;
+    height: 100%;
+    width:  100%;
+    max-height: 30px;
+}
+
+#ctaText{
+    position: relative;
+    display: flex;
+    vertical-align:middle;
+    text-align: center;
+    line-height: 1em;
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 10px;
+    padding: 6px 20px 6px 20px;
+    font-family: 'Matter SQ Med';
+}
+
+#lastframe-cta-wrapper {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 80px;
+    margin: auto;
+    max-width:125px;
+    min-height:23px;
+    background: #67C058;
+}
+
+#lastframe-ctaText{
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    line-height: 1em;
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 10px;
+    padding: 6px 20px 6px 20px;
+    font-family: 'Matter SQ Med';
+    text-align: center;
+
+}
+
+#lastframe-ctaTextParent{
+    position: relative;
+    height: 100%;
+    width:  100%;
+    max-height: 30px;
+}
+
+#disc-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+    width: 300px;
+    height: auto;
+    min-height: 27px; 
+    max-height: 95px;
+    left: 0px;
+    background-color: #fff;
+    z-index: 999;
+}
+
+#disclaimerText{
+    position: static;
+    font-family: 'Matter SQ Med';
+    padding: 1px 0px 1px 13px;
+    width: 274px;
+    height: auto;
+    font-size: 10px;
+    line-height: 1.200em;
+    text-align: left;
+    color: #002954;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+#extralegal-bg{
+    background: #002954;
+    transform-origin: bottom left;
+}
+
+#extralegal-wrapper{
+    position: absolute;
+    width: 275px;
+    height: 76px;
+    left: 12px;
+    top: 35px;
+}
+
+#legalText{
+    font-family: 'Matter SQ Med';
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    line-height: 1.200em;
+    text-align: left;
+    color: #fff;
+    padding-bottom:10px;
+}
+
+#endframe {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/***************************************************
+
+DO NOT MODIFY ANYTHING BELOW
+
+***************************************************/
+.mainContent {
+    position: absolute;
+    overflow:hidden;
+    border: 1px solid black;
+    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-style: preserve-3d;
+    width:300px;
+    height:250px;
+}
+.exitButton {
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index: 999; /* in case there would be a button above the exitButton change this z-index*/
+    cursor: pointer;
+}
+p {
+     margin: 0px;
+}
+
+.wrap-100{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.is-img-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.is-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
