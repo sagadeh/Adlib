@@ -6,7 +6,7 @@
 // tween.set("#frame1HeadlineWrapper",{opacity:1})
 var tl;
 
-gsap.set("#headline-wrapper, #subheadline-wrapper, #subheadline2, #footer-container, #cta-container", {rotationZ:0.01, force3D:false});
+gsap.set("#headline-wrapper, #subheadline-wrapper, #legal-wrapper, #cta-container", {rotationZ:0.01, force3D:false});
 
 function initAnimation() {
     // place all fluid elements before text resize and css attrib.
@@ -20,22 +20,14 @@ function initAnimation() {
 function startAnimation() {  
     tl = gsap.timeline({
         onStart: function(){
-            if(defaultValues.trigger == "noPanel"){
-                gsap.set("#header-container", {backgroundColor: "transparent"});
-                gsap.set("#logo", {opacity: 0});
-                gsap.set("#logo2", {opacity: 1});
-                gsap.set("#header-container", {width: "100%", padding:"9px 0px 0px 0px"});
-                gsap.set("#subheadline2-wrapper", {padding:"3px 7px 3px 7px"});
-                gsap.set("#bg-subheadline2", {display: "block"});
-            } 
-            if(Adlib.isEmpty(defaultValues.frame1Subheadline2)) {
+            if(defaultValues.trigger == "noPanel") gsap.set("#header-container", {width: "100%", backgroundColor: "transparent"});
+            if(Adlib.isEmpty(defaultValues.frame1Subheadline)) gsap.set("#subheadline-wrapper", {display: "none"});
+            if(Adlib.isEmpty(defaultValues.legal) && Adlib.isEmpty(defaultValues.legal2)) {
+                gsap.set("#header-container", {padding: "0px"});
                 gsap.set("#logo-headline-wrapper", {height: "100%"});
                 gsap.set("#logo-wrapper", {display: "flex", alignItems: "center"});
-                gsap.set("#text-wapper", {display: "flex", flexFlow: "row wrap", alignContent: "space-evenly"});
-                gsap.set("#header-container", {padding: "5px 7px 5px 7px"});
-                gsap.set("#disclaimer-container", {height: "80px"});
+                gsap.set("#legal-wrapper", {display: "none"});
             }
-            if(Adlib.isEmpty(defaultValues.frame1Subheadline2) && Adlib.isEmpty(defaultValues.frame1Subheadline)) gsap.set("#headline-wrapper", {marginBottom: "0px"});
         },onComplete: animationEnd
     }); //Screenshot FRAME5 / adlibEnd
     tl.to("#mainContent", {duration: 0.5, visibility: "visible"})
@@ -43,38 +35,19 @@ function startAnimation() {
       .from("#logo", {duration: 0.5, opacity: 0})
       .from("#headline-wrapper, #subheadline-wrapper", {duration: 0.5, opacity: 0, force3D: false})
       .from("#cta-container", {duration: 0.5, opacity: 0},'-=0.5')
-      .from("#subheadline2, #bg-subheadline2", {duration: 0.5, y: "120%", force3D: false, onComplete: function(){
+      .from("#legal-wrapper", {duration: 0.5, y: "120%", force3D: false, onComplete: function(){
           //NO HEADLINE 2 AND HEADLINE 3
-          if(Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline) && Adlib.isEmpty(defaultValues.disclaimer)) {
-            skipTextAnimation("cta");
-          }else if(Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline)) {
-            takeScreenshot();
-            skipTextAnimation("seek");
-          }else{
-            skipTextAnimation("screenshot");
-          }
-      }})
-      .to("#headline1", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
-      .from("#headline2", {duration: 0.5, opacity: 0, y:"10%", onComplete: function(){
-          //NO HEADLINE 3
-          if(Adlib.isEmpty(defaultValues.frame3Headline) && Adlib.isEmpty(defaultValues.disclaimer)) {
-            skipTextAnimation("cta");
-          }else if(Adlib.isEmpty(defaultValues.frame3Headline)) {
-            skipTextAnimation("seek");
-          }else{
-            skipTextAnimation("screenshot");
-          }
-      }})
-      .to("#headline2", {duration: 0.5, opacity: 0, y:"-10%"},'+=2')
-      .from("#headline3", {duration: 0.5, opacity: 0, y:"10%", onComplete: function() {
-          //NO DISCLAIMER, IT WILL ANIMATE CTA
-          var action = (Adlib.isEmpty(defaultValues.disclaimer)) ? "cta" : "screenshot";
+          var action = (Adlib.isEmpty(defaultValues.frame2Headline) && Adlib.isEmpty(defaultValues.frame3Headline)) ? "cta" : "screenshot";
           skipTextAnimation(action);
-      }})// 8sec
-      .to("#headline-wrapper, #subheadline-wrapper, #subheadline2-wrapper", {duration: 0.5, opacity: 0},'+=2')
-      .to("#header-container", {duration: 0.5, backgroundColor: "rgb(255, 0, 0, 0)"},'-=0.5')
-      .to("#logo2", {duration: 0, opacity: 1},'-=0.5')
-      .from("#disclaimer", {duration: 0.5, opacity: 0})
+      }})
+      .to("#headline1", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
+      .from("#headline2", {duration: 0.5, opacity: 0, y:"20%", onComplete: function(){
+          //NO HEADLINE 3
+          var action = (Adlib.isEmpty(defaultValues.frame3Headline)) ? "cta" : "screenshot";
+          skipTextAnimation(action);
+      }})
+      .to("#headline2", {duration: 0.5, opacity: 0, y:"-20%"},'+=2')
+      .from("#headline3", {duration: 0.5, opacity: 0, y:"20%"})
       .to("#cta-wrapper", {duration: 0.25, scale: 1.1, yoyo: true, repeat: 1});
 }
 
@@ -86,9 +59,6 @@ function skipTextAnimation(action) {
             break;
         case "screenshot":
             takeScreenshot();
-            break;
-        case "seek":
-            setTimeout(function(){tl.seek(10),'+=2';},2000);
             break;
     }
 }
@@ -146,10 +116,10 @@ function eventListener() {
 function stageEventListener(e) {
     switch(e.type) {
         case "mouseover":
-            gsap.to("#cta-wrapper", {duration: 0.5, backgroundColor: defaultValues.ctaColor2});
+            gsap.to("#cta-wrapper", {duration: 0, backgroundColor: defaultValues.ctaColor2});
             break;
         case "mouseout":
-            gsap.to("#cta-wrapper", {duration: 0.5, backgroundColor: defaultValues.ctaColor1});
+            gsap.to("#cta-wrapper", {duration: 0, backgroundColor: defaultValues.ctaColor1});
             break;
     }
 }

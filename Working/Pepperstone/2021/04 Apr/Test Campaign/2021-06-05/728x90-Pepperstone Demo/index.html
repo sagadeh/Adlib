@@ -18,12 +18,10 @@
         <div id='mainContent' class='mainContent'>
             <img id="frame1bg" adlib-image="frame1Background" src="">
             <!--<img id="guide" src="guide.png">-->
-            <!-- Frame 1 -->
             <div id="header-container">
                 <div id="logo-headline-wrapper">
                     <div id="logo-wrapper">
                          <img id="logo" adlib-image="logo" src="">
-                         <img id="logo2" adlib-image="logo2" src="">
                     </div>
                     <div id="text-wapper">
                         <div id="headline-wrapper">
@@ -36,13 +34,9 @@
                         </div>
                     </div>
                 </div>
-                
-                <div id="subheadline2-wrapper">
-                    <div id="bg-subheadline2"></div>
-                     <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
-                </div>
-                <div id="disclaimer-container">
-                    <p id="disclaimer" adlib-text="disclaimer"></p> 
+                <div id="legal-wrapper">
+                     <p id="legal" adlib-text="legal"></p> 
+                     <p id="legal2" adlib-text="legal2"></p> 
                 </div>
             </div>
             <div id="cta-container">
@@ -50,7 +44,6 @@
                     <p id="cta" adlib-text="ctaText"></p>
                 </div>
             </div>
-            <!-- Frame 1 -->
             <div id='exitButton' class='exitButton'></div>
         </div>
     </body>
@@ -67,18 +60,17 @@
             cssAttrib:"/* CSS STYLE */",
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
-            frame1Headline:"Lorem ipsum dolor sit amet,<br> consectetur abor",
-            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti",
-            frame1Subheadline2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-            frame2Headline:"Adipiscing elit, sed dolor<br> eiusmod sed tempo",
-            frame3Headline:"Utenimad minime veniam<br> quise nostru depellat",
-            logo:"logo-black.png",
-            logo2:"logo-white.png",
+            frame1Headline:"Lorem ipsum dolor sit amet,  consectetur",
+            frame2Headline:"Adipiscing elit, sed dolor eiusmod sed",
+            frame3Headline:"Utenimad minime veniam quise nostru",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis",
+            logo:"logo-white.png",
             ctaText:"Lorem Ipsum",
-            disclaimer:"At vero eos et accusamus iusto odio dignissimos <br>ducimus blanditiis praesentium voluptatum deleniti<br> atque corrupti quos dolores et quas molestias <br>excepturi sint occaecati cupiditate non provident,<br> similique sunt in culpa qui officia deserunt",
-            disclaimerBgColor:"rgb(0, 0, 0, 0.4)",
+            legal:"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis enim",
+            legal2:"At vero eos et accusamus iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias",
+            customVariable:"rgb(0, 0, 0, 0)",
             trigger:"withPanel", //withPanel or noPanel
-            bgColor:"white",
+            bgColor:"#18268F",
             ctaColor1:"#ed2e3a",
             ctaColor2:"blue"
         };
@@ -109,7 +101,7 @@
             *****************************************/
             document.querySelector("#header-container").style.backgroundColor = defaultValues.bgColor;
             document.querySelector("#cta-wrapper").style.backgroundColor = defaultValues.ctaColor1;
-            document.querySelector("#bg-subheadline2").style.backgroundColor = defaultValues.disclaimerBgColor;
+            document.querySelector("#legal-wrapper").style.backgroundColor = defaultValues.customVariable;
         };
     /*-----------------------------------------------------------------
 

@@ -11,7 +11,7 @@ author: Ad-Lib Innovation
     transform: perspective(1920px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     /*opacity:0;*/
     visibility: hidden;
-    background-color: white;
+    background-color: #231F20;
 }
 .exitButton {
     position: absolute;

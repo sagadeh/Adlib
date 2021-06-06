@@ -34,12 +34,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="subheadline2-wrapper">
-                    <div id="bg-subheadline2"></div>
-                     <p id="subheadline2" adlib-text="frame1Subheadline2"></p>
-                </div>
-                <div id="disclaimer-container">
-                    <p id="disclaimer" adlib-text="disclaimer"></p> 
+                <div id="legal-wrapper">
+                     <p id="legal" adlib-text="legal"></p> 
                 </div>
             </div>
             <div id="cta-container">
@@ -47,7 +43,6 @@
                     <p id="cta" adlib-text="ctaText"></p>
                 </div>
             </div>
-            <!-- Frame 1 -->
             <div id='exitButton' class='exitButton'></div>
         </div>
     </body>
@@ -64,17 +59,16 @@
             cssAttrib:"/* CSS STYLE */",
             landingPage:"https://ad-lib.io/",
             frame1Background:"bg.png",
-            frame1Headline:"Is it time to switch brokers?",
-            frame1Subheadline:"Reliable platforms during market volatility",
-            frame1Subheadline2:"atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident similique sunt in culpa qui officia deserunt",
-            frame2Headline:"Is it time to switch brokers?",
-            frame3Headline:"Is it time to switch brokers?",
-            logo:"icon.png",
-            ctaText:"Lorem Ipsum",
-            disclaimer:"At vero eos et accusamus iusto odio dignissimos <br>ducimus blanditiis praesentium voluptatum deleniti<br> atque corrupti quos dolores et quas molestias <br>excepturi sint occaecati cupiditate non provident,<br> similique sunt in culpa qui officia deserunt",
-            disclaimerBgColor:"rgb(0, 0, 0, 0.4)",
+            frame1Headline:"Lorem ipsum dolor sit ameter",
+            frame2Headline:"Sed quianoner numquam tempora",
+            frame3Headline:"Dignissimos ducimu blanditiis",
+            frame1Subheadline:"At vero eos et accusamus iusto odio dignissimos ducimus",
+            logo:"logo.png",
+            ctaText:"Ducid mus",
+            legal:"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit fugit voluptatem accusantium doloremquers",
+            customVariable:"rgb(0, 0, 0, 0)",
             trigger:"withPanel", //withPanel or noPanel
-            bgColor:"white",
+            bgColor:"#18268F",
             ctaColor1:"#ed2e3a",
             ctaColor2:"blue"
         };
@@ -105,7 +99,7 @@
             *****************************************/
             document.querySelector("#header-container").style.backgroundColor = defaultValues.bgColor;
             document.querySelector("#cta-wrapper").style.backgroundColor = defaultValues.ctaColor1;
-            document.querySelector("#bg-subheadline2").style.backgroundColor = defaultValues.disclaimerBgColor;
+            document.querySelector("#legal-wrapper").style.backgroundColor = defaultValues.customVariable;
         };
     /*-----------------------------------------------------------------
 
