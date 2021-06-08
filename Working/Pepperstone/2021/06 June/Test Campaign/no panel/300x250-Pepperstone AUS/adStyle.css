@@ -1,0 +1,113 @@
+@font-face {
+     font-family: RobotoRegular;
+     src: url("RobotoRegular.woff");
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url("RobotoBold.woff");
+}
+@font-face {
+     font-family: TitilliumWebRegular;
+     src: url("TitilliumWebRegular.woff");
+}
+@font-face {
+     font-family: TitilliumWebBold;
+     src: url("TitilliumWebBold.woff");
+}
+#guide {
+    position: absolute;
+
+}
+/* VERTICAL ALIGN ELEMENTS*/
+#mainContent {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+}
+/* VERTICAL ALIGN ELEMENTS*/
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#header-container {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 125px;
+    max-height: 200px;
+    padding: 8px;
+    border-bottom-right-radius: 16px;
+    background-color: white;
+}
+#logo-wrapper {
+    margin-bottom: 3px;
+}
+#logo {
+    height: 26px;
+}
+#headline-wrapper {
+    position: relative;
+    margin-bottom: 4px;
+}
+#headline1, #headline2, #headline3 {
+    top: 0px;
+    font-family: TitilliumWebBold;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: left;
+    color: #fff;
+}
+#subheadline-wrapper {
+    position: relative;
+    top: -5px;
+}
+#subheadline1, #subheadline2, #subheadline3 {
+    top: 0px;
+    font-family: TitilliumWebRegular;
+    font-size: 11px;
+    line-height: 110%;
+    text-align: left;
+    color: #fff;
+}
+#cta-container {
+    position: relative;
+    top: 8px;
+    margin-left: 8px;
+    display: flex;
+    perspective: 1000px; 
+}
+#cta-wrapper {
+    border-radius: 16px;
+    background-color: red;
+    min-width: 126px;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+#cta {
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: white;
+}
+#footer-container {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    bottom: 0px; 
+    padding: 3px 8px 8px 8px;
+}
+#legal, #legal2 {
+    text-align: left;
+    font-family: RobotoRegular;
+    font-size: 8px;
+    color: white;
+    line-height: 110%;
+}

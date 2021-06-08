@@ -1,0 +1,125 @@
+@font-face {
+     font-family: RobotoRegular;
+     src: url("RobotoRegular.woff");
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url("RobotoBold.woff");
+}
+@font-face {
+     font-family: TitilliumWebRegular;
+     src: url("TitilliumWebRegular.woff");
+}
+@font-face {
+     font-family: TitilliumWebBold;
+     src: url("TitilliumWebBold.woff");
+}
+#guide {
+    position: absolute;
+    opacity: 0.5;
+}
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#header-container {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    top: 0px;
+    width: 373px;
+    height: 100%;
+    padding: 4px 0px 0px 0px;
+    border-top-right-radius: 8px;
+}
+#logo-headline-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 4px;;
+}
+#logo-wrapper {
+    position: relative;
+    padding-right: 12px;
+}
+#logo{
+    height: 32px;
+}
+#text-wapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 347px;
+}
+#headline-wrapper {
+    position: relative;
+    top: 1px;
+}
+#subheadline-wrapper {
+    position: relative;
+    top: 1px;
+}
+#headline1, #headline2, #headline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebBold;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: left;
+    color: #fff;
+}
+#subheadline1, #subheadline2, #subheadline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebRegular;
+    font-size: 10px;
+    text-align: left;
+    color: #fff;
+}
+#bg-subheadline2 {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#cta-container {
+    position: absolute;
+    top: 9px;
+    right: 105px;
+    perspective: 1000px; 
+}
+#cta-wrapper {
+    border-radius: 16px;
+    min-width: 77px;
+    min-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+#cta {
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+#legal-wrapper {
+    position: relative;
+    padding: 4px 0px 4px 4px;
+}
+#legal, #legal2 {
+    text-align: left;
+    font-family: RobotoRegular;
+    font-size: 5px;
+    color: #fff;
+    line-height: 110%;
+}

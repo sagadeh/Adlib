@@ -1,0 +1,124 @@
+@font-face {
+     font-family: RobotoRegular;
+     src: url("RobotoRegular.woff");
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url("RobotoBold.woff");
+}
+@font-face {
+     font-family: TitilliumWebRegular;
+     src: url("TitilliumWebRegular.woff");
+}
+@font-face {
+     font-family: TitilliumWebBold;
+     src: url("TitilliumWebBold.woff");
+}
+#guide {
+    position: absolute;
+    opacity: 0.5;
+}
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 585px;
+    height: 100%;
+    border-top-right-radius: 24px;
+    background-color: #18268F;
+}
+#header-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    top: 0px;
+    width: 585px;
+    height: 100%;
+    padding-top: 16px;
+}
+#logo-wrapper {
+    position: relative;
+    margin-left: 16px;
+}
+#logo {
+    height: 37px;
+}
+#headline-wrapper, #subheadline-wrapper{
+    margin-left: 16px;
+    width: 553px;
+}
+#headline-wrapper {
+    position: relative;
+    top: 5px;
+}
+#subheadline-wrapper {
+    position: relative;
+    top: 5px;
+}
+#headline1, #headline2, #headline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebBold;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: left;
+    color: #fff;
+}
+#subheadline1, #subheadline2, #subheadline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebRegular;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: #fff;
+}
+#cta-container {
+    position: absolute;
+    top: 16px;
+    right: 402px;
+    perspective: 1000px; 
+}
+#cta-wrapper {
+    border-radius: 20px;
+    background-color: red;
+    min-width: 140px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+#cta {
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: white;
+}
+#legal-wrapper {
+    position: absolute;
+    bottom 0px;
+    width: 100%;
+    height: auto;
+    bottom: 0px; 
+    padding: 7px 16px 16px 16px;
+}
+#legal, #legal2 {
+    text-align: left;
+    font-family: RobotoRegular;
+    font-size: 11px;
+    color: white;
+    line-height: 110%;
+}
