@@ -1,0 +1,139 @@
+@font-face {
+     font-family: RobotoRegular;
+     src: url("RobotoRegular.woff");
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url("RobotoBold.woff");
+}
+@font-face {
+     font-family: TitilliumWebRegular;
+     src: url("TitilliumWebRegular.woff");
+}
+@font-face {
+     font-family: TitilliumWebBold;
+     src: url("TitilliumWebBold.woff");
+}
+#guide {
+    position: absolute;
+    opacity: 1;
+}
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 191px;
+    height: 100%;
+    border-top-right-radius: 8px;
+    background-color: #18268F;
+
+}
+#header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    top: 0px;
+    width: 191px;
+    height: 100%;
+    padding-top: 3px;
+}
+#headline-wrapper {
+    position: relative;
+    top: 1px;
+}
+#logo-wrapper {
+    position: relative;
+    margin-left: 5px;
+}
+#logo {
+    height: 13px;
+}
+#headline-wrapper, #subheadline-wrapper{
+    margin-left: 5px;
+    width: 181px;
+}
+#subheadline-wrapper {
+    position: relative;
+    top: 0px;
+}
+#headline1-holder, #headline2-holder, #headline3-holder {
+    width: 181px;
+    max-height: 25px;
+}
+#subheadline1-holder, #subheadline2-holder, #subheadline3-holder {
+    width: 181px;
+    max-height: 14px;
+}
+#headline1, #headline2, #headline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebBold;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: left;
+    color: #fff;
+}
+#subheadline1, #subheadline2, #subheadline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebRegular;
+    font-size: 12px;
+    text-align: left;
+    color: #fff;
+}
+#cta-container {
+    position: absolute;
+    top: 5px;
+    right: 138px;
+    perspective: 1000px;
+}
+#cta-wrapper {
+    border-radius: 8.5px;
+    background-color: red;
+    min-width: 59px;
+    min-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 4px;
+    perspective: 1000px;
+}
+#cta {
+    position: relative;
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 8px;
+    letter-spacing: 0.02em;
+    color: white;
+}
+#cta.macFirefox{
+    top: -1px;
+}
+#cta.winFirefox{
+    top: -1px;
+}
+#legal-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0px; 
+    padding: 3px 5px 3px 5px;
+}
+#legal, #legal2 {
+    text-align: left;
+    font-family: RobotoRegular;
+    font-size: 4px;
+    color: white;
+    line-height: 1.3em;
+}

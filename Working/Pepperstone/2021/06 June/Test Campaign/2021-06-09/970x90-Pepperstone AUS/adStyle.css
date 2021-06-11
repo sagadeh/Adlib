@@ -1,0 +1,134 @@
+@font-face {
+     font-family: RobotoRegular;
+     src: url("RobotoRegular.woff");
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url("RobotoBold.woff");
+}
+@font-face {
+     font-family: TitilliumWebRegular;
+     src: url("TitilliumWebRegular.woff");
+}
+@font-face {
+     font-family: TitilliumWebBold;
+     src: url("TitilliumWebBold.woff");
+}
+#guide {
+    position: absolute;
+    opacity: 0.5;
+}
+#frame1bg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#header-container {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    top: 0px;
+    width: 728px;
+    height: 100%;
+    padding: 9px 0px 0px 0px;
+    border-top-right-radius: 24px;
+}
+#logo-headline-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 8px;;
+}
+#logo-wrapper {
+    position: relative;
+    padding-right: 15px;
+}
+#logo{
+    height: 48px;
+}
+#text-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 490px;
+}
+#headline-wrapper {
+    position: relative;
+    top: -5px;
+}
+#subheadline-wrapper {
+    position: relative;
+    top: -4px;
+}
+#headline1-holder, #headline2-holder, #headline3-holder {
+    width: 490px;
+    max-height: 27px;
+}
+#subheadline1-holder, #subheadline2-holder, #subheadline3-holder {
+    width: 490px;
+    max-height: 22px;
+}
+#headline1, #headline2, #headline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebBold;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: left;
+    color: #fff;
+}
+#subheadline1, #subheadline2, #subheadline3 {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: TitilliumWebRegular;
+    font-size: 15px;
+    text-align: left;
+    color: #fff;
+}
+#bg-subheadline2 {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#cta-container {
+    position: absolute;
+    top: 12px;
+    right: 254px;
+    perspective: 1000px; 
+}
+#cta-wrapper {
+    border-radius: 16px;
+    min-width: 110px;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    perspective: 1000px;
+}
+#cta {
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+#legal-wrapper {
+    position: relative;
+    padding: 4px 9px 4px 9px;
+}
+#legal, #legal2 {
+    text-align: left;
+    font-family: RobotoRegular;
+    font-size: 10px;
+    color: #fff;
+    line-height: 110%;
+}
