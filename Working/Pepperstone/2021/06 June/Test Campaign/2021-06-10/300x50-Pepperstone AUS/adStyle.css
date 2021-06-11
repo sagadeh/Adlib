@@ -53,7 +53,7 @@
 }
 #text-wrapper {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
     width: 190px;
 }

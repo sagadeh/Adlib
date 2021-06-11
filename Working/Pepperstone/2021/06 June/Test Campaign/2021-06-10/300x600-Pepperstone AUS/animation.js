@@ -28,6 +28,7 @@ function startAnimation() {
             }
             if(Adlib.isEmpty(defaultValues.frame1Subheadline) && Adlib.isEmpty(defaultValues.frame2Subheadline) && Adlib.isEmpty(defaultValues.frame3Subheadline)){
                 document.getElementById("subheadline-wrapper").style.display = "none";
+                gsap.set("#headline-wrapper, #cta-container", {margin: "0px"});
                 gsap.set("#headline-wrapper", {top: "0px"});
             }
             if(Adlib.isEmpty(defaultValues.legal) && Adlib.isEmpty(defaultValues.legal2)) {

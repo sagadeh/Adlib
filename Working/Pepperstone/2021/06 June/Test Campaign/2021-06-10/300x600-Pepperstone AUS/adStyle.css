@@ -45,12 +45,13 @@
 }
 #headline-wrapper {
     position: relative;
-    top: -5px;
+    top: -7px;
     width: 100%;
+    margin: 16px 0px 16px 0px;
 }
 #subheadline-wrapper{
     position: relative;
-    top: -14px;
+    top: -17px;
     width: 100%;
 }
 #headline1, #headline2, #headline3 {
@@ -77,6 +78,7 @@
     display: flex;
     justify-content: center;
     perspective: 1000px;
+    margin: 16px 0px 0px 0px;
 }
 #cta-wrapper {
     border-radius: 23px;

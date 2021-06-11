@@ -19,7 +19,7 @@
 #mainContent {
     display: flex;
     justify-content: flex-start;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 /* VERTICAL ALIGN ELEMENTS*/
 #frame1bg {

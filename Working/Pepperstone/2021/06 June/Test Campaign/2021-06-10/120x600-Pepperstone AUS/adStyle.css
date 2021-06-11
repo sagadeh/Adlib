@@ -46,6 +46,7 @@
     position: relative;
     top: -12px;
     width: 100%;
+    margin: 10px 0px 10px 0px;
 }
 #subheadline-wrapper{
     position: relative;
@@ -76,6 +77,7 @@
     display: flex;
     justify-content: center;
     perspective: 1000px;
+     margin: 10px 0px 0px 0px;
 }
 #cta-wrapper {
     border-radius: 14px;
