@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="ad.size" id='adSize'>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="adlib.css">
+        <link rel="stylesheet" type="text/css" href="adStyle.css">
+        <!-- <link rel="preload" as="font" href="DINPro-Medium.woff2" type="font/woff2" crossorigin="anonymous"> -->
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+        <script src="splittext.min.js"></script>
+    </head>
+    <style></style>
+    <body>
+        <div id='mainContent' class='mainContent'>
+            <video id='dynamic-video' class='videos' adlib-video='videoUrl' studio-video='customVariable' muted playsinline></video>
+            <div id="headlineContainer" textResize="true">
+                <p id="headlineContent" adlib-text="frame1Headline"></p>
+            </div>
+
+                <img id="product1" class="images" adlib-image="productImage1"/>
+                <img id="product3" class="images" adlib-image="productImage3"/>
+                <img id="product2" class="images" adlib-image="productImage2"/>
+
+
+            <div id='exitButton' class='exitButton'></div>
+          <div id="bigPlayBtn"><img id='bigPlayBtnImg' src="play-ico.svg"></div>
+
+        </div>
+
+        <!-- Guide -->
+<!--         <div>
+            <img src="guide1.png" width="100%" height="auto" style="opacity: 0.5; position: absolute;">
+        </div> -->
+    </body>
+    <script>           
+        /***************************************
+            DO NOT DELETE VARIABLES BELOW
+        ***************************************/
+        var devDynamicContent = {}; // Variable for studio invocation code.
+        var myVideo; // Variable to hold video element.
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i); // This is to check if the unit is running in mobile so the event to be used is touchend
+        /**************************************/
+        var defaultValues = {  
+            videoUrl:"MtnDew.mp4",
+            customVariable:"MtnDew.mp4",
+            productImage1:"product1.png",
+            productImage2:"product2.png",
+            productImage3:"product3.png",
+            frame1Headline:"LOREM IPSUM DOLOR SIT AMET CONSETETUR SADIPSCING ELITR SED",
+            cssAttrib:"/* CSS STYLE */",
+            landingPage:"https://www.mountaindew.com/",
+            readableLabel:"VPAID",
+            locationName:"Location"
+        };
+        function exitCall() {
+            myVideo.pause();
+            videoStatus = "pause";
+            Enabler.reportManualClose();
+            Enabler.close();
+            Enabler.exitOverride("MainClick", defaultValues.landingPage);
+        }
+        var videoCuePoint = [
+            "13.0:animateProduct",
+            "13.0:animateHeadline",
+        ]
+        function initDynamic() {
+            //Adlib.fpsSettings(60); // uncomment this if you want to change the FPS used in the creative
+            if (checkEnvironment() === 'tools') {
+                for (var i=0;i<Object.keys(defaultValues).length;i++) {
+                    Object.keys(defaultValues)[i];
+                }
+            } else {
+                // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+                
+                Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+            }
+        }
+        function populate() {            
+            Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+            /*****************************************
+            If you need to manually assign a defaultValue to a style of an element, add it below.
+            *****************************************/
+        };
+    /*-----------------------------------------------------------------
+
+        DO NOT MODIFY ANYTHING BELOW THIS COMMENT
+    
+    -----------------------------------------------------------------*/
+        window.gwd = window.gwd || {};
+        var videoStatus = "play"
+        gwd.auto_PauseBtnClick = function(event) {
+            gsap.globalTimeline.pause(); 
+            if (myVideo != undefined)
+                myVideo.pause();
+                videoStatus = "pause";
+        }
+        gwd.auto_PlayBtnClick  = function(event) {
+            gsap.globalTimeline.resume(); 
+            if (myVideo != undefined)
+                myVideo.play();
+                videoStatus = "play";
+        }
+        window.onload = function() {
+            (Enabler.isInitialized()) ? enablerInitHandler() : Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+        }   
+        function enablerInitHandler() {
+            initDynamic();
+            setTimeout(function() {
+                Adlib.createAd();
+                document.querySelector("#mainContent").style.opacity = 1;
+            }, 100);
+            // this is from engineering team. this is strictly required
+            var event = new CustomEvent("adinitialized");
+            document.dispatchEvent(event);
+        }
+        // function for checking serving environment either studio or non studio
+        function checkEnvironment() {
+            let retVal;
+            ( !Enabler.isServingInLiveEnvironment() ) ? retVal = 'tools': retVal = 'studio';
+            return retVal;
+        }
+        (function () {
+            if ( typeof window.CustomEvent === "function" ) return false; //If not IE
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+    </script>
+    <script src="adlibUtils-v3.js"></script>
+    <script src='animation.js'></script>
+</html>
