@@ -29,7 +29,7 @@ var possibleValues = {
 }
 function populate() {
   document.querySelector("#frame1headline").innerHTML = defaultValues.frame1Headline;
-  document.querySelector('#frame1background').style.backgroundColor = defaultValues.frame1Background;
+  document.querySelector("#frame1background").setAttribute("source", defaultValues.frame1Background);
   document.querySelector('#frame1headline-wrapper').style.height = defaultValues.customVariable4;
   document.querySelector("#logo").setAttribute("source", defaultValues.logo);
 }

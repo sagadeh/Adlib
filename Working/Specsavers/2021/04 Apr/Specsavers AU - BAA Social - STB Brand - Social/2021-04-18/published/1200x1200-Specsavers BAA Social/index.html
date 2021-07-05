@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl779bd2d35ea536a0eceb0e064def3980"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl5888213cea9dc82bdc28d7aab1899742"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 11.0.2.0415">
   <meta name="template" content="Banner 3.0.0">
@@ -474,10 +474,15 @@ function initDynamic() {
       //invocation code from studio here...
     }
 }
-
+var possibleValues = {
+  customVariable:"showText,hideText",
+  customVariable2:"showCurve,hideCurve",
+  customVariable3:"rightCurve,uCurve",
+  customVariable5:"showLogo,hideLogo"
+}
 function populate() {
   document.querySelector("#frame1headline").innerHTML = defaultValues.frame1Headline;
-  document.querySelector('#frame1background').style.backgroundColor = defaultValues.frame1Background;
+  document.querySelector("#frame1background").setAttribute("source", defaultValues.frame1Background);
   document.querySelector('#frame1headline-wrapper').style.height = defaultValues.customVariable4;
   document.querySelector("#logo").setAttribute("source", defaultValues.logo);
 }</script>

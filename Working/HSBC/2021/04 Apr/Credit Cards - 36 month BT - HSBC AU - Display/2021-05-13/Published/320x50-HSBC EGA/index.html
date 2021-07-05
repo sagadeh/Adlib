@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl02cb63f8ddbc9b92061ae309443a5f6b"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJld5c1971795530e21648da43343adbaa2"/>
   <meta charset="utf-8">
   <meta name="generator" content="Google Web Designer 11.0.2.0415">
   <meta name="template" content="Banner 3.0.0">
@@ -842,10 +842,10 @@ b+"' of type "+("object"!=c?c:b?Array.isArray(b)?"array":c:"null")),b="type_erro
     };
     gwd.exitUrl = function(event) {
       /*if (defaultValues.readableLabel == "Default-320x50" || !Enabler.isServingInLiveEnvironment()) {
-                Enabler.exitOverride("clickthrough exit", defaultValues.landingPage);
-              } else {
-                Enabler.exitOverride("clickthrough exit", defaultValues.landingPage + "VH:" + variationHash);
-              }*/
+                    Enabler.exitOverride("clickthrough exit", defaultValues.landingPage);
+                  } else {
+                    Enabler.exitOverride("clickthrough exit", defaultValues.landingPage + "VH:" + variationHash);
+                  }*/
       Enabler.exitOverride("Clickthrough", defaultValues.landingPage);
     };
     gwd.callAnimation = function(event) {
@@ -1019,7 +1019,8 @@ var defaultValues = {
        bgColor:"#F7F5F5",
        landingPage:"https://www.hsbc.com.au/",
        readableLabel:"Mock",
-       customVariable:" "
+       customVariable:" ",
+       cssAttrib:" ",
       };
 
 
@@ -1051,6 +1052,7 @@ function initDynamic() {
      defaultValues.landingPage;
      defaultValues.readableLabel;
      defaultValues.customVariable;
+     defaultValues.cssAttrib;
   }else{
     Enabler.setProfileId(10638578);
     var devDynamicContent = {};

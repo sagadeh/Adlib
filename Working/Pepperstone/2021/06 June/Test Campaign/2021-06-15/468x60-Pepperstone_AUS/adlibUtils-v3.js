@@ -175,9 +175,9 @@ let Adlib = {
                 document.querySelector('#'+elems[i].id).src = (checkEnvironment() == 'tools') ? defaultValues[elems[i].getAttribute('adlib-video')] : defaultValues[elems[i].getAttribute('studio-video')].substring(defaultValues[elems[i].getAttribute('studio-video')].indexOf(',')+1,defaultValues[elems[i].getAttribute('studio-video')].length); 
                 myVideo = document.querySelector('#'+elems[i].id);
                 _obj.setVideoCuePoint();             
-                Enabler.loadModule(studio.module.ModuleId.VIDEO, function() {
+                /*Enabler.loadModule(studio.module.ModuleId.VIDEO, function() {
                     studio.video.Reporter.attach('adVideo', myVideo);
-                });
+                });*/
                 _obj.tabActiveCheck();
             }                    
         }
